@@ -3,8 +3,9 @@
         <div class="block-header__body">
 
             @livewire('utils.breadcrumb')
-
-            <h1 class="block-header__title">{{ $title }}</h1>
+            @if($title)
+                <h1 class="block-header__title">{{ $title }}</h1>
+            @endif
         </div>
     </div>
 </div>

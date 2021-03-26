@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('body')
-    <livewire:utils.block-header :title="'title'" />
+    <livewire:utils.block-header :title="__('global.shop_list')" />
     <div class="block-split block-split--has-sidebar">
         <div class="container">
             <div class="block-split__row row no-gutters">
