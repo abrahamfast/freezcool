@@ -104,6 +104,13 @@ return [
     'calculator_Enter VIN number' => 'کد مشاور راوارد کنید',
     'about_freezcool' => 'درباره فروشگاه اینترنتی فریز کول',
     'about_ProfessionalTeam' => 'تیم حرفه ای گروه صنعتی',
+    'contact_Our Address' => 'آدرس ما',
+    'contact_Leave_us_a_Message' => 'برای ما پیامی بگذارید',
+    'contact_Your Name' => 'نام شما',
+    'contact_Subject' => 'موضوع',
+    'contact_Message' => 'لطفا پیام خود را بنویسید',
+    'Send Message' => 'ارسال پیام',
+
 
 
 

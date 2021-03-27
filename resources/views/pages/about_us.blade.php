@@ -5,7 +5,7 @@
         <div class="about__body">
             <x-about_us.about_image />
             <x-about_us.about_card />
-            <x-about_us.about_indicators
+            <x-about_us.about_indicators />
         </div>
     </div>
     <x-ui.block_space_layout_divider_xl />
