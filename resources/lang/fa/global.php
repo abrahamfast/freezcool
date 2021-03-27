@@ -98,7 +98,10 @@ return [
     'Color' => 'رنگ',
     'Material' => 'مواد و جنس',
 
-    'compare_Remove' => 'حذف'
+    'compare_Remove' => 'حذف',
+    'calculator' => 'محاسبه میزان جریان مورد نیاز',
+    'calculator_header' => 'محاسبه برای ارزیابی صحیح عملکرد فن مورد نیاز فیلتر. در صورت نیاز به کمک از طریق ایمیل یا تلفن با ما تماس بگیرید',
+    'calculator_Enter VIN number' => 'کد مشاور راوارد کنید'
 
 
 
