@@ -6420,7 +6420,7 @@ select.form-control-sm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc((100% - 3px) / 4);
+  width: calc((100% - 3px) / 3);
   padding: 1.5rem 2.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -6595,6 +6595,7 @@ select.form-control-sm {
   font-weight: 500;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   margin: 0;
+  font-family: "Iran Yekan Bold"
 }
 
 .block-finder__subtitle {
@@ -6689,6 +6690,7 @@ select.form-control-sm {
 
 .block-finder__form-control--select .select2-selection--single {
   border: none;
+    direction: rtl;
 }
 
 .block-finder__form-control--select .select2-container--disabled .select2-selection--single {

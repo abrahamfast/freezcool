@@ -1,5 +1,5 @@
 <tr class="compare-table__row">
-    <th class="compare-table__column compare-table__column--header">Weight</th>
+    <th class="compare-table__column compare-table__column--header">{{ __('global.Weight') }}</th>
     <td class="compare-table__column compare-table__column--product">0.1 Kg</td>
     <td class="compare-table__column compare-table__column--product">2.3 Kg</td>
     <td class="compare-table__column compare-table__column--product">1.4 Kg</td>

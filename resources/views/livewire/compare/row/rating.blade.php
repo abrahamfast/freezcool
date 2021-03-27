@@ -1,5 +1,5 @@
 <tr class="compare-table__row">
-    <th class="compare-table__column compare-table__column--header">Rating</th>
+    <th class="compare-table__column compare-table__column--header">{{ __('global.Rating') }}</th>
     <td class="compare-table__column compare-table__column--product">
         <div class="compare-table__rating">
             <div class="compare-table__rating-stars">
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-            <div class="compare-table__rating-title">Based on 3 reviews</div>
+            <div class="compare-table__rating-title">بر اساس ۳ بررسی</div>
         </div>
     </td>
     <td class="compare-table__column compare-table__column--product">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="compare-table__rating-title">Based on 22 reviews</div>
+            <div class="compare-table__rating-title">بر اساس ۳۰ بررسی</div>
         </div>
     </td>
     <td class="compare-table__column compare-table__column--product">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="compare-table__rating-title">Based on 14 reviews</div>
+            <div class="compare-table__rating-title">بر اساس ۱۴ بررسی</div>
         </div>
     </td>
     <td class="compare-table__column compare-table__column--product">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="compare-table__rating-title">Based on 26 reviews</div>
+            <div class="compare-table__rating-title">بر اساس ۲۶ بررسی</div>
         </div>
     </td>
     <td class="compare-table__column compare-table__column--product">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="compare-table__rating-title">Based on 9 reviews</div>
+            <div class="compare-table__rating-title">بر اساس ۹ بررسی</div>
         </div>
     </td>
     <td class="compare-table__column compare-table__column--fake"></td>

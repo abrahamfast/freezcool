@@ -6,7 +6,7 @@
         <div class="container">
             <div class="compare card">
 
-                <livewire:compare.options />
+{{--                <livewire:compare.options />--}}
 
                 <div class="table-responsive">
                     <livewire:compare.table />
