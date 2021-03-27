@@ -69,7 +69,26 @@ return [
     'Support' => 'پشتیبانی ۲۴ ساعت هفته',
     'Call us anytime' => 'تماس در هر زمان شبانه‌ روز',
     'Hot Offers' => 'پیشنهادات داغ',
-    'Discounts up to' => 'تخفیف تا ۹۰٪'
+    'Discounts up to' => 'تخفیف تا ۹۰٪',
+    'Contact Us' => 'با ما تماس بگیرید',
+    'Phone Number' => 'شماره تماس',
+    'Email Address' => 'آدرس ایمیل',
+    'Our Location' => 'آدرس ما',
+    'Working Hours' => 'ساعات کاری',
+    'Information' => 'اطلاعات',
+    'Delivery Information' => 'اطلاعات تحویل',
+    'Privacy Policy' => 'سیاست حفظ حریم خصوصی',
+    'Brands' => 'برندها',
+    'Returns' => 'بازگشت',
+    'Site Map' => 'نقشه سایت',
+    'Wish List' => 'لیست علاقه مندیها',
+    'Newsletter' => 'خبرنامه',
+    'Certificates' => 'گواهینامه ها',
+    'Affiliate' => 'شرکت های وابسته',
+    'Subscribe' => 'مشترک شوید',
+    'Follow us on social networks' => 'ما را در شبکه های اجتماعی دنبال کنید'
+
+
 
 
 
