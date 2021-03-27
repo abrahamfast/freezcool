@@ -101,8 +101,9 @@ return [
     'compare_Remove' => 'حذف',
     'calculator' => 'محاسبه میزان جریان مورد نیاز',
     'calculator_header' => 'محاسبه برای ارزیابی صحیح عملکرد فن مورد نیاز فیلتر. در صورت نیاز به کمک از طریق ایمیل یا تلفن با ما تماس بگیرید',
-    'calculator_Enter VIN number' => 'کد مشاور راوارد کنید'
-
+    'calculator_Enter VIN number' => 'کد مشاور راوارد کنید',
+    'about_freezcool' => 'درباره فروشگاه اینترنتی فریز کول',
+    'about_ProfessionalTeam' => 'تیم حرفه ای گروه صنعتی',
 
 
 
