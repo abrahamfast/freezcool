@@ -2,27 +2,27 @@
     <div class="container">
         <div class="block-banners__list">
             <a href="" class="block-banners__item block-banners__item--style--one">
-                <span class="block-banners__item-image"><img src="images/banners/banner1.jpg" alt=""></span>
-                <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner1.jpg" alt=""></span>
-                <span class="block-banners__item-title">Motor Oils</span>
+                <span class="block-banners__item-image"><img src="/images/banners/banner1.jpg" alt=""></span>
+                <span class="block-banners__item-image block-banners__item-image--blur"><img src="/images/banners/banner1.jpg" alt=""></span>
+                <span class="block-banners__item-title">تجهیزات سیستم</span>
                 <span class="block-banners__item-details">
-                                Synthetic motor oil with free shipping<br>
-                                Friction free life guaranteed
+                                فروشگاه تجهیزات و سردخانه<br>
+                                فروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانه
                             </span>
                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                Shop Now
+                                {{ __('global.Shop Now') }}
                             </span>
             </a>
             <a href="" class="block-banners__item block-banners__item--style--two">
                 <span class="block-banners__item-image"><img src="images/banners/banner2.jpg" alt=""></span>
                 <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner2.jpg" alt=""></span>
-                <span class="block-banners__item-title">Save up to $40</span>
+                <span class="block-banners__item-title">سردخانه</span>
                 <span class="block-banners__item-details">
-                                Luxurious interior part for real aesthetes<br>
-                                Leather, fabric, ivory and more.
+                                فروشگاه تجهیزات و سردخانه<br>
+                                فروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانه
                             </span>
                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                Shop Now
+                                {{ __('global.Shop Now') }}
                             </span>
             </a>
         </div>
@@ -32,25 +32,25 @@
             <a href="" class="block-banners__item block-banners__item--style--one">
                 <span class="block-banners__item-image"><img src="images/banners/banner1.jpg" alt=""></span>
                 <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner1.jpg" alt=""></span>
-                <span class="block-banners__item-title">Motor Oils</span>
+                <span class="block-banners__item-title">کندانسور</span>
                 <span class="block-banners__item-details">
-                                Synthetic motor oil with free shipping<br>
-                                Friction free life guaranteed
+                                فروشگاه تجهیزات و سردخانه<br>
+                                فروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانه
                             </span>
                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                Shop Now
+                                {{ __('global.Shop Now') }}
                             </span>
             </a>
             <a href="" class="block-banners__item block-banners__item--style--two">
                 <span class="block-banners__item-image"><img src="images/banners/banner2.jpg" alt=""></span>
                 <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner2.jpg" alt=""></span>
-                <span class="block-banners__item-title">Save up to $40</span>
+                <span class="block-banners__item-title">فروشگاه سردخانه استوک</span>
                 <span class="block-banners__item-details">
-                                Luxurious interior part for real aesthetes<br>
-                                Leather, fabric, ivory and more.
+                                فروشگاه تجهیزات و سردخانه<br>
+                                فروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانه
                             </span>
                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                Shop Now
+                                {{ __('global.Shop Now') }}
                             </span>
             </a>
         </div>
@@ -60,13 +60,13 @@
             <a href="" class="block-banners__item block-banners__item--style--one" style="width: calc(100% - 30px);">
                 <span class="block-banners__item-image"><img src="images/banners/banner1.jpg" alt=""></span>
                 <span class="block-banners__item-image block-banners__item-image--blur"><img src="images/banners/banner1.jpg" alt=""></span>
-                <span class="block-banners__item-title">Motor Oils</span>
+                <span class="block-banners__item-title">تجهیزات عایقکاری</span>
                 <span class="block-banners__item-details">
-                                Synthetic motor oil with free shipping<br>
-                                Friction free life guaranteed
+                                فروشگاه تجهیزات و سردخانه<br>
+                                فروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانهفروشگاه تجهیزات و سردخانه
                             </span>
                 <span class="block-banners__item-button btn btn-primary btn-sm">
-                                Shop Now
+                                {{ __('global.Shop Now') }}
                             </span>
             </a>
         </div>

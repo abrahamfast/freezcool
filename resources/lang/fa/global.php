@@ -57,7 +57,19 @@ return [
     'Call Us' => 'شماره مشاوره',
     'Select Bmi' => 'تولید پکیچ',
     'Top Sales Products' => 'محصولات پر فروش',
-    'Categories' => 'دسته بندی‌ها'
+    'Categories' => 'دسته بندی‌ها',
+    'Shop Now' => 'مشاهده محصولات',
+
+    'sale' => 'آماده ارسال',
+    'new' => 'جدید',
+    'hot' => 'پرطرفدار',
+    'SKU' => 'کد کالا',
+    'Free Shipping' => 'ارسال رایگان',
+    'For orders from' => 'برای خریدهای بالای :howmuch تومان',
+    'Support' => 'پشتیبانی ۲۴ ساعت هفته',
+    'Call us anytime' => 'تماس در هر زمان شبانه‌ روز',
+    'Hot Offers' => 'پیشنهادات داغ',
+    'Discounts up to' => 'تخفیف تا ۹۰٪'
 
 
 
