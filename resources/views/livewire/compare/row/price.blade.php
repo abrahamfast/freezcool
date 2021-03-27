@@ -1,19 +1,19 @@
 <tr class="compare-table__row">
-    <th class="compare-table__column compare-table__column--header">Price</th>
+    <th class="compare-table__column compare-table__column--header">{{ __('global.Price') }}</th>
     <td class="compare-table__column compare-table__column--product">
-        $19.00
+        ۲۰۰ هزار تومان
     </td>
     <td class="compare-table__column compare-table__column--product">
-        $224.00
+        ۱۳۲ هزار تومان
     </td>
     <td class="compare-table__column compare-table__column--product">
-        $349.00
+        ۱۲۰ هزار تومان
     </td>
     <td class="compare-table__column compare-table__column--product">
-        $589.00
+        ۱۷۶ هزار تومان
     </td>
     <td class="compare-table__column compare-table__column--product">
-        $749.00
+        ۲۰۳ هزار تومان
     </td>
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>

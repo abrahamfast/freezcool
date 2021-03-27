@@ -86,7 +86,20 @@ return [
     'Certificates' => 'گواهینامه ها',
     'Affiliate' => 'شرکت های وابسته',
     'Subscribe' => 'مشترک شوید',
-    'Follow us on social networks' => 'ما را در شبکه های اجتماعی دنبال کنید'
+    'Follow us on social networks' => 'ما را در شبکه های اجتماعی دنبال کنید',
+
+    'Rating' => 'رتبه بندی',
+    'Availability' => 'موجودی',
+    'In Stock' => 'در انبار',
+    'Please Call Us' => 'لطفا تماس بگیرید',
+    'Price' => 'قیمت',
+    'Add to cart' => 'اضافه به سبد',
+    'Weight' => 'وزن کالا',
+    'Color' => 'رنگ',
+    'Material' => 'مواد و جنس',
+
+    'compare_Remove' => 'حذف'
+
 
 
 

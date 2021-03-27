@@ -10,13 +10,5 @@
     <livewire:compare.row.color />
     <livewire:compare.row.material />
     <livewire:compare.row.action />
-
-
-
-
-
-
-
-
     </tbody>
 </table>
