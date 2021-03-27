@@ -8,7 +8,7 @@
                         <div class="topbar__item-text"><a class="topbar__link" href="/contact-us">{{ __('global.Contacts') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/storeLocation">{{ __('global.StoreLocation') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/track-order">{{ __('global.Track Order') }}</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="blog-classic-right-sidebar.html">{{ __('global.Blog') }}</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" href="/blog-classic-right-sidebar">{{ __('global.Blog') }}</a></div>
                         <div class="topbar__item-spring"></div>
                         <div class="topbar__item-button">
                             <a href="" class="topbar__button">
@@ -185,14 +185,14 @@
                                         {{ __('global.About Us') }}
                                     </a>
                                 </li>
+{{--                                <li class="main-menu__item">--}}
+{{--                                    <a href="/" class="main-menu__link" target="_blank">--}}
+{{--                                        {{ __('global.packages') }}--}}
+{{--                                    </a>--}}
+{{--                                </li>--}}
                                 <li class="main-menu__item">
-                                    <a href="/" class="main-menu__link" target="_blank">
-                                        {{ __('global.packages') }}
-                                    </a>
-                                </li>
-                                <li class="main-menu__item">
-                                    <a href="/" class="main-menu__link" target="_blank">
-                                        {{ __('global.Featured') }}
+                                    <a href="/btu/calculator" class="main-menu__link" target="_blank">
+                                        {{ __('global.calculator') }}
                                     </a>
                                 </li>
                             </ul>
@@ -515,15 +515,15 @@
                                         </div>
                                         <div class="dropcart__item-info">
                                             <div class="dropcart__item-name">
-                                                <a href="product-full.html">Glossy Gray 19" Aluminium Wheel AR-19</a>
+                                                <a href="product-full.html">سردخانه میوه موتور ۱۲۰ بار</a>
                                             </div>
                                             <ul class="dropcart__item-features">
-                                                <li>Color: Yellow</li>
-                                                <li>Material: Aluminium</li>
+                                                <li>رنگ: قرمز</li>
+                                                <li>مواد و جنس: توریم</li>
                                             </ul>
                                             <div class="dropcart__item-meta">
-                                                <div class="dropcart__item-quantity">2</div>
-                                                <div class="dropcart__item-price">$699.00</div>
+                                                <div class="dropcart__item-quantity">۲</div>
+                                                <div class="dropcart__item-price">۲۲۰ هزار تومان</div>
                                             </div>
                                         </div>
                                         <button type="button" class="dropcart__item-remove"><svg width="10" height="10">
@@ -542,11 +542,15 @@
                                         </div>
                                         <div class="dropcart__item-info">
                                             <div class="dropcart__item-name">
-                                                <a href="product-full.html">Brandix Brake Kit BDX-750Z370-S</a>
+                                                <a href="product-full.html">سردخانه میوه موتور ۲۲۰ بار</a>
                                             </div>
+                                            <ul class="dropcart__item-features">
+                                                <li>رنگ: قرمز</li>
+                                                <li>مواد و جنس: توریم</li>
+                                            </ul>
                                             <div class="dropcart__item-meta">
-                                                <div class="dropcart__item-quantity">1</div>
-                                                <div class="dropcart__item-price">$849.00</div>
+                                                <div class="dropcart__item-quantity">۱</div>
+                                                <div class="dropcart__item-price">۲۱۸ هزار تومان</div>
                                             </div>
                                         </div>
                                         <button type="button" class="dropcart__item-remove"><svg width="10" height="10">
@@ -565,14 +569,15 @@
                                         </div>
                                         <div class="dropcart__item-info">
                                             <div class="dropcart__item-name">
-                                                <a href="product-full.html">Twin Exhaust Pipe From Brandix Z54</a>
+                                                <a href="/product-full">سردخانه میوه موتور</a>
                                             </div>
                                             <ul class="dropcart__item-features">
-                                                <li>Color: True Red</li>
+                                                <li>رنگ: قرمز</li>
+                                                <li>مواد و جنس: توریم</li>
                                             </ul>
                                             <div class="dropcart__item-meta">
-                                                <div class="dropcart__item-quantity">3</div>
-                                                <div class="dropcart__item-price">$1210.00</div>
+                                                <div class="dropcart__item-quantity">۳</div>
+                                                <div class="dropcart__item-price">۲۲۰ هزار تومان</div>
                                             </div>
                                         </div>
                                         <button type="button" class="dropcart__item-remove"><svg width="10" height="10">
@@ -587,26 +592,26 @@
                                 <div class="dropcart__totals">
                                     <table>
                                         <tr>
-                                            <th>Subtotal</th>
-                                            <td>$5877.00</td>
+                                            <th>{{ __('global.Subtotal') }}</th>
+                                            <td>۲ میلیون و ۵۰۰ هزار</td>
                                         </tr>
                                         <tr>
-                                            <th>Shipping</th>
-                                            <td>$25.00</td>
+                                            <th>{{ __('global.Shipping') }}</th>
+                                            <td>۲ میلیون و ۵۰۰ هزار</td>
                                         </tr>
                                         <tr>
-                                            <th>Tax</th>
-                                            <td>$0.00</td>
+                                            <th>{{ __('global.Tax') }}</th>
+                                            <td>۲ میلیون و ۵۰۰ هزار</td>
                                         </tr>
                                         <tr>
-                                            <th>Total</th>
-                                            <td>$5902.00</td>
+                                            <th>{{ __('global.Total') }}</th>
+                                            <td>۲ میلیون و ۵۰۰ هزار</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="dropcart__actions">
-                                    <a href="cart.html" class="btn btn-secondary">View Cart</a>
-                                    <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                                    <a href="/cart" class="btn btn-secondary">{{ __('global.View Cart') }}</a>
+                                    <a href="/checkout" class="btn btn-primary">{{ __('global.Checkout') }}</a>
                                 </div>
                             </div>
                         </div>

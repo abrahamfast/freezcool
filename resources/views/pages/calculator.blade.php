@@ -66,6 +66,15 @@
                                 <div class="vehicle-form__item">
                                     <input type="text" class="form-control" placeholder="{{ __('global.calculator_Enter VIN number') }}" aria-label="VIN number">
                                 </div>
+                                <div class="vehicle-form__divider"></div>
+                                <div class="vehicle-form__item">
+                                    <input type="text" class="form-control" placeholder="{{ __('global.calculator_Enter VIN number') }}" aria-label="VIN number">
+                                </div>
+                                <div class="vehicle-form__divider"></div>
+                                <div class="vehicle-form__item">
+                                    <input type="text" class="form-control" placeholder="{{ __('global.calculator_Enter VIN number') }}" aria-label="VIN number">
+                                </div>
+                                <div class="vehicle-form__divider"></div>
                             </div>
                             <div class="mt-4 pt-3">
                                 <a href="/btu/calculator/result" class="btn btn-sm btn-primary">محاسبه</a>

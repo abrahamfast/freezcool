@@ -99,7 +99,7 @@ return [
     'Material' => 'مواد و جنس',
 
     'compare_Remove' => 'حذف',
-    'calculator' => 'محاسبه میزان جریان مورد نیاز',
+    'calculator' => 'ماشین حساب',
     'calculator_header' => 'محاسبه برای ارزیابی صحیح عملکرد فن مورد نیاز فیلتر. در صورت نیاز به کمک از طریق ایمیل یا تلفن با ما تماس بگیرید',
     'calculator_Enter VIN number' => 'کد مشاور راوارد کنید',
     'about_freezcool' => 'درباره فروشگاه اینترنتی فریز کول',
@@ -110,6 +110,12 @@ return [
     'contact_Subject' => 'موضوع',
     'contact_Message' => 'لطفا پیام خود را بنویسید',
     'Send Message' => 'ارسال پیام',
+    'Subtotal' => 'جمع کل',
+    'Shipping' => 'حمل و نقل',
+    'Tax' => 'مالیات',
+    'Total' => 'جمع',
+    'View Cart' => 'مشاهده سبد خرید',
+    'Checkout' => 'پرداخت نهایی',
 
 
 
