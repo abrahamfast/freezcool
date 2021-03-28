@@ -79,6 +79,7 @@ return [
     'Delivery Information' => 'اطلاعات تحویل',
     'Privacy Policy' => 'سیاست حفظ حریم خصوصی',
     'Brands' => 'برندها',
+    'Brand' => 'برند',
     'Returns' => 'بازگشت',
     'Site Map' => 'نقشه سایت',
     'Wish List' => 'لیست علاقه مندیها',
@@ -127,7 +128,9 @@ return [
     'Product Name' => 'نام محصول',
     'current' => 'فعلی',
     'Add to compare' => 'افزودن برای مقایسه',
-    'Add to wishlist' => ' علاقه مندی'
+    'Add to wishlist' => ' علاقه مندی',
+    'Reset' => 'تنظیم مجدد',
+    'Filter' => 'نمایش'
 
 
 
