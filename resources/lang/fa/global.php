@@ -117,6 +117,19 @@ return [
     'View Cart' => 'مشاهده سبد خرید',
     'Checkout' => 'پرداخت نهایی',
 
+    // shop list
+    'Filters' => 'فیلترها',
+    'Clear All' => 'همه را پاک کن',
+    'Sort' => 'نمایش',
+    'Show' => 'تعداد',
+    'Active Filters' => 'فیلترهای فعال',
+    'Image' => 'تصویر',
+    'Product Name' => 'نام محصول',
+    'current' => 'فعلی',
+    'Add to compare' => 'افزودن برای مقایسه',
+    'Add to wishlist' => ' علاقه مندی'
+
+
 
 
 
