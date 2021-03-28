@@ -25,13 +25,6 @@
         </div>
     </div>
 
-    <livewire:utils.block-space />
-    <livewire:blocks.block-products-carousel />
-
-
-
-
-
 
     <livewire:utils.block-space-before-footer />
 

@@ -16,9 +16,9 @@ If you do not know the image size, you can remove the data-width and data-height
 attribute, in which case the width and height will be obtained from the naturalWidth
 and naturalHeight property of img.image__tag.
 -->
-            <a class="image image--type--product" href="images/products/product-2-700x700.jpg" target="_blank" data-width="700" data-height="700">
+            <a class="image image--type--product" href="/images/products/product-2-700x700.jpg" target="_blank" data-width="700" data-height="700">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-2-500x500.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-2-500x500.jpg" alt="">
                 </div>
             </a>
             <!--
@@ -29,9 +29,9 @@ If you do not know the image size, you can remove the data-width and data-height
 attribute, in which case the width and height will be obtained from the naturalWidth
 and naturalHeight property of img.image__tag.
 -->
-            <a class="image image--type--product" href="images/products/product-1-700x700.jpg" target="_blank" data-width="700" data-height="700">
+            <a class="image image--type--product" href="/images/products/product-1-700x700.jpg" target="_blank" data-width="700" data-height="700">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-1-500x500.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-1-500x500.jpg" alt="">
                 </div>
             </a>
             <!--
@@ -42,9 +42,9 @@ If you do not know the image size, you can remove the data-width and data-height
 attribute, in which case the width and height will be obtained from the naturalWidth
 and naturalHeight property of img.image__tag.
 -->
-            <a class="image image--type--product" href="images/products/product-3-700x700.jpg" target="_blank" data-width="700" data-height="700">
+            <a class="image image--type--product" href="/images/products/product-3-700x700.jpg" target="_blank" data-width="700" data-height="700">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-3-500x500.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-3-500x500.jpg" alt="">
                 </div>
             </a>
             <!--
@@ -55,9 +55,9 @@ If you do not know the image size, you can remove the data-width and data-height
 attribute, in which case the width and height will be obtained from the naturalWidth
 and naturalHeight property of img.image__tag.
 -->
-            <a class="image image--type--product" href="images/products/product-4-700x700.jpg" target="_blank" data-width="700" data-height="700">
+            <a class="image image--type--product" href="/images/products/product-4-700x700.jpg" target="_blank" data-width="700" data-height="700">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-4-500x500.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-4-500x500.jpg" alt="">
                 </div>
             </a>
         </div>
@@ -66,22 +66,22 @@ and naturalHeight property of img.image__tag.
         <div class="owl-carousel">
             <div class="product-gallery__thumbnails-item image image--type--product">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-2-70x70.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-2-70x70.jpg" alt="">
                 </div>
             </div>
             <div class="product-gallery__thumbnails-item image image--type--product">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-1-70x70.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-1-70x70.jpg" alt="">
                 </div>
             </div>
             <div class="product-gallery__thumbnails-item image image--type--product">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-3-70x70.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-3-70x70.jpg" alt="">
                 </div>
             </div>
             <div class="product-gallery__thumbnails-item image image--type--product">
                 <div class="image__body">
-                    <img class="image__tag" src="images/products/product-4-70x70.jpg" alt="">
+                    <img class="image__tag" src="/images/products/product-4-70x70.jpg" alt="">
                 </div>
             </div>
         </div>

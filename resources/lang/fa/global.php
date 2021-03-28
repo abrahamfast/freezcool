@@ -23,7 +23,7 @@ return [
     'Garage' => 'سفارشات',
 
     'Home' => 'صفحه اصلی',
-    'FreeCall' => 'پشتیبانی ۲۴ ساعت هفته',
+    'FreeCall' => 'پشتیبانی ',
     'category' => 'دسته بندی',
     'Featured' => 'فروش ویژه',
     'packages' => 'پکیج‌ها',
@@ -64,11 +64,11 @@ return [
     'new' => 'جدید',
     'hot' => 'پرطرفدار',
     'SKU' => 'کد کالا',
+    'Vendor code' => 'کد فروشگاه',
     'Free Shipping' => 'ارسال رایگان',
     'For orders from' => 'برای خریدهای بالای :howmuch تومان',
-    'Support' => 'پشتیبانی ۲۴ ساعت هفته',
-    'Call us anytime' => 'تماس در هر زمان شبانه‌ روز',
-    'Hot Offers' => 'پیشنهادات داغ',
+    'Support' => 'پشتیبانی',
+    'Call us anytime' => 'به صورت تلفنی',
     'Discounts up to' => 'تخفیف تا ۹۰٪',
     'Contact Us' => 'با ما تماس بگیرید',
     'Phone Number' => 'شماره تماس',
@@ -130,8 +130,20 @@ return [
     'Add to compare' => 'افزودن برای مقایسه',
     'Add to wishlist' => ' علاقه مندی',
     'Reset' => 'تنظیم مجدد',
-    'Filter' => 'نمایش'
+    'Filter' => 'نمایش',
 
+    'Description' => 'شرح',
+    'Specification' => 'مشخصات',
+    'Reviews' => 'بررسی ها',
+    'General' => 'عمومی',
+    'Write A Review' => 'ثبت نظر',
+    'Your Review' => 'بررسی شما',
+    'Post Your Review' => 'نظر خود را ارسال کنید',
+    'Review Stars' => 'امتیاز',
+    'Country' => 'کشور',
+    'Safety' => 'امنیت در خرید',
+    'Only secure payments' => 'درگاه بانکی معتنبر',
+    'Hot Offers' => 'پیشنهاد ویژه',
 
 
 

@@ -1,14 +1,14 @@
 <div class="product__info">
     <div class="product__info-card">
         <div class="product__info-body">
-            <div class="product__badge tag-badge tag-badge--sale">Sale</div>
+            <div class="product__badge tag-badge tag-badge--sale">{{ __('global.Sale') }}</div>
             <div class="product__prices-stock">
                 <div class="product__prices">
-                    <div class="product__price product__price--current">$1,499.00</div>
+                    <div class="product__price product__price--current">۲ میلیون تومان</div>
                 </div>
                 <div class="status-badge status-badge--style--success product__stock status-badge--has-text">
                     <div class="status-badge__body">
-                        <div class="status-badge__text">In Stock</div>
+                        <div class="status-badge__text">{{ __('global.In Stock') }}</div>
                         <div class="status-badge__tooltip" tabindex="0" data-toggle="tooltip" title="In&#x20;Stock"></div>
                     </div>
                 </div>
@@ -16,19 +16,19 @@
             <div class="product__meta">
                 <table>
                     <tr>
-                        <th>SKU</th>
+                        <th>{{ __('global.SKU') }}</th>
                         <td>201902-0057</td>
                     </tr>
                     <tr>
-                        <th>Brand</th>
-                        <td><a href="">Brandix</a></td>
+                        <th>{{ __('global.Brand') }}</th>
+                        <td><a href="">نام برند</a></td>
                     </tr>
                     <tr>
-                        <th>Country</th>
-                        <td>Japan</td>
+                        <th>{{ __('global.Country') }}</th>
+                        <td>ایراین</td>
                     </tr>
                     <tr>
-                        <th>Vendor code</th>
+                        <th>{{ __('global.Vendor code') }}</th>
                         <td>BDX-750Z370-S</td>
                     </tr>
                 </table>
@@ -37,46 +37,21 @@
         <div class="product-form product__form">
             <div class="product-form__body">
                 <div class="product-form__row">
-                    <div class="product-form__title">Material</div>
+                    <div class="product-form__title">جنس</div>
                     <div class="product-form__control">
                         <div class="input-radio-label">
                             <div class="input-radio-label__list">
                                 <label class="input-radio-label__item">
                                     <input type="radio" name="material" class="input-radio-label__input">
-                                    <span class="input-radio-label__title">Steel</span>
+                                    <span class="input-radio-label__title">فولاد</span>
                                 </label>
                                 <label class="input-radio-label__item">
                                     <input type="radio" name="material" class="input-radio-label__input">
-                                    <span class="input-radio-label__title">Aluminium</span>
+                                    <span class="input-radio-label__title">آلومینیوم</span>
                                 </label>
                                 <label class="input-radio-label__item">
                                     <input type="radio" name="material" class="input-radio-label__input" disabled>
-                                    <span class="input-radio-label__title">Thorium</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-form__row">
-                    <div class="product-form__title">Color</div>
-                    <div class="product-form__control">
-                        <div class="input-radio-color">
-                            <div class="input-radio-color__list">
-                                <label class="input-radio-color__item input-radio-color__item--white" style="color: #fff;" data-toggle="tooltip" title="White">
-                                    <input type="radio" name="color">
-                                    <span></span>
-                                </label>
-                                <label class="input-radio-color__item" style="color: #ffd333;" data-toggle="tooltip" title="Yellow">
-                                    <input type="radio" name="color">
-                                    <span></span>
-                                </label>
-                                <label class="input-radio-color__item" style="color: #ff4040;" data-toggle="tooltip" title="Red">
-                                    <input type="radio" name="color">
-                                    <span></span>
-                                </label>
-                                <label class="input-radio-color__item input-radio-color__item--disabled" style="color: #4080ff;" data-toggle="tooltip" title="Blue">
-                                    <input type="radio" name="color" disabled>
-                                    <span></span>
+                                    <span class="input-radio-label__title">توریم</span>
                                 </label>
                             </div>
                         </div>
@@ -93,7 +68,7 @@
                 </div>
             </div>
             <div class="product__actions-item product__actions-item--addtocart">
-                <button class="btn btn-primary btn-lg btn-block">Add to cart</button>
+                <button class="btn btn-primary btn-lg btn-block">{{ __('global.Add to cart') }}</button>
             </div>
             <div class="product__actions-divider"></div>
             <button class="product__actions-item product__actions-item--wishlist" type="button">
@@ -101,7 +76,7 @@
                     <path d="M13.9,8.4l-5.4,5.4c-0.3,0.3-0.7,0.3-1,0L2.1,8.4c-1.5-1.5-1.5-3.8,0-5.3C2.8,2.4,3.8,2,4.8,2s1.9,0.4,2.6,1.1L8,3.7
 	l0.6-0.6C9.3,2.4,10.3,2,11.3,2c1,0,1.9,0.4,2.6,1.1C15.4,4.6,15.4,6.9,13.9,8.4z" />
                 </svg>
-                <span>Add to wishlist</span>
+                <span>{{ __('global.Add to wishlist') }}</span>
             </button>
             <button class="product__actions-item product__actions-item--compare" type="button">
                 <svg width="16" height="16">
@@ -109,27 +84,19 @@
                     <path d="M1,9h2c0.6,0,1,0.4,1,1v4c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1v-4C0,9.4,0.4,9,1,9z" />
                     <path d="M15,5h-2c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h2c0.6,0,1-0.4,1-1V6C16,5.4,15.6,5,15,5z" />
                 </svg>
-                <span>Add to compare</span>
+                <span>{{ __('global.Add to compare') }}</span>
             </button>
         </div>
         <div class="product__tags-and-share-links">
             <div class="product__tags tags tags--sm">
                 <div class="tags__list">
-                    <a href="">Brake Kit</a>
-                    <a href="">Brandix</a>
-                    <a href="">Filter</a>
-                    <a href="">Bumper</a>
-                    <a href="">Transmission</a>
-                    <a href="">Hood</a>
+                    <a href="">تگ شماره ۱</a>
+                    <a href="">تگ شماره ۱۲</a>
+                    <a href="">تگ شماره ۳</a>
+                    <a href="">تگ شماره ۴</a>
+                    <a href="">تگ شماره ۵</a>
+                    <a href="">تگ شماره ۲</a>
                 </div>
-            </div>
-            <div class="product__share-links share-links">
-                <ul class="share-links__list">
-                    <li class="share-links__item share-links__item--type--like"><a href="">Like</a></li>
-                    <li class="share-links__item share-links__item--type--tweet"><a href="">Tweet</a></li>
-                    <li class="share-links__item share-links__item--type--pin"><a href="">Pin It</a></li>
-                    <li class="share-links__item share-links__item--type--counter"><a href="">4K</a></li>
-                </ul>
             </div>
         </div>
     </div>
@@ -171,8 +138,8 @@
                     </svg>
                 </div>
                 <div class="shop-features__info">
-                    <div class="shop-features__item-title">Free Shipping</div>
-                    <div class="shop-features__item-subtitle">For orders from $50</div>
+                    <div class="shop-features__item-title">{{ __('global.Free Shipping') }}</div>
+                    <div class="shop-features__item-subtitle">{{ __('global.For orders from', ['howmuch' => '۲۰۰ هزار']) }}</div>
                 </div>
             </li>
             <li class="shop-features__divider" role="presentation"></li>
@@ -227,8 +194,8 @@
                     </svg>
                 </div>
                 <div class="shop-features__info">
-                    <div class="shop-features__item-title">Support 24/7</div>
-                    <div class="shop-features__item-subtitle">Call us anytime</div>
+                    <div class="shop-features__item-title">{{ __('global.Support') }}</div>
+                    <div class="shop-features__item-subtitle">{{ __('global.Call us anytime') }}</div>
                 </div>
             </li>
             <li class="shop-features__divider" role="presentation"></li>
@@ -259,8 +226,8 @@
                     </svg>
                 </div>
                 <div class="shop-features__info">
-                    <div class="shop-features__item-title">100% Safety</div>
-                    <div class="shop-features__item-subtitle">Only secure payments</div>
+                    <div class="shop-features__item-title">{{ __('global.Safety') }}</div>
+                    <div class="shop-features__item-subtitle">{{ __('global.Only secure payments') }}</div>
                 </div>
             </li>
             <li class="shop-features__divider" role="presentation"></li>
@@ -288,8 +255,8 @@
                     </svg>
                 </div>
                 <div class="shop-features__info">
-                    <div class="shop-features__item-title">Hot Offers</div>
-                    <div class="shop-features__item-subtitle">Discounts up to 90%</div>
+                    <div class="shop-features__item-title">{{ __('global.Hot Offers') }}</div>
+                    <div class="shop-features__item-subtitle">{{ __('global.Discounts up to') }}</div>
                 </div>
             </li>
             <li class="shop-features__divider" role="presentation"></li>

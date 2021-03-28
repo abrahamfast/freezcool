@@ -1,19 +1,15 @@
 <div class="product__main">
     <div class="product__excerpt">
-        Many philosophical debates that began in ancient times are still debated today.
-        In one general sense, philosophy is associated with wisdom, intellectual culture and a search for knowledge.
+        آبسردکن عمومی یا همان آبسردکن مرکزی یکی از محصولات وب سایت فروشگاهی eig-shop میباشد که با نهایت دقت طراحی و تولید شده است ، این آبسردکن های مرکزی دارای پنج شیر خروجی میباشد و مناسب برای استفاده در مکان های پر تردد مانند بازار ها ، پیاده رو های پر تردد ، کارخانه های بزرگ ، محیط های صنعتی و… میباشد. در ساخت این محصول سعی بر این بوده تا از قطعات با کیفیت استفاده گردد تا نهایت راندمان را با این آبسردکن ها تجربه کنید. در ادامه توضیحات کاملتری در مورد آبسردکن مرکزی قرار داده ایم که میتوانید مطالعه فرمایید.
     </div>
     <div class="product__features">
-        <div class="product__features-title">Key Features:</div>
+        <div class="product__features-title">ویژگی های کلیدی:</div>
         <ul>
-            <li>Speed: <span>750 RPM</span></li>
-            <li>Power Source: <span>Cordless-Electric</span></li>
-            <li>Battery Cell Type: <span>Lithium</span></li>
-            <li>Voltage: <span>20 Volts</span></li>
-            <li>Battery Capacity: <span>2 Ah</span></li>
+            <li>مارک کمپراسور : bitzer یا DWM</li>
+            <li>جنس مخزن یا وان : گالوانیزه یا فولاد</li>
+            <li>جنس شاسی : قوطی یا تیرآهن</li>
+            <li>نوع جوشکاری : co2</li>
+            <li>نوع کندانسور : هوایی یا آبی</li>
         </ul>
-        <div class="product__features-link">
-            <a href="">See Full Specification</a>
-        </div>
     </div>
 </div>
