@@ -3,7 +3,8 @@
 @section('body')
     <livewire:index.block-finder />
     <livewire:utils.block-space />
-    <livewire:index.block-categories />
     <livewire:utils.block-space />
-    <livewire:index.block-features />
+    <livewire:index.categories-one />
+    <livewire:utils.block-space />
+    <livewire:utils.block-space />
 @endsection

@@ -6,7 +6,6 @@
                     <div class="topbar topbar--classic">
                         <div class="topbar__item-text"><a class="topbar__link" href="/about-us">{{ __('global.About Us') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/contact-us">{{ __('global.Contacts') }}</a></div>
-                        <div class="topbar__item-text"><a class="topbar__link" href="/storeLocation">{{ __('global.StoreLocation') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/track-order">{{ __('global.Track Order') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/blog-classic-right-sidebar">{{ __('global.Blog') }}</a></div>
                         <div class="topbar__item-spring"></div>
@@ -105,7 +104,7 @@
                         <div class="main-menu">
                             <ul class="main-menu__list">
                                 <li class="main-menu__item">
-                                    <a href="/" class="main-menu__link" target="_blank">
+                                    <a href="/" class="main-menu__link">
                                         {{ __('global.Home') }}
                                     </a>
                                 </li>

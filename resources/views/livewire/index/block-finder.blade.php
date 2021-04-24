@@ -60,7 +60,7 @@
                     <option>۱۳۰ اسب سه فاز</option>
                 </select>
             </div>
-            <button class="block-finder__form-control block-finder__form-control--button" type="submit">محاسبه</button>
+            <button class="block-finder__form-control block-finder__form-control--button" type="submit">{{ __('global.continue') }}</button>
         </form>
     </div>
 </div>
