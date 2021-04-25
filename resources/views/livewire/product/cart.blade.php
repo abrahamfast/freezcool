@@ -47,7 +47,7 @@
                         <div class="tag-badge tag-badge--new">{{ __('global.new') }}</div>
                         <div class="tag-badge tag-badge--hot">{{ __('global.hot') }}</div>
                     </div>
-                    <a href="/product-full">سردخانه میوه موتور ۱۲۰ بار</a>
+                    <a href="/product/single">سردخانه میوه موتور ۱۲۰ بار</a>
                 </div>
             </div>
             <div class="product-card__rating">
