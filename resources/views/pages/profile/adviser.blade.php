@@ -2,7 +2,7 @@
 @section('content')
                             <div class="card">
                                 <div class="card-header">
-                                    <h5>Garage</h5>
+                                    <h5>{{ __('global.Adviser packages') }}</h5>
                                 </div>
                                 <div class="card-divider"></div>
                                 <div class="card-body card-body--padding--2">

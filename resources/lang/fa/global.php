@@ -171,6 +171,7 @@ return [
     'Navigation' => 'آیتم‌ها',
     'Dashboard' => 'داشبورد',
     'Adviser' => 'مشاور',
+    'Adviser packages' => 'پگیج های ارائه شده',
     'Edit Profile' => 'ویرایش پروفایل',
     'Order History' => 'لیست سفارشات',
     'Order Details' => 'جرئیات سفارش',
