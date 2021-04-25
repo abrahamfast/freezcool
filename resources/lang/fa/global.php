@@ -22,6 +22,9 @@ return [
     'Cart' => 'سبد خرید',
     'Garage' => 'سفارشات',
 
+    'Save' => 'ذخیره',
+    
+
     'Home' => 'صفحه اصلی',
     'FreeCall' => 'پشتیبانی ',
     'category' => 'دسته بندی',
@@ -178,7 +181,9 @@ return [
     'Recent Orders' => 'سفارش اخیر',
     'Orders Date' => 'تاریخ',
     'Orders Status' => 'وضعیت',
-    'Orders Total' => 'مجموع'
+    'Orders Total' => 'مجموع',
+    'First Name' => 'اسم کوچک',
+    'Last Name' => 'نام خانوادگی',
 
 
 

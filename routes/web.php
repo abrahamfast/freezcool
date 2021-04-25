@@ -6,7 +6,8 @@ use App\Http\Controllers\Pages\{
 	ProductController, CompareController, CalculatorController
 };
 use App\Http\Controllers\Profile\{
-	TrackOrderController, WishListController, CardController, DashboardController
+	TrackOrderController, WishListController, CardController, DashboardController,
+	ProfileController
 };
 
 
@@ -25,3 +26,4 @@ Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wis
 Route::get('/cart', [CardController::class, 'index'])->name('cart');
 
 Route::get('/account-dashboard', [DashboardController::class, 'index']);
+Route::get('/account-profile', [ProfileController::class, 'show']);

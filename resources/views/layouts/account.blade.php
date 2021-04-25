@@ -8,9 +8,7 @@
                             @include('partials.account-nav')
                         </div>
                         <div class="col-12 col-lg-9 mt-4 mt-lg-0">
-                            <div class="dashboard">
                                 @yield('content')
-                            </div>
                         </div>
                     </div>
                 </div>

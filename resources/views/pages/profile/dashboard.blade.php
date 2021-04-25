@@ -1,5 +1,6 @@
 @extends('layouts.account')
 @section('content')
+<div class="dashboard">
     <div class="dashboard__profile card profile-card">
         <div class="card-body profile-card__body">
             <div class="profile-card__avatar">
@@ -76,4 +77,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
