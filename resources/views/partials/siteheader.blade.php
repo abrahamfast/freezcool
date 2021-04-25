@@ -109,7 +109,7 @@
                                     </a>
                                 </li>
                                 <li class="main-menu__item main-menu__item--submenu--megamenu main-menu__item--has-submenu">
-                                    <a href="index.html" class="main-menu__link">
+                                    <a href="/" class="main-menu__link">
                                         {{ __('global.category') }}
                                         <svg width="7px" height="5px">
                                             <path d="M0.280,0.282 C0.645,-0.084 1.238,-0.077 1.596,0.297 L3.504,2.310 L5.413,0.297 C5.770,-0.077 6.363,-0.084 6.728,0.282 C7.080,0.634 7.088,1.203 6.746,1.565 L3.504,5.007 L0.262,1.565 C-0.080,1.203 -0.072,0.634 0.280,0.282 Z" />
@@ -362,21 +362,21 @@
                                 </a>
                                 <div class="account-menu__divider"></div>
                                 <ul class="account-menu__links">
-                                    <li><a href="account-dashboard.html">{{ __('global.Dashboard') }}</a></li>
-                                    <li><a href="account-dashboard.html">{{ __('global.Track Order') }}</a></li>
-                                    <li><a href="account-profile.html">{{ __('global.Edit Profile') }}</a></li>
-                                    <li><a href="account-orders.html">{{ __('global.Order History') }}</a></li>
-                                    <li><a href="account-addresses.html">{{ __('global.Addresses') }}</a></li>
+                                    <li><a href="account-dashboard">{{ __('global.Dashboard') }}</a></li>
+                                    <li><a href="/track-order">{{ __('global.Track Order') }}</a></li>
+                                    <li><a href="account-profile">{{ __('global.Edit Profile') }}</a></li>
+                                    <li><a href="account-orders">{{ __('global.Order History') }}</a></li>
+                                    <li><a href="account-addresses">{{ __('global.Addresses') }}</a></li>
                                 </ul>
                                 <div class="account-menu__divider"></div>
                                 <ul class="account-menu__links">
-                                    <li><a href="account-login.html">{{ __('global.Logout') }}</a></li>
+                                    <li><a href="account-login">{{ __('global.Logout') }}</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="indicator indicator--trigger--click">
-                        <a href="cart.html" class="indicator__button">
+                        <a href="cart" class="indicator__button">
                             <span class="indicator__icon">
                                 <svg width="32" height="32">
                                     <circle cx="10.5" cy="27.5" r="2.5" />
@@ -401,7 +401,7 @@
                                         </div>
                                         <div class="dropcart__item-info">
                                             <div class="dropcart__item-name">
-                                                <a href="product-full.html">سردخانه میوه موتور ۱۲۰ بار</a>
+                                                <a href="product-full">سردخانه میوه موتور ۱۲۰ بار</a>
                                             </div>
                                             <ul class="dropcart__item-features">
                                                 <li>رنگ: قرمز</li>
@@ -422,7 +422,7 @@
                                     <li class="dropcart__divider" role="presentation"></li>
                                     <li class="dropcart__item">
                                         <div class="dropcart__item-image image image--type--product">
-                                            <a class="image__body" href="product-full.html">
+                                            <a class="image__body" href="product-full">
                                                 <img class="image__tag" src="/images/products/product-2-70x70.jpg" alt="">
                                             </a>
                                         </div>

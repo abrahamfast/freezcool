@@ -163,7 +163,24 @@ return [
     'Latest Posts' => 'جدیدترین مطابل',
     'wishlist' => 'لیست علاقه مندی',
     'Shopping Cart' => 'سبد خرید',
-    
+    'Navigation' => 'آیتم‌ها',
+    'Dashboard' => 'داشبورد',
+    'Adviser' => 'مشاور',
+    'Edit Profile' => 'ویرایش پروفایل',
+    'Order History' => 'لیست سفارشات',
+    'Order Details' => 'جرئیات سفارش',
+    'Addresses' => 'آدرس‌ها',
+    'Edit Address' => 'ویرایش آدرس‌',
+    'Password' => 'رمز عبور',
+    'Logout' => 'خروج',
+    'Address Default' => 'پیش فرض',
+    'Your Address' => 'آدرس شما',
+    'Recent Orders' => 'سفارش اخیر',
+    'Orders Date' => 'تاریخ',
+    'Orders Status' => 'وضعیت',
+    'Orders Total' => 'مجموع'
+
+
 
 
 
