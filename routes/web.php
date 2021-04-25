@@ -7,7 +7,7 @@ use App\Http\Controllers\Pages\{
 };
 use App\Http\Controllers\Profile\{
 	TrackOrderController, WishListController, CardController, DashboardController,
-	ProfileController
+	ProfileController, AdviserController
 };
 
 
@@ -25,5 +25,6 @@ Route::get('/track-order', [TrackOrderController::class, 'index'])->name('order.
 Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wishlist');
 Route::get('/cart', [CardController::class, 'index'])->name('cart');
 
+Route::get('account-adviser', [AdviserController::class, 'index']);
 Route::get('/account-dashboard', [DashboardController::class, 'index']);
 Route::get('/account-profile', [ProfileController::class, 'show']);

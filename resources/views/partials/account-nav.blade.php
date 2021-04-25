@@ -5,7 +5,7 @@
                                         <a href="/account-dashboard">{{ __('global.Dashboard') }}</a>
                                     </li>
                                     <li class="account-nav__item ">
-                                        <a href="/account-garage">{{ __('global.Adviser') }}</a>
+                                        <a href="/account-adviser">{{ __('global.Adviser') }}</a>
                                     </li>
                                     <li class="account-nav__item ">
                                         <a href="/account-profile">{{ __('global.Edit Profile') }}</a>
