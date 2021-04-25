@@ -11,4 +11,9 @@ class WeblogController extends Controller
     {
     	return view('pages.weblog.index');
     }
+
+    public function show($slug = null)
+    {
+    	return view('pages.weblog.show');
+    }
 }

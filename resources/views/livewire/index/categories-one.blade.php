@@ -3,7 +3,7 @@
         <ul class="block-features__list">
             <li class="block-features__item">
                 <div class="block-features__item-icon">
-                    <x-ui.icon.delivery />
+                    <x-ui.icon.security />
                 </div>
                 <div class="block-features__item-info">
                     <div class="block-features__item-title">{{ __('global.Shop By Category') }}</div>
@@ -12,7 +12,7 @@
             </li>
             <li class="block-features__item">
                 <div class="block-features__item-icon">
-                    <x-ui.icon.support />
+                    <x-ui.icon.security />
                 </div>
                 <div class="block-features__item-info">
                     <div class="block-features__item-title">{{ __('global.Shop By Category') }}</div>
@@ -21,7 +21,7 @@
             </li>
             <li class="block-features__item">
                 <div class="block-features__item-icon">
-                    <x-ui.icon.hot />
+                    <x-ui.icon.security />
                 </div>
                 <div class="block-features__item-info">
                     <div class="block-features__item-title">{{ __('global.Shop By Category') }}</div>
