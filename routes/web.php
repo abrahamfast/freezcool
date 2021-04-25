@@ -15,3 +15,4 @@ Route::get('/compare', [App\Http\Controllers\Pages\CompareController::class, 'in
 Route::get('/btu/calculator', [App\Http\Controllers\Pages\CalculatorController::class, 'index'])->name('calculator');
 Route::get('/btu/calculator/result', [App\Http\Controllers\Pages\CalculatorController::class, 'show'])->name('calculator.result');
 Route::get('/profile/order/track', [App\Http\Controllers\Profile\TrackOrderController::class, 'index'])->name('order.track');
+Route::get('/wishlist', [App\Http\Controllers\Profile\WishListController::class, 'index'])->name('profile.wishlist');

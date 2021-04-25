@@ -40,13 +40,13 @@
                                 <div class="site-footer__widget footer-links">
                                     <h5 class="footer-links__title">{{ __('global.Information') }}</h5>
                                     <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.About Us') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Delivery Information') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Privacy Policy') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Brands') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Contact Us') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Returns') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Site Map') }}</a></li>
+                                        <li class="footer-links__item"><a href="/about-us" class="footer-links__link">{{ __('global.About Us') }}</a></li>
+                                        <li class="footer-links__item"><a href="/delivery-information" class="footer-links__link">{{ __('global.Delivery Information') }}</a></li>
+                                        <li class="footer-links__item"><a href="/privacy-policy" class="footer-links__link">{{ __('global.Privacy Policy') }}</a></li>
+                                        <li class="footer-links__item"><a href="/brands" class="footer-links__link">{{ __('global.Brands') }}</a></li>
+                                        <li class="footer-links__item"><a href="/contact-us" class="footer-links__link">{{ __('global.Contact Us') }}</a></li>
+                                        <li class="footer-links__item"><a href="/returns" class="footer-links__link">{{ __('global.Returns') }}</a></li>
+                                        <li class="footer-links__item"><a href="/site-map" class="footer-links__link">{{ __('global.Site Map') }}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -54,11 +54,11 @@
                                 <div class="site-footer__widget footer-links">
                                     <h5 class="footer-links__title">{{ __('global.My Account') }}</h5>
                                     <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Order History') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Wish List') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Newsletter') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Certificates') }}</a></li>
-                                        <li class="footer-links__item"><a href="" class="footer-links__link">{{ __('global.Affiliate') }}</a></li>
+                                        <li class="footer-links__item"><a href="/profile/order-history" class="footer-links__link">{{ __('global.Order History') }}</a></li>
+                                        <li class="footer-links__item"><a href="/wishlist" class="footer-links__link">{{ __('global.Wish List') }}</a></li>
+                                        <li class="footer-links__item"><a href="/profile/newsletter" class="footer-links__link">{{ __('global.Newsletter') }}</a></li>
+                                        <li class="footer-links__item"><a href="/profile/certificates" class="footer-links__link">{{ __('global.Certificates') }}</a></li>
+                                        <li class="footer-links__item"><a href="/profile/affiliate" class="footer-links__link">{{ __('global.Affiliate') }}</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -78,28 +78,14 @@
                                     </div>
                                     <div class="footer-newsletter__social-links social-links">
                                         <ul class="social-links__list">
-                                            <li class="social-links__item social-links__item--facebook"><a href="/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li class="social-links__item social-links__item--twitter"><a href="/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                            <li class="social-links__item social-links__item--facebook"><a href="/" target="_blank"><i class="fab fa-telegram"></i></a></li>
+                                            <li class="social-links__item social-links__item--facebook"><a href="/" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
                                             <li class="social-links__item social-links__item--youtube"><a href="/" target="_blank"><i class="fab fa-youtube"></i></a></li>
                                             <li class="social-links__item social-links__item--instagram"><a href="/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                                             <li class="social-links__item social-links__item--rss"><a href="/" target="_blank"><i class="fas fa-rss"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="site-footer__bottom">
-                    <div class="container">
-                        <div class="site-footer__bottom-row">
-                            <div class="site-footer__copyright">
-                                <!-- copyright -->
-                                Powered by <a href="https://pelk.io" target="_blank">PELK.IO</a>
-                                <!-- copyright / end -->
-                            </div>
-                            <div class="site-footer__payments">
-                                <img src="/images/payments.png" alt="">
                             </div>
                         </div>
                     </div>

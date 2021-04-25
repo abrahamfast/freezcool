@@ -124,21 +124,21 @@
                                                             <li class="megamenu-links__item megamenu-links__item--has-submenu">
                                                                 <a class="megamenu-links__item-link" href="">{{ __('global.category') }} شماره یک</a>
                                                                 <ul class="megamenu-links">
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
                                                                 </ul>
                                                             </li>
                                                             <li class="megamenu-links__item megamenu-links__item--has-submenu">
-                                                                <a class="megamenu-links__item-link" href="">{{ __('global.category') }} شماره دوم</a>
+                                                                <a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }} شماره دوم</a>
                                                                 <ul class="megamenu-links">
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href=""> زیر{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list"> زیر{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
@@ -146,23 +146,23 @@
                                                     <div class="col-6">
                                                         <ul class="megamenu__links megamenu-links megamenu-links--root">
                                                             <li class="megamenu-links__item megamenu-links__item--has-submenu">
-                                                                <a class="megamenu-links__item-link" href="">{{ __('global.category') }} شماره سوم</a>
+                                                                <a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }} شماره سوم</a>
                                                                 <ul class="megamenu-links">
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
                                                                 </ul>
                                                             </li>
                                                             <li class="megamenu-links__item megamenu-links__item--has-submenu">
-                                                                <a class="megamenu-links__item-link" href="">{{ __('global.category') }} شماره چهارم</a>
+                                                                <a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }} شماره چهارم</a>
                                                                 <ul class="megamenu-links">
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
-                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
+                                                                    <li class="megamenu-links__item"><a class="megamenu-links__item-link" href="/shop-list">{{ __('global.category') }}</a></li>
                                                                 </ul>
                                                             </li>
                                                         </ul>
@@ -174,16 +174,16 @@
                                 </li>
 
 
-                                <li class="main-menu__item">
-                                    <a href="/" class="main-menu__link" target="_blank">
+{{--                                 <li class="main-menu__item">
+                                    <a href="/contact-us" class="main-menu__link" target="_blank">
                                         {{ __('global.Contacts') }}
                                     </a>
                                 </li>
                                 <li class="main-menu__item">
-                                    <a href="/" class="main-menu__link" target="_blank">
+                                    <a href="/about-us" class="main-menu__link" target="_blank">
                                         {{ __('global.About Us') }}
                                     </a>
-                                </li>
+                                </li> --}}
 {{--                                <li class="main-menu__item">--}}
 {{--                                    <a href="/" class="main-menu__link" target="_blank">--}}
 {{--                                        {{ __('global.packages') }}--}}
@@ -198,14 +198,14 @@
                         </div>
                     </div>
                     <div class="header__navbar-phone phone">
-                        <a href="" class="phone__body">
+                        <a href="tel:02122222222" class="phone__body">
                             <div class="phone__title">{{ __('global.Call Us') }} :</div>
                             <div class="phone__number">۰۲۱-۳۳۳۳۹۳۳۳</div>
                         </a>
                     </div>
                 </div>
                 <div class="header__logo">
-                    <a href="/index" class="logo">
+                    <a href="/" class="logo">
                         <div class="logo__slogan">
                             {{ __('global.freecool') }}
                         </div>
