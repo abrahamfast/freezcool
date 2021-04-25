@@ -16,3 +16,4 @@ Route::get('/btu/calculator', [App\Http\Controllers\Pages\CalculatorController::
 Route::get('/btu/calculator/result', [App\Http\Controllers\Pages\CalculatorController::class, 'show'])->name('calculator.result');
 Route::get('/profile/order/track', [App\Http\Controllers\Profile\TrackOrderController::class, 'index'])->name('order.track');
 Route::get('/wishlist', [App\Http\Controllers\Profile\WishListController::class, 'index'])->name('profile.wishlist');
+Route::get('/cart', [App\Http\Controllers\Profile\CardController::class, 'index'])->name('cart');

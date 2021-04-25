@@ -192,27 +192,27 @@
                                     <div class="mobile-menu__panel-body">
                                         <ul class="mobile-menu__links">
                                             <li data-mobile-menu-item>
-                                                <a href="/" class="" data-mobile-menu-trigger>
+                                                <a href="/shop-list" class="" data-mobile-menu-trigger>
                                                     {{ __('global.category') }}
                                                 </a>
                                             </li>
                                             <li data-mobile-menu-item>
-                                                <a href="/" class="" data-mobile-menu-trigger>
+                                                <a href="/shop-list" class="" data-mobile-menu-trigger>
                                                     {{ __('global.category') }}
                                                 </a>
                                             </li>
                                             <li data-mobile-menu-item>
-                                                <a href="/" class="" data-mobile-menu-trigger>
+                                                <a href="/shop-list" class="" data-mobile-menu-trigger>
                                                     {{ __('global.category') }}
                                                 </a>
                                             </li>
                                             <li data-mobile-menu-item>
-                                                <a href="/" class="" data-mobile-menu-trigger>
+                                                <a href="/shop-list" class="" data-mobile-menu-trigger>
                                                     {{ __('global.category') }}
                                                 </a>
                                             </li>
                                             <li data-mobile-menu-item>
-                                                <a href="/" class="" data-mobile-menu-trigger>
+                                                <a href="/shop-list" class="" data-mobile-menu-trigger>
                                                     {{ __('global.category') }}
                                                 </a>
                                             </li>
