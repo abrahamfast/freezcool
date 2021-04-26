@@ -31,3 +31,4 @@ Route::get('/account-profile', [ProfileController::class, 'show']);
 Route::get('/account-orders', [OrderController::class, 'index']);
 Route::get('/account-order-details', [OrderController::class, 'show']);
 Route::get('/account-addresses', [AddressController::class, 'index']);
+Route::get('/account-edit-address', [AddressController::class, 'create']);

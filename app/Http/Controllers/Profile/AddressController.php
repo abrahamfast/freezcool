@@ -11,4 +11,9 @@ class AddressController extends Controller
 	{
 		return view('pages.profile.addresses');
 	}
+
+	public function create()
+	{
+		return view('pages.profile.addresses-create');
+	}
 }

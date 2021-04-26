@@ -185,7 +185,7 @@ return [
     'Orders Date' => 'تاریخ',
     'Orders Status' => 'وضعیت',
     'Orders Total' => 'مجموع',
-    'First Name' => 'اسم کوچک',
+    'First Name' => 'نام',
     'Last Name' => 'نام خانوادگی',
     'Order History' => 'تاریخچه سفارش ها',
     'Back to list' => 'سفارشات',
@@ -199,7 +199,16 @@ return [
     'Add New Address' => 'آدرس جدید',
     'Default Address' => 'پیشفرض',
     'Edit' => 'ویرایش',
-    'Remove' => 'حذف'
+    'Remove' => 'حذف',
+    'Company' => 'نام شرکت',
+    'Country' => 'کشور',
+    'Optional' => '(اختیاری)',
+    'Select a country...' => 'انتخاب کشور',
+    'Street Address' => 'آدرس کامل',
+    'City' => 'شهر',
+    'State' => 'منطقه', 
+    'Postcode' => 'کد پستی',
+    'Set as my default address' => 'به عنوان آدرس ارسال تنظیم شود.'
 
 
 
