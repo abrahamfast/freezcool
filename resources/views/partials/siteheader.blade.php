@@ -10,7 +10,7 @@
                         <div class="topbar__item-text"><a class="topbar__link" href="/blog">{{ __('global.Blog') }}</a></div>
                         <div class="topbar__item-spring"></div>
                         <div class="topbar__item-button">
-                            <a href="" class="topbar__button">
+                            <a href="/compare" class="topbar__button">
                                 <span class="topbar__button-label">{{ __('global.Compare') }} : </span>
                                 <span class="topbar__button-title">۵ مورد</span>
                             </a>

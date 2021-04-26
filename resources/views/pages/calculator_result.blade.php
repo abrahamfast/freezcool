@@ -74,7 +74,7 @@
                         <div class="card-divider"></div>
                         <div class="card-body card-body--padding--2">
                             <div class="table-responsive">
-                                <livewire:compare.table />
+                                <livewire:compare.calculator-result />
                             </div>
                         </div>
                     </div>
