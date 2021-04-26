@@ -11,4 +11,9 @@ class OrderController extends Controller
     {
     	return view('pages.profile.order');
     }
+
+    public function show($id = null)
+    {
+    	return view('pages.profile.order-detail');	
+    }
 }

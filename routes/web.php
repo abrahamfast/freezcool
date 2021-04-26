@@ -29,3 +29,4 @@ Route::get('/account-adviser', [AdviserController::class, 'index']);
 Route::get('/account-dashboard', [DashboardController::class, 'index']);
 Route::get('/account-profile', [ProfileController::class, 'show']);
 Route::get('/account-orders', [OrderController::class, 'index']);
+Route::get('/account-order-details', [OrderController::class, 'show']);

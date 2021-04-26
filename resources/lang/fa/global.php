@@ -187,7 +187,15 @@ return [
     'Orders Total' => 'مجموع',
     'First Name' => 'اسم کوچک',
     'Last Name' => 'نام خانوادگی',
-
+    'Order History' => 'تاریخچه سفارش ها',
+    'Back to list' => 'سفارشات',
+    'Order Num' => 'کد سفارش',
+    'Product' => 'نام محصول',
+    'Subtotal' => 'کل',
+    'Shipping' => 'هزینه ارسال',
+    'Tax' => 'مالیات',
+    'Total' => 'مجموع',
+    'Shipping Address' => 'آدرس تحویل',
 
 
 
