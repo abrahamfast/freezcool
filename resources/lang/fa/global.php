@@ -196,6 +196,10 @@ return [
     'Tax' => 'مالیات',
     'Total' => 'مجموع',
     'Shipping Address' => 'آدرس تحویل',
+    'Add New Address' => 'آدرس جدید',
+    'Default Address' => 'پیشفرض',
+    'Edit' => 'ویرایش',
+    'Remove' => 'حذف'
 
 
 
