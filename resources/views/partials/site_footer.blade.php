@@ -43,10 +43,10 @@
                                         <li class="footer-links__item"><a href="/about-us" class="footer-links__link">{{ __('global.About Us') }}</a></li>
                                         <li class="footer-links__item"><a href="/delivery-information" class="footer-links__link">{{ __('global.Delivery Information') }}</a></li>
                                         <li class="footer-links__item"><a href="/privacy-policy" class="footer-links__link">{{ __('global.Privacy Policy') }}</a></li>
-                                        <li class="footer-links__item"><a href="/brands" class="footer-links__link">{{ __('global.Brands') }}</a></li>
+                                        {{-- <li class="footer-links__item"><a href="/brands" class="footer-links__link">{{ __('global.Brands') }}</a></li> --}}
                                         <li class="footer-links__item"><a href="/contact-us" class="footer-links__link">{{ __('global.Contact Us') }}</a></li>
                                         <li class="footer-links__item"><a href="/returns" class="footer-links__link">{{ __('global.Returns') }}</a></li>
-                                        <li class="footer-links__item"><a href="/site-map" class="footer-links__link">{{ __('global.Site Map') }}</a></li>
+                                        {{-- <li class="footer-links__item"><a href="/site-map" class="footer-links__link">{{ __('global.Site Map') }}</a></li> --}}
                                     </ul>
                                 </div>
                             </div>
@@ -54,11 +54,11 @@
                                 <div class="site-footer__widget footer-links">
                                     <h5 class="footer-links__title">{{ __('global.My Account') }}</h5>
                                     <ul class="footer-links__list">
-                                        <li class="footer-links__item"><a href="/profile/order-history" class="footer-links__link">{{ __('global.Order History') }}</a></li>
+                                        <li class="footer-links__item"><a href="/account-orders" class="footer-links__link">{{ __('global.Order History') }}</a></li>
                                         <li class="footer-links__item"><a href="/wishlist" class="footer-links__link">{{ __('global.Wish List') }}</a></li>
-                                        <li class="footer-links__item"><a href="/profile/newsletter" class="footer-links__link">{{ __('global.Newsletter') }}</a></li>
-                                        <li class="footer-links__item"><a href="/profile/certificates" class="footer-links__link">{{ __('global.Certificates') }}</a></li>
-                                        <li class="footer-links__item"><a href="/profile/affiliate" class="footer-links__link">{{ __('global.Affiliate') }}</a></li>
+                                        {{-- <li class="footer-links__item"><a href="/newsletter" class="footer-links__link">{{ __('global.Newsletter') }}</a></li> --}}
+                                        <li class="footer-links__item"><a href="/certificates" class="footer-links__link">{{ __('global.Certificates') }}</a></li>
+                                        <li class="footer-links__item"><a href="/affiliate" class="footer-links__link">{{ __('global.Affiliate') }}</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -11,4 +11,9 @@ class ProfileController extends Controller
     {
     	return view('pages.profile.edit-profile');
     }
+
+    public function getLogin()
+    {
+    	return view('pages.profile.login');
+    }
 }

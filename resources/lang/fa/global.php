@@ -83,7 +83,7 @@ return [
     'Privacy Policy' => 'سیاست حفظ حریم خصوصی',
     'Brands' => 'برندها',
     'Brand' => 'برند',
-    'Returns' => 'بازگشت',
+    'Returns' => 'شرایط مرجوعی',
     'Site Map' => 'نقشه سایت',
     'Wish List' => 'لیست علاقه مندیها',
     'Newsletter' => 'خبرنامه',
@@ -208,8 +208,14 @@ return [
     'City' => 'شهر',
     'State' => 'منطقه', 
     'Postcode' => 'کد پستی',
-    'Set as my default address' => 'به عنوان آدرس ارسال تنظیم شود.'
-
+    'Set as my default address' => 'به عنوان آدرس ارسال تنظیم شود.',
+    'Terms And Conditions' => 'شرایط و ضوابط',
+    'Definitions' => 'تعاریف',
+    'Frequently Asked Questions' => 'سوالات متداول',
+    'Forgot password' => 'رمز عبور خود را فراموش کرده اید؟',
+    'Remember Me' => 'به خاطر بسپار',
+    'Repeat password' => 'تکرار رمزعبور',
+    'Register' => 'عضویت'
 
 
 
