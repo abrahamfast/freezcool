@@ -16,4 +16,9 @@ class ProfileController extends Controller
     {
     	return view('pages.profile.login');
     }
+
+    public function getRegister()
+    {
+    	return view('pages.profile.register');
+    }
 }

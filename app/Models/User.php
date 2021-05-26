@@ -11,14 +11,19 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $table = "account";
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
+        'id',
+        'phone',
         'name',
         'email',
+        'account_id',
         'password',
     ];
 
@@ -39,5 +44,28 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'id' => 'string',
+        'account_id' => 'string'
     ];
+
+    public $incrementing = false;
+
+    public function wishlist()
+    {
+        return $this->hasMany(Wishlist::class, 'user_frontend_id');
+    }
+
+    public function account()
+    {
+        return $this->hasOne(Account::class, 'id', 'account_id');
+    }
+
+    /**
+     * this related between quote, user & account tables.
+     * account_id is related key in both tables.
+     */
+    public function quote()
+    {
+        return $this->hasMany(Quote::class, 'account_id', 'account_id');
+    }
 }

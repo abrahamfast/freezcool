@@ -10,26 +10,17 @@
                                     <h3 class="card-title"></h3>
                                     <form method="POST" action="{{ route('login') }}">
                                     @csrf
+                                        @csrf
                                         <div class="form-group">
                                             <label for="signin-email">{{ __('global.Email address') }}</label>
                                             <input id="signin-email" type="email" class="form-control" placeholder="">
-                                                                            @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                                         </div>
                                         <div class="form-group">
                                             <label for="signin-password">{{ __('global.Password') }}</label>
-                                            <input name="password" id="signin-password" type="password" class="form-control" placeholder="">
+                                            <input id="signin-password" type="password" class="form-control" placeholder="">
                                             <small class="form-text text-muted">
                                                 <a href="">{{ __('global.Forgot password') }}</a>
                                             </small>
-                                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <div class="form-check">
