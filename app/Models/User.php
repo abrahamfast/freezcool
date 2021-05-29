@@ -11,6 +11,9 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'modified_at'; 
+
     protected $table = "account";
 
     /**

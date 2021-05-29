@@ -7,49 +7,42 @@
                         <div class="col-md-6 d-flex">
                             <div class="card flex-grow-1 mb-md-0 mr-0 mr-lg-3 ml-0 ml-lg-4">
                                 <div class="card-body card-body--padding--2">
-                                    <h3 class="card-title"></h3>
-                                    <form method="POST" action="{{ route('login') }}">
-                                    @csrf
-                                        <div class="form-group">
-                                            <label for="signin-email">{{ __('global.Email address') }}</label>
-                                            <input id="signin-email" type="email" class="form-control" placeholder="">
-                                                                            @error('email')
+                                    <h3 class="card-title">{{ __('global.Sign In') }}</h3>
+                                                      <form method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <div class="form-title">
+                            <h6></h6>
+                        </div>
+                        <div class="form-group pos_rel">
+                            <input id="phone[number]" name="email" type="text" placeholder="{{ __('global.Email address') }}" class="form-control lgn_input @error('email') is-invalid @enderror"  value="{{ old('email') }}" required="">
+                            <i class="uil uil-mobile-android-alt lgn_icon"></i>
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="signin-password">{{ __('global.Password') }}</label>
-                                            <input name="password" id="signin-password" type="password" class="form-control" placeholder="">
-                                            <small class="form-text text-muted">
-                                                <a href="">{{ __('global.Forgot password') }}</a>
-                                            </small>
-                                            @error('password')
+                        </div>
+                        <div class="form-group pos_rel">
+                            <input id="password1" name="password" type="password" placeholder="{{ __('global.Password') }}" class="form-control lgn_input" required="">
+                            <i class="uil uil-padlock lgn_icon"></i>
+                             @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="form-check">
-                                                <span class="input-check form-check-input">
-                                                    <span class="input-check__body">
-                                                        <input class="input-check__input" type="checkbox" id="signin-remember">
-                                                        <span class="input-check__box"></span>
-                                                        <span class="input-check__icon"><svg width="9px" height="7px">
-                                                                <path d="M9,1.395L3.46,7L0,3.5L1.383,2.095L3.46,4.2L7.617,0L9,1.395Z" />
-                                                            </svg>
-                                                        </span>
-                                                    </span>
-                                                </span>
-                                                <label class="form-check-label" for="signin-remember">{{ __('global.Remember Me') }}</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group mb-0">
-                                            <button type="submit" class="btn btn-primary mt-3">{{ __('global.Login') }}</button>
-                                        </div>
-                                    </form>
+                        </div>
+                        <div class="form-group pos_rel">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('global.Remember Me') }}
+                                    </label>
+                                </div>
+                        </div>
+
+                        <button class="btn btn-primary mt-3" type="submit">{{ __('global.Login') }}</button>
+                    </form>
                                 </div>
                             </div>
                         </div>

@@ -215,7 +215,9 @@ return [
     'Forgot password' => 'رمز عبور خود را فراموش کرده اید؟',
     'Remember Me' => 'به خاطر بسپار',
     'Repeat password' => 'تکرار رمزعبور',
-    'Register' => 'عضویت'
+    'Register' => 'عضویت',
+    'Sign In' => 'ورود به پنل کاربری',
+    'go to panel' => 'برای ورود کلیک کنید'
 
 
 

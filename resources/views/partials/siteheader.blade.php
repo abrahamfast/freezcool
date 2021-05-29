@@ -323,11 +323,17 @@
     C26,18.5,30,23.8,30,30h-2C28,23.4,22.6,18,16,18z M22,10c0-3.3-2.7-6-6-6s-6,2.7-6,6s2.7,6,6,6S22,13.3,22,10z" />
                                 </svg>
                             </span>
-                            <span class="indicator__title">{{ __('global.Hello') }}, {{ __('global.jeff') }}</span>
-                            <span class="indicator__value">{{ __('global.My Account') }}</span>
+                            @auth
+                                <span class="indicator__title">{{ __('global.Hello') }}, {{ auth()->name }}</span>
+                            @endauth
+                            @guest
+                                <span class="indicator__title">{{ __('global.go to panel') }}</span>
+                                <span class="indicator__value">{{ __('global.My Account') }}</span>
+                            @endguest
                         </a>
                         <div class="indicator__content">
                             <div class="account-menu">
+                                @guest
                                 <form class="account-menu__form">
                                     <div class="account-menu__form-title">
                                         {{ __('global.Log In to Your Account') }}
@@ -347,9 +353,11 @@
                                         <button type="submit" class="btn btn-primary btn-sm">{{ __('global.Login') }}</button>
                                     </div>
                                     <div class="account-menu__form-link">
-                                        <a href="/account-login">{{ __('global.Create An Account') }}</a>
+                                        <a href="/register">{{ __('global.Create An Account') }}</a>
                                     </div>
                                 </form>
+                                @endguest
+                                @auth
                                 <div class="account-menu__divider"></div>
                                 <a href="" class="account-menu__user">
                                     <div class="account-menu__user-avatar">
@@ -372,7 +380,9 @@
                                 <ul class="account-menu__links">
                                     <li><a href="account-login">{{ __('global.Logout') }}</a></li>
                                 </ul>
+                                @endguest
                             </div>
+
                         </div>
                     </div>
                     <div class="indicator indicator--trigger--click">
