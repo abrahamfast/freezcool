@@ -217,7 +217,8 @@ return [
     'Repeat password' => 'تکرار رمزعبور',
     'Register' => 'عضویت',
     'Sign In' => 'ورود به پنل کاربری',
-    'go to panel' => 'برای ورود کلیک کنید'
+    'go to panel' => 'برای ورود کلیک کنید',
+    'full name' => 'نام کامل',
 
 
 

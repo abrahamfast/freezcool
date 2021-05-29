@@ -324,7 +324,8 @@
                                 </svg>
                             </span>
                             @auth
-                                <span class="indicator__title">{{ __('global.Hello') }}, {{ auth()->name }}</span>
+                                <span class="indicator__title">{{ __('global.Hello') }}, {{ Auth::user()->name }}</span>
+                                <span class="indicator__value">{{ __('global.My Account') }}</span>
                             @endauth
                             @guest
                                 <span class="indicator__title">{{ __('global.go to panel') }}</span>
@@ -364,8 +365,8 @@
                                         <img src="/images/avatars/avatar-4.jpg" alt="">
                                     </div>
                                     <div class="account-menu__user-info">
-                                        <div class="account-menu__user-name">{{ __('global.jeff') }}</div>
-                                        <div class="account-menu__user-email">mahyar@gmail.com</div>
+                                        <div class="account-menu__user-name">{{ Auth::user()->name }}</div>
+                                        <div class="account-menu__user-email">{{ Auth::user()->email }}</div>
                                     </div>
                                 </a>
                                 <div class="account-menu__divider"></div>
