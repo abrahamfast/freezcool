@@ -25,6 +25,12 @@ class ProfileController extends Controller
         $user = $reqeust->user();
         $user->email = $reqeust->get('email');
         $user->name = $reqeust->get('name');
+        $user->phone = $reqeust->get('phone');
+        $user->shipping_address_country = $reqeust->get('shipping_address_country');
+        $user->shipping_address_city = $reqeust->get('shipping_address_city');
+        $user->shipping_address_state = $reqeust->get('shipping_address_state');
+        $user->shipping_address_street = $reqeust->get('shipping_address_street');
+        $user->shipping_address_postal_code = $reqeust->get('shipping_address_postal_code');
         $user->save();
         
         return redirect()->back();

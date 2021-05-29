@@ -28,6 +28,11 @@ class User extends Authenticatable
         'email',
         'account_id',
         'password',
+        'shipping_address_street',
+        'shipping_address_city',
+        'shipping_address_state',
+        'shipping_address_country',
+        'shipping_address_postal_code'
     ];
 
     /**

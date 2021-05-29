@@ -220,6 +220,12 @@ return [
     'Sign In' => 'ورود به پنل کاربری',
     'go to panel' => 'برای ورود کلیک کنید',
     'full name' => 'نام کامل',
+    'not set' => 'تنظیم نشده',
+    'shipping_address_street' => 'خیابان',
+    'shipping_address_city' => 'شهر',
+    'shipping_address_state' => 'منطقه',
+    'shipping_address_country' => 'کشور',
+    'shipping_address_postal_code' => 'کد پستی',
 
 
 

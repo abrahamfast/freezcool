@@ -16,21 +16,23 @@
     <div class="dashboard__address card address-card address-card--featured">
         <div class="address-card__badge tag-badge tag-badge--theme">{{ __('global.Address Default') }}</div>
         <div class="address-card__body">
-            <div class="address-card__name">محیا رضایی</div>
+            <div class="address-card__name">{{ $user->name }}</div>
             <div class="address-card__row">
                 <div class="address-card__row-title">{{ __('global.Your Address')}}</div>
-                <div class="address-card__row-content">                ایران<br>
-                ۱۰۲۰, تهران<br>
-                دولت آباد فلکه اول پلاک ۱۰
+                <div class="address-card__row-content">
+                    {{ $user->shipping_address_country  }}<br>
+                    {{ $user->shipping_address_city }}<br>
+                    {{ $user->shipping_address_state }}<br>
+                    {{ $user->shipping_address_street }}<br>
                 </div>
             </div>
             <div class="address-card__row">
                 <div class="address-card__row-title">{{ __('global.Phone Number')}}</div>
-                <div class="address-card__row-content">09032324184</div>
+                <div class="address-card__row-content">{{ $user->phone ?? __('global.not set') }}</div>
             </div>
             <div class="address-card__row">
                 <div class="address-card__row-title">{{ __('global.Email Address')}}</div>
-                <div class="address-card__row-content">mahya@gmail.com</div>
+                <div class="address-card__row-content">{{ $user->email }}</div>
             </div>
             <div class="address-card__footer">
                 <a href="">{{ __('global.Edit Address') }}</a>
