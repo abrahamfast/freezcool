@@ -35,7 +35,7 @@
                 <div class="address-card__row-content">{{ $user->email }}</div>
             </div>
             <div class="address-card__footer">
-                <a href="">{{ __('global.Edit Address') }}</a>
+                <a href="/account-profile">{{ __('global.Edit Profile') }}</a>
             </div>
         </div>
     </div>
