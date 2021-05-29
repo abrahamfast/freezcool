@@ -123,7 +123,7 @@
 	c0,1.9-0.9,3.6-2.3,4.7C17.4,12.2,20,15.8,20,20z M14,6c0-2.2-1.8-4-4-4S6,3.8,6,6s1.8,4,4,4S14,8.2,14,6z" />
                                 </svg>
                             </span>
-                            <span class="mobile-menu__indicator-title">{{ __('global.Account') }}</span>
+                            <span class="mobile-menu__indicator-title">{{ __('global.Dashboard') }}</span>
                         </a>
                         <a class="mobile-menu__indicator" href="/cart">
                             <span class="mobile-menu__indicator-icon">

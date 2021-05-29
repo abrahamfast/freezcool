@@ -216,6 +216,7 @@ return [
     'Remember Me' => 'به خاطر بسپار',
     'Repeat password' => 'تکرار رمزعبور',
     'Register' => 'عضویت',
+    'Register new' => 'ثبت نام جدید',
     'Sign In' => 'ورود به پنل کاربری',
     'go to panel' => 'برای ورود کلیک کنید',
     'full name' => 'نام کامل',
