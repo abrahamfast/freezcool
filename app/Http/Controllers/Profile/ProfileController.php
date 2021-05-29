@@ -7,18 +7,26 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
-    	return view('pages.profile.edit-profile');
+        $user = $request->user();
+    	return view('pages.profile.edit-profile', [
+            'user' => $user
+        ]);
     }
 
-    public function getLogin()
+    public function store(Request $reqeust)
     {
-    	return view('pages.profile.login');
-    }
+        $reqeust->validate([
+            'name' => 'required',
+            'email' => 'required',
+        ]);
 
-    public function getRegister()
-    {
-    	return view('pages.profile.register');
+        $user = $reqeust->user();
+        $user->email = $reqeust->get('email');
+        $user->name = $reqeust->get('name');
+        $user->save();
+        
+        return redirect()->back();
     }
 }

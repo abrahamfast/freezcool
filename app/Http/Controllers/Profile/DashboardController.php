@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-    	return view('pages.profile.dashboard');
+    	$user = $request->user();
+
+    	return view('pages.profile.dashboard', [
+    		'user' => $user
+    	]);
     }
 }

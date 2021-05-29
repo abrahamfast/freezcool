@@ -33,15 +33,15 @@ Route::get('/track-order', [TrackOrderController::class, 'index'])->name('order.
 Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wishlist');
 Route::get('/cart', [CardController::class, 'index'])->name('cart');
 
-Route::get('/account-register', [ProfileController::class, 'getLogin']);
-Route::get('/account-login', [ProfileController::class, 'getLogin']);
-Route::get('/account-adviser', [AdviserController::class, 'index']);
-Route::get('/account-dashboard', [DashboardController::class, 'index']);
-Route::get('/account-profile', [ProfileController::class, 'show']);
-Route::get('/account-orders', [OrderController::class, 'index']);
-Route::get('/account-order-details', [OrderController::class, 'show']);
-Route::get('/account-addresses', [AddressController::class, 'index']);
-Route::get('/account-edit-address', [AddressController::class, 'create']);
-
+Route::middleware(['auth'])->group(function () {
+	Route::get('/account-adviser', [AdviserController::class, 'index']);
+	Route::get('/account-dashboard', [DashboardController::class, 'index']);
+	Route::get('/account-profile', [ProfileController::class, 'show']);
+	Route::post('/account-profile', [ProfileController::class, 'store'])->name('profile.save');
+	Route::get('/account-orders', [OrderController::class, 'index']);
+	Route::get('/account-order-details', [OrderController::class, 'show']);
+	Route::get('/account-addresses', [AddressController::class, 'index']);
+	Route::get('/account-edit-address', [AddressController::class, 'create']);
+});
 
 Auth::routes();

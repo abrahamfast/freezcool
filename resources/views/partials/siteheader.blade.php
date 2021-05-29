@@ -335,18 +335,26 @@
                         <div class="indicator__content">
                             <div class="account-menu">
                                 @guest
-                                <form class="account-menu__form">
+                                    <form class="account-menu__form" method="POST" action="{{ route('login') }}">
+                        @csrf
                                     <div class="account-menu__form-title">
                                         {{ __('global.Log In to Your Account') }}
                                     </div>
                                     <div class="form-group">
                                         <label for="header-signin-email" class="sr-only">{{ __('global.Email address') }}</label>
-                                        <input id="header-signin-email" type="email" class="form-control form-control-sm" placeholder="{{ __('global.Email address') }}">
+                                          <div class="account-menu__form-forgot">
+                                          <input id="phone[number]" name="email" type="text" placeholder="{{ __('global.Email address') }}" class="form-control lgn_input @error('email') is-invalid @enderror"  value="{{ old('email') }}" required="">
+                                                                          @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                      </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="header-signin-password" class="sr-only">{{ __('global.Password') }}</label>
                                         <div class="account-menu__form-forgot">
-                                            <input id="header-signin-password" type="password" class="form-control form-control-sm" placeholder="{{ __('global.Password') }}">
+                                          <input id="password1" name="password" type="password" placeholder="{{ __('global.Password') }}" class="form-control lgn_input" required="">
                                             <a href="" class="account-menu__form-forgot-link">{{ __('global.Forgot') }}</a>
                                         </div>
                                     </div>
@@ -379,7 +387,17 @@
                                 </ul>
                                 <div class="account-menu__divider"></div>
                                 <ul class="account-menu__links">
-                                    <li><a href="account-login">{{ __('global.Logout') }}</a></li>
+                                    <li>
+                                        <a href="logout" 
+                                            class="item channel_item" 
+                                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                            {{ __('global.Logout') }}
+                                            <i class="uil uil-lock-alt icon__1"></i>
+                                        </a>
+                                    </li>
+                                    <form id="logout-form" action="/logout" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                                 </ul>
                                 @endguest
                             </div>

@@ -6,8 +6,8 @@
             <div class="profile-card__avatar">
                 <img src="/images/avatars/avatar-4.jpg" alt="">
             </div>
-            <div class="profile-card__name">pelkio</div>
-            <div class="profile-card__email">pelkio@gmail.com</div>
+            <div class="profile-card__name">{{ $user->name }}</div>
+            <div class="profile-card__email">{{ $user->email }}</div>
             <div class="profile-card__edit">
                 <a href="account-profile" class="btn btn-secondary btn-sm">{{ __('global.Edit Profile') }}</a>
             </div>
