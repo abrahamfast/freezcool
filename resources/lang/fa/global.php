@@ -226,6 +226,7 @@ return [
     'shipping_address_state' => 'منطقه',
     'shipping_address_country' => 'کشور',
     'shipping_address_postal_code' => 'کد پستی',
+    'advisor' => 'پنل مشاور',
 
 
 
