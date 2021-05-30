@@ -4,7 +4,7 @@
                 <div class="header__topbar-classic-bg"></div>
                 <div class="header__topbar-classic">
                     <div class="topbar topbar--classic">
-                        <div class="topbar__item-text"><a class="topbar__link" href="/https://crm.freezcool.stage.pelk.io">{{ __('global.advisor') }}</a></div>
+                        <div class="topbar__item-text"><a class="topbar__link" target="_blank" href="/https://crm.freezcool.stage.pelk.io">{{ __('global.advisor') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/about-us">{{ __('global.About Us') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/contact-us">{{ __('global.Contacts') }}</a></div>
                         <div class="topbar__item-text"><a class="topbar__link" href="/track-order">{{ __('global.Track Order') }}</a></div>
