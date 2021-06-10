@@ -11,4 +11,9 @@ class WishListController extends Controller
     {
     	return view('pages.profile.wishlist');
     }
+
+    public function store($id)
+    {
+        return redirect()->back();
+    }
 }

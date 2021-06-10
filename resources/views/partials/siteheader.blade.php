@@ -13,7 +13,7 @@
                         <div class="topbar__item-button">
                             <a href="/compare" class="topbar__button">
                                 <span class="topbar__button-label">{{ __('global.Compare') }} : </span>
-                                <span class="topbar__button-title">۵ مورد</span>
+                                <span class="topbar__button-title">{{ session()->get('compare') ? count(session()->get('compare')) : "۰" }} مورد</span>
                             </a>
                         </div>
                         <div class="topbar__item-button topbar__menu">

@@ -99,14 +99,10 @@
                 </div>
                 <div class="products-list__content">
 
-                    <livewire:product.cart />
-                    <livewire:product.cart />
-                    <livewire:product.cart />
-                    <livewire:product.cart />
-                    <livewire:product.cart />
-                    <livewire:product.cart />
-                    <livewire:product.cart />
-                    <livewire:product.cart />
+
+                @foreach($products as $product)
+                    <livewire:product.cart :product="$product"  />
+                @endforeach
 
 
                 </div>

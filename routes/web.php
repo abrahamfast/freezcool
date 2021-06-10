@@ -26,12 +26,17 @@ Route::get('/blog', [WeblogController::class, 'index'])->name('blog');
 Route::get('/blog/single', [WeblogController::class, 'show'])->name('blog.show');
 Route::get('/shop-list', [ProductController::class, 'index'])->name('shop-list');
 Route::get('/product/single', [ProductController::class, 'show'])->name('product');
-Route::get('/compare', [CompareController::class, 'index'])->name('compare');
 Route::get('/btu/calculator', [CalculatorController::class, 'index'])->name('calculator');
 Route::get('/btu/calculator/result', [CalculatorController::class, 'show'])->name('calculator.result');
 Route::get('/track-order', [TrackOrderController::class, 'index'])->name('order.track');
 Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wishlist');
 Route::get('/cart', [CardController::class, 'index'])->name('cart');
+
+
+Route::get('/compare', [CompareController::class, 'index'])->name('compare');
+Route::get('/compare/{id}', [CompareController::class, 'add'])->name('compare.add');
+
+
 
 Route::middleware(['auth'])->group(function () {
 	Route::get('/account-adviser', [AdviserController::class, 'index']);
@@ -42,6 +47,10 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/account-order-details', [OrderController::class, 'show']);
 	Route::get('/account-addresses', [AddressController::class, 'index']);
 	Route::get('/account-edit-address', [AddressController::class, 'create']);
+
+	Route::get('/account-wishlist/{id}', [
+		WishListController::class, 'link'
+	])->name('wishlist.link');
 });
 
 Auth::routes();

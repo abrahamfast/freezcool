@@ -227,6 +227,7 @@ return [
     'shipping_address_country' => 'کشور',
     'shipping_address_postal_code' => 'کد پستی',
     'advisor' => 'پنل مشاور',
+    'not found' => 'موردی یافت نشد',
 
 
 
