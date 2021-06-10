@@ -4,14 +4,14 @@
     <th class="compare-table__column compare-table__column--header">{{ __('global.product') }}</th>
     @foreach($products as $product)
     <td class="compare-table__column compare-table__column--product">
-        <a href="/product/single" class="compare-table__product">
+        <a href="{{ route('product.show', $product->id) }}" class="compare-table__product">
             <div class="compare-table__product-image image image--type--product">
                 <div class="image__body">
                     <img class="image__tag" src="/images/products/product-1-150x150.jpg" alt="">
                 </div>
             </div>
             <div class="compare-table__product-name">
-                سردخانه کانکسی
+                {{ $product->name }}
             </div>
         </a>
     </td>

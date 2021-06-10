@@ -18,16 +18,22 @@ class CompareController extends Controller
 
     public function add($id)
     {
-
         $list = session()->get('compare');
+        session()->forget('compare');
+
+        if($list == null) {
+            unset($list);
+            $list[] = Product::find($id);
+            session()->put('compare', $list);
+            return redirect()->back();
+        }
 
         if ($list && count($list) <= 5) {
             foreach ($list as $item) {
-                if($item->id != $id) $list[] = Product::find($id);
+                $keys[] = $item->id;
             }
-            session()->put('compare', $list);
-        } else {
-            $list[] = Product::find($id);  
+
+            if(!in_array($id, $keys)) $list[] = Product::find($id);
             session()->put('compare', $list);
         }
         
