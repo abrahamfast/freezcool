@@ -14,6 +14,7 @@ class WishListController extends Controller
 
     public function store($id)
     {
+        // @TODO added whishlist
         return redirect()->back();
     }
 }

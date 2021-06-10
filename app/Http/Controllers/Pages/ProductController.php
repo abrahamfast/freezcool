@@ -8,9 +8,11 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index($id = null)
     {
-        return view('pages.shop-list');
+        return view('pages.shop-list', [
+            'id' => $id
+        ]);
     }
 
     public function show($id = null)

@@ -15,7 +15,11 @@ class ProductCategories extends Model
 
     protected $casts = [
     	'id' => 'string',
-    	'cover_id' => 'string',
-    	'parent_id' => ''
+    	'parent_id' => 'string'
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'category_id');
+    }
 }
