@@ -11,7 +11,7 @@ class ProductController extends Controller
     public function index($id = null)
     {
         return view('pages.shop-list', [
-            'id' => $id
+            'categoryId' => $id
         ]);
     }
 

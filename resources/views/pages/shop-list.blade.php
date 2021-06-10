@@ -6,7 +6,7 @@
         <div class="container">
             <div class="block-split__row row no-gutters">
                 <livewire:product.sidebar />
-                <livewire:product.lists :id="$id" />
+                <livewire:product.lists :cate="$categoryId" />
             </div>
         </div>
     </div>

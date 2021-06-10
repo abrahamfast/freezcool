@@ -8,16 +8,20 @@ use App\Models\{Product,ProductCategories};
 class Lists extends Component
 {
     public $products;
-    public $id;
     public $category;
+    public $cate;
 
     public function mount()
     {
-        if($this->id){
-            $category = ProductCategories::find($this->id);
+        // get product by cat
+        if($this->cate){
+            $category = ProductCategories::find($this->cate);
             $this->products = $category->products;
             $this->category = $category;
+            return true;
         }
+
+        // get all product has available
         $this->products = Product::where([
             'deleted' => 0,
             'status' => 'Available'
