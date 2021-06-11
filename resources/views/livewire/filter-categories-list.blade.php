@@ -14,7 +14,7 @@
                 <ul class="filter-categories__list">
                     @foreach($cates as $cat)
                     <li class="filter-categories__item filter-categories__item--current">
-                        <a href="">{{ $cat->name }}</a>
+                        <a href="{{ route('category.list', $cat->id) }}">{{ $cat->name }}</a>
                         <div class="filter-categories__counter">{{ $cat->products()->count() }}</div>
                     </li>
                     @endforeach
