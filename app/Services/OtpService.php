@@ -7,6 +7,8 @@ use Cache;
 use Kavenegar\Exceptions\ApiException;
 use Kavenegar\Exceptions\HttpException;
 use Kavenegar\KavenegarApi;
+use App\Models\Otp;
+use App\Helper\Stri;
 
 
 /**
@@ -44,6 +46,12 @@ class OtpService
     {
         try {
             $token = $this->code->setCacheKey($this->getReceptor())->generate();
+
+            Otp::create([
+                'id' => Stri::uuid(),
+                'name' => $token,
+                'phone_number' => $this->getReceptor()
+            ]);
 
             return $this->client->VerifyLookup(
                 $this->getReceptor(),
