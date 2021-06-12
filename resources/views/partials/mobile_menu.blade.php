@@ -154,11 +154,20 @@
                     </div>
                     <div class="mobile-menu__divider"></div>
                     <ul class="mobile-menu__links">
-                        <li data-mobile-menu-item>
-                            <a href="https://crm.freezcool.stage.pelk.io" class="" target="_blank" data-mobile-menu-trigger>
-                                {{ __('global.advisor') }}
-                            </a>
-                        </li>
+                        
+                            @guest
+                                <li data-mobile-menu-item>
+                                    <a href="/login" class="" data-mobile-menu-trigger>
+                                        {{ __('global.user panel') }}
+                                    </a>
+                                </li>
+                                <li data-mobile-menu-item>
+                                    <a href="/register" class="" data-mobile-menu-trigger>
+                                        {{ __('global.Register') }}
+                                    </a>
+                                </li>
+                            @endguest
+                        
                         <li data-mobile-menu-item>
                             <a href="/" class="@if(url()->current() == '/') highlight @endif" data-mobile-menu-trigger>
                                 {{ __('global.Home') }}
