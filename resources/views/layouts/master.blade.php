@@ -43,6 +43,7 @@
     <script src="/vendor/select2/js/select2.min.js"></script>
     <script src="/js/number.js"></script>
     <script src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
 
     @livewireScripts
 </body>
