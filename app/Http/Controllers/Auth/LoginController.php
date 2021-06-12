@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Services\OtpService;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -42,15 +43,20 @@ class LoginController extends Controller
         $this->validateLogin($request);
         // send otp
         $receptor = $request->get('phone');
-        $reciver = 'otp:' . $receptor;
+        $user = User::where('phone', $receptor)->first();
+        // user has not registered force to register
+        if(!$user) {
+            return redirect()->route('register');
+        }
+        $reciver = 'otp:phone';
         if($request->session()->get($reciver)) {
             return view('auth.otp');
         }
 
         $this->otpService->setReceptor($receptor);
-        // $this->otpService->send();
+        $this->otpService->send();
         // @TODO need improve by expireation key
-        session()->put($reciver, true);
+        session()->put($reciver, $receptor);
         
         // just one time
         return view('auth.otp');
@@ -59,8 +65,13 @@ class LoginController extends Controller
 
     public function doLogin(Request $request)
     {
-        // dd($request->session()->all(), $request->all(), $this->otpService->verifyOtp("09129796502", $request->get('phone')));
-        $this->validateLogin($request);
+        // dd($request->session()->all(), $request->all());
+        $request->validate([
+            'code' => 'required'
+        ]);
+        $phone = $request->session()->get('otp:phone');
+
+        $verify = $this->otpService->verifyOtp($phone, $request->get('code'));
 
 
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
@@ -70,7 +81,9 @@ class LoginController extends Controller
             return $this->sendLockoutResponse($request);
         }
 
-        if ($this->attemptLogin($request)) {
+        if ($verify) {
+            $user = User::where('phone', $phone)->first();
+            auth()->login($user);
             return $this->sendLoginResponse($request);
         }
 

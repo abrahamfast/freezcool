@@ -231,8 +231,12 @@ return [
 
 
     'phoneNumber' => 'شماره همراه',
-    'phoneNumber enter' => 'شماوه همراه خود را وارد کنید',
+    'phoneNumber enter' => 'شماره همراه خود را وارد کنید',
     'advisor code' => 'کد مشاور',
+    'Enter Otp Code' => 'کد پیامک شده را وارد کنید',
+    'code uniqie' => 'کد یکبار مصرف را وارد کنید',
+    'Enter Otp Code detail' => 'کد از طریق پیامک به شماره همراه شما ارسال شده است.',
+    'verify code' => 'بررسی و ورود'
 
 
 

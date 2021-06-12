@@ -53,12 +53,12 @@ class OtpService
                 'phone_number' => $this->getReceptor()
             ]);
 
-            return $this->client->VerifyLookup(
-                $this->getReceptor(),
-                $token,"","",
-                $this->getPattern(),
-                $this->getChannel()
-            );
+            // return $this->client->VerifyLookup(
+            //     $this->getReceptor(),
+            //     $token,"","",
+            //     $this->getPattern(),
+            //     $this->getChannel()
+            // );
         } catch (ApiException | HttpException $e) {
             return $e->errorMessage();
         }
