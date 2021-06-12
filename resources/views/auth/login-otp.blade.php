@@ -14,7 +14,7 @@
                                             <h6></h6>
                                         </div>
                                         <div class="form-group pos_rel">
-                                            <input id="phone[number]" name="phone" type="number" placeholder="{{ __('global.Email address') }}" class="form-control lgn_input @error('phone') is-invalid @enderror"  value="{{ old('phone') }}" required="">
+                                            <input id="phone[number]" name="phone" type="number" placeholder="{{ __('global.phoneNumber enter') }}" class="form-control lgn_input @error('phone') is-invalid @enderror"  value="{{ old('phone') }}" required="">
                                             <i class="uil uil-mobile-android-alt lgn_icon"></i>
                                                 @error('phone')
                                                     <span class="invalid-feedback" role="alert">
@@ -22,33 +22,12 @@
                                                     </span>
                                                 @enderror
                                         </div>
-                                        <div class="form-group pos_rel">
-                                            <input id="password1" name="password" type="password" placeholder="{{ __('global.Password') }}" class="form-control lgn_input" required="">
-                                            <i class="uil uil-padlock lgn_icon"></i>
-                                             @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="form-group pos_rel">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                                    <label class="form-check-label" for="remember">
-                                                        {{ __('global.Remember Me') }}
-                                                    </label>
-                                                </div>
-                                        </div>
 
                                         <button class="btn btn-primary mt-3" type="submit">{{ __('global.Login') }}</button>
                                         <a href="/register" class="btn btn-success mt-3">{{ __('global.Register new') }}</a>
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            
                         </div>
                     </div>
                 </div>

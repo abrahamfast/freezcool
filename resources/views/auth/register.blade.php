@@ -21,9 +21,9 @@
                                 @enderror
                             </div>
                              <div class="form-group">
-                                <label for="signup-email">{{ __('global.Email address') }}</label>
-                                <input name="email" required id="signup-email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="">
-                                @error('email')
+                                <label for="signup-phoneNumber">{{ __('global.phoneNumber') }}</label>
+                                <input name="phoneNumber" required id="signup-phoneNumber" value="{{ old('phoneNumber') }}" type="number" class="form-control @error('phoneNumber') is-invalid @enderror" placeholder="">
+                                @error('phoneNumber')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

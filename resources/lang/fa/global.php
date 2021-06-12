@@ -230,6 +230,9 @@ return [
     'not found' => 'موردی یافت نشد',
 
 
+    'phoneNumber' => 'شماره همراه',
+    'phoneNumber enter' => 'شماوه همراه خود را وارد کنید',
+    'advisor code' => 'کد مشاور',
 
 
 

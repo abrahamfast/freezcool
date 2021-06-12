@@ -56,3 +56,4 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Auth::routes();
+Route::post('dologin', 'App\Http\Controllers\Auth\LoginController@dologin')->name('doLogin');
