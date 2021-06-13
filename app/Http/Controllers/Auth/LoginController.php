@@ -56,7 +56,7 @@ class LoginController extends Controller
         $this->otpService->setReceptor($receptor);
         $this->otpService->send();
         // @TODO need improve by expireation key
-        session()->put($reciver, $receptor);
+        session()->put($reciver, $receptor, 120);
         
         // just one time
         return redirect()->route('otp');
@@ -70,7 +70,6 @@ class LoginController extends Controller
 
     public function doLogin(Request $request)
     {
-        // dd($request->session()->all(), $request->all());
         $request->validate([
             'code' => 'required'
         ]);

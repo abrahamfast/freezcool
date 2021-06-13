@@ -236,22 +236,15 @@
                                         {{ __('global.Log In to Your Account') }}
                                     </div>
                                     <div class="form-group">
-                                        <label for="header-signin-email" class="sr-only">{{ __('global.Email address') }}</label>
+                                        <label for="header-signin-phone" class="sr-only">{{ __('global.phoneNumber enter') }}</label>
                                           <div class="account-menu__form-forgot">
-                                          <input id="phone[number]" name="email" type="text" placeholder="{{ __('global.Email address') }}" class="form-control lgn_input @error('email') is-invalid @enderror"  value="{{ old('email') }}" required="">
-                                                                          @error('email')
+                                          <input id="phone[number]" name="phone" type="text" placeholder="{{ __('global.phoneNumber enter') }}" class="form-control lgn_input @error('phone') is-invalid @enderror"  value="{{ old('phone') }}" required="">
+                                                                          @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                       </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="header-signin-password" class="sr-only">{{ __('global.Password') }}</label>
-                                        <div class="account-menu__form-forgot">
-                                          <input id="password1" name="password" type="password" placeholder="{{ __('global.Password') }}" class="form-control lgn_input" required="">
-                                            <a href="" class="account-menu__form-forgot-link">{{ __('global.Forgot') }}</a>
-                                        </div>
                                     </div>
                                     <div class="form-group account-menu__form-button">
                                         <button type="submit" class="btn btn-primary btn-sm">{{ __('global.Login') }}</button>
