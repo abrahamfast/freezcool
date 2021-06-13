@@ -62,9 +62,14 @@ class LoginController extends Controller
         return redirect()->route('otp');
     }
 
-    public function otp()
+    public function otp(Request $request)
     {
-        return view('auth.otp');
+        $phone = $request->session()->get('otp:phone');
+        if($phone){
+            return view('auth.otp');
+        }
+        
+        return redirect()->to('/login');
     }
 
 
