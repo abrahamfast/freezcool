@@ -50,7 +50,7 @@ class LoginController extends Controller
         }
         $reciver = 'otp:phone';
         if($request->session()->get($reciver)) {
-            return view('auth.otp');
+            return redirect()->route('otp');
         }
 
         $this->otpService->setReceptor($receptor);
@@ -59,6 +59,11 @@ class LoginController extends Controller
         session()->put($reciver, $receptor);
         
         // just one time
+        return redirect()->route('otp');
+    }
+
+    public function otp()
+    {
         return view('auth.otp');
     }
 
