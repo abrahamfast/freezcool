@@ -22,6 +22,7 @@ class OtpService
     private   $sender;
     protected $channel = 'sms';
     protected $pattern;
+    protected $isDeveloperMode;
 
 
     /**
@@ -35,6 +36,7 @@ class OtpService
         $this->setSender($config['sender']);
         $this->setPattern($config['pattern']);
         $this->code = $codeGenerator;
+        $this->isDeveloperMode = $config['isDeveloperMode'];
     }
 
     /**
@@ -53,12 +55,15 @@ class OtpService
                 'phone_number' => $this->getReceptor()
             ]);
 
-            // return $this->client->VerifyLookup(
-            //     $this->getReceptor(),
-            //     $token,"","",
-            //     $this->getPattern(),
-            //     $this->getChannel()
-            // );
+            if($this->isDeveloperMode) return true;
+
+            return $this->client->VerifyLookup(
+                $this->getReceptor(),
+                $token,"","",
+                $this->getPattern(),
+                $this->getChannel()
+            );
+            
         } catch (ApiException | HttpException $e) {
             return $e->errorMessage();
         }
