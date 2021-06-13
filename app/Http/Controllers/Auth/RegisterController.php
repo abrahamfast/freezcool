@@ -6,9 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Helper\Stri;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
+use App\Services\OtpService;
 
 class RegisterController extends Controller
 {
@@ -25,6 +28,8 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+    private otpService $otpService;
+
     /**
      * Where to redirect users after registration.
      *
@@ -37,9 +42,10 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(OtpService $otpService)
     {
         $this->middleware('guest');
+        $this->otpService = $otpService;
     }
 
     /**
@@ -52,7 +58,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'phoneNumber' => ['required', 'string', 'max:255', 'unique:account'],
+            'phoneNumber' => ['required', 'string', 'max:255', 'unique:account,phone'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -73,7 +79,32 @@ class RegisterController extends Controller
         ]);
     }
 
-        /**
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        // $this->guard()->login($user);
+
+        if ($response = $this->registered($request, $user)) {
+            return $response;
+        }
+
+        return $request->wantsJson()
+                    ? new JsonResponse([], 201)
+                    : redirect($this->redirectPath());
+    }
+
+
+
+    /**
      * The user has been registered.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -82,7 +113,17 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-        // send otp
-        // redirect to verify code
+        $reciver = 'otp:phone';
+        if($request->session()->get($reciver)) {
+            return view('auth.otp');
+        }
+
+        $this->otpService->setReceptor($user->phone);
+        $this->otpService->send();
+        // @TODO need improve by expireation key
+        session()->put($reciver, $user->phone);
+        
+        // just one time
+        return view('auth.otp');
     }
 }

@@ -66,27 +66,29 @@
                                         {{ __('global.Home') }}
                                     </a>
                                 </li>
-
-{{--                                 <li class="main-menu__item">
-                                    <a href="/contact-us" class="main-menu__link" target="_blank">
-                                        {{ __('global.Contacts') }}
+                                 <li class="main-menu__item">
+                                    <a href="/btu/calculator" class="main-menu__link">
+                                        {{ __('global.calculator') }}
                                     </a>
                                 </li>
-                                <li class="main-menu__item">
-                                    <a href="/about-us" class="main-menu__link" target="_blank">
-                                        {{ __('global.About Us') }}
-                                    </a>
-                                </li> --}}
+                                @guest
+                                    <li class="main-menu__item">
+                                        <a href="/login" class="main-menu__link">
+                                            {{ __('global.Login') }}
+                                        </a>
+                                    </li>
+                                    <li class="main-menu__item">
+                                        <a href="/register" class="main-menu__link">
+                                            {{ __('global.Register') }}
+                                        </a>
+                                    </li>
+                                @endguest
 {{--                                <li class="main-menu__item">--}}
 {{--                                    <a href="/" class="main-menu__link" target="_blank">--}}
 {{--                                        {{ __('global.packages') }}--}}
 {{--                                    </a>--}}
 {{--                                </li>--}}
-                                <li class="main-menu__item">
-                                    <a href="/btu/calculator" class="main-menu__link" target="_blank">
-                                        {{ __('global.calculator') }}
-                                    </a>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
