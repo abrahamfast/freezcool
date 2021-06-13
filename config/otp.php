@@ -7,5 +7,5 @@ return [
     'otp_cache_key' => env('OTP_CACHE'),
     'pattern' => env('OTP_PATTERN'),
     'store' => true,
-    'isDeveloperMode' => end('OTP_DEVELOPER_MODE')
+    'isDeveloperMode' => env('OTP_DEVELOPER_MODE')
 ];
