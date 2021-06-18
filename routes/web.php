@@ -42,7 +42,7 @@ Route::get('/compare/{id}', [CompareController::class, 'add'])->name('compare.ad
 
 Route::middleware(['auth'])->group(function () {
 	Route::get('/account-adviser', [AdviserController::class, 'index']);
-	Route::get('/account-dashboard', [DashboardController::class, 'index']);
+	Route::get('/account-dashboard', [DashboardController::class, 'index'])->name('dashboard');
 	Route::get('/account-profile', [ProfileController::class, 'show']);
 	Route::post('/account-profile', [ProfileController::class, 'store'])->name('profile.save');
 	Route::get('/account-orders', [OrderController::class, 'index']);

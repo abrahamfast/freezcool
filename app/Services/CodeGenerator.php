@@ -23,9 +23,10 @@ class CodeGenerator
     {
         $code = rand($this->getStart(), $this->getEnd());
         // save to cache
+        $cache_key = $this->getCachePrefix() . "-" . $this->getCacheKey();
         try {
             Cache::put(
-                $this->getCachePrefix() . "-" . $this->getCacheKey(),
+                $cache_key,
                 $code,
                 320
             );

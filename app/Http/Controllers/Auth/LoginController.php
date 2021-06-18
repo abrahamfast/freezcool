@@ -22,6 +22,12 @@ class LoginController extends Controller
      */
     protected $redirectTo = RouteServiceProvider::HOME;
 
+
+    public function redirectTo()
+    {
+        return '/';
+    }
+
     public function showLoginForm()
     {
         return view('auth.login-otp');

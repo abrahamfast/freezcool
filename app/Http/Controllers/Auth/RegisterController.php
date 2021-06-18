@@ -91,6 +91,9 @@ class RegisterController extends Controller
 
         event(new Registered($user = $this->create($request->all())));
 
+        // store into session to force redirect to profile
+        session()->put('register', true);
+
         // $this->guard()->login($user);
 
         if ($response = $this->registered($request, $user)) {
