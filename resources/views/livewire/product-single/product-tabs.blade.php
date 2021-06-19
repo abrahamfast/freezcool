@@ -12,17 +12,7 @@
     <div class="product-tabs__content">
         <div class="product-tabs__pane product-tabs__pane--active" id="product-tab-description">
             <div class="typography">
-                <p>
-                    آبسردکن مرکزی ، از جمله بزرگترین و مناسب ترین نوع آبسردکن های استفاده شده در مراکز عمومی و شلوغ است. این آبسرد کن ها بدنه ای از جنس استیل دارند که بهترین عایق در مقابل دما و رطوبت است. آبسردکن های عمومی دارای موتور کمپرسور بسیار قوی بوده و کاملا با قطعات اروپایی ساخته شده اند و توانایی پاسخ گویی در اماکن پر رفت و آمد را دارند. آبسردکن مرکزی برای مکان های عمومی طراحی شده و شما می توانید با توجه به نیازتان از آن 4 الی 8 یا بیشتر ، شیر خروجی آب سرد بگیرید. این آبسرد کن ها بسیار مقاوم و شیک بوده و شیر های آنها بر خلاف سایر تجهیزات سردمایش آب موجود در بازار ضد چکه می باشد. شیر های به کار برده شده در این محصول کاملا آلومینیومی بوده و بهداشتی است
-                </p>
-                <p>
-                    البته بایستی توجه داشته باشید که دو نوع موتور هرماتیک و سمی هرماتیک به معنای قابل تعمیر و غیرقابل تعمیر در این آب سردکن ها می توان استفاده کرد که قیمت تمام شده را بسیار متفاوت می نماید. همچنین محل مورد استفاده آبسردکن نیز در قیمت آن بسیار تاثیر گذار است به عنوان مثال آب سرد کن مورد استفاده در بوشهر در مقایسه با آبسردکن های مورد استفاده در تهران با توجه به حجم سرمایش مورد نیاز قیمت بسیار متفاوتی نیز دارند.
-                </p>
-                <p>
-                    آبسرد کن های مرکزی برخلاف سردکن های آب استیل موجود در بازار امکان اتصال مستقیم به آب و برق را ندارند بلکه بعد از سفارش آبسردکن مرکزی توسط شما این محصول ابتدا توسط گروه فنی و مهندسی این شرکت طراحی و تولید گردیده و بعد از آن بوسیله اکیپ سیار این کارخانه در محل مورد نظر شما نصب و راه اندازی می گردد.
-
-
-                </p>
+                {{ $product->description }}
             </div>
         </div>
         <div class="product-tabs__pane" id="product-tab-specification">
@@ -30,56 +20,47 @@
                 <div class="spec__section">
                     <h4 class="spec__section-title">{{ __('global.General') }}</h4>
                     <div class="spec__row">
-                        <div class="spec__name">وزن سردخانه نگهداری جسد</div>
-                        <div class="spec__value">180 کیلو گرم</div>
+                        <div class="spec__name">{{ __('global.insulation') }}</div>
+                        <div class="spec__value">{{ $product->insulation }}</div>
+                    </div>
+                   <div class="spec__row">
+                        <div class="spec__name">{{ __('global.chassis_material') }}</div>
+                        <div class="spec__value">{{ $product->chassis_material }}</div>
+                    </div>
+                   <div class="spec__row">
+                        <div class="spec__name">{{ __('global.evaporator_fan') }}</div>
+                        <div class="spec__value">{{ $product->evaporator_fan }}</div>
                     </div>
                     <div class="spec__row">
-                        <div class="spec__name">ابعاد سردخانه دو کابین</div>
-                        <div class="spec__value">عرض 85 سانتی متر- طول 260 سانتی متر – ارتفاع 175 سانتی</div>
+                        <div class="spec__name">{{ __('global.condenser_fan') }}</div>
+                        <div class="spec__value">{{ $product->condenser_fan }}</div>
                     </div>
                     <div class="spec__row">
-                        <div class="spec__name">برند موتور</div>
-                        <div class="spec__value">	سکاپ (دانفوس)– کالترون– تکامسه – انبرکو (بنا به انتخاب مشتری)</div>
+                        <div class="spec__name">{{ __('global.evaporator_material') }}</div>
+                        <div class="spec__value">{{ $product->evaporator_material }}</div>
                     </div>
                     <div class="spec__row">
-                        <div class="spec__name">مصرف برق</div>
-                        <div class="spec__value">تکفاز خانگی</div>
+                        <div class="spec__name">{{ __('global.condenser_material') }}</div>
+                        <div class="spec__value">{{ $product->condenser_material }}</div>
                     </div>
                     <div class="spec__row">
-                        <div class="spec__name">جنس کندانسور</div>
-                        <div class="spec__value">مسی با فین آلومینیومی</div>
+                        <div class="spec__name">{{ __('global.electricity_consumption') }}</div>
+                        <div class="spec__value">{{ $product->electricity_consumption }}</div>
                     </div>
                     <div class="spec__row">
-                        <div class="spec__name">جنس اواپراتور</div>
-                        <div class="spec__value">مسی با فین آلومینیومی</div>
+                        <div class="spec__name">{{ __('global.warranty_and_service') }}</div>
+                        <div class="spec__value">{{ $product->warranty_and_service }}</div>
                     </div>
                     <div class="spec__row">
-                        <div class="spec__name">جنس شاسی</div>
-                        <div class="spec__value">پروفیل فولادی با پوشش رنگ کوره</div>
+                        <div class="spec__name">{{ __('global.warranty_and_service') }}</div>
+                        <div class="spec__value">{{ $product->warranty_and_service }}</div>
+                    </div>
+                    <div class="spec__row">
+                        <div class="spec__name">{{ __('global.warranty_terms') }}</div>
+                        <div class="spec__value">{{ $product->warranty_terms }}</div>
                     </div>
                 </div>
-                <div class="spec__section">
-                    <h4 class="spec__section-title">موتور</h4>
-                    <div class="spec__row">
-                        <div class="spec__name">دارای</div>
-                        <div class="spec__value">فوم تزریقی با ضخامت 10 سانتی متر</div>
-                    </div>
-                    <div class="spec__row">
-                        <div class="spec__name">دارای</div>
-                        <div class="spec__value">چرخ جهت حمل و نقل آسان</div>
-                    </div>
-                </div>
-                <div class="spec__section">
-                    <h4 class="spec__section-title">جنس</h4>
-                    <div class="spec__row">
-                        <div class="spec__name">دارای</div>
-                        <div class="spec__value">فوم تزریقی با ضخامت 10 سانتی متر</div>
-                    </div>
-                    <div class="spec__row">
-                        <div class="spec__name">دارای</div>
-                        <div class="spec__value">چرخ جهت حمل و نقل آسان</div>
-                    </div>
-                </div>
+
                 <div class="spec__disclaimer">
                     اطلاعات مربوط به مشخصات فنی ، مجموعه تحویل ، کشور سازنده و شکل ظاهری
                     کالاها فقط برای مرجع است و براساس آخرین اطلاعات موجود در زمان انتشار است.

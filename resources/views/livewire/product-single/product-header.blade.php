@@ -1,19 +1,13 @@
 <div class="product__header">
-    <h1 class="product__title">سردخانه میوه موتور ۱۲۰ بار</h1>
+    <h1 class="product__title">{{ $product->name }}</h1>
     <div class="product__subtitle">
         <div class="product__rating">
             <div class="product__rating-stars">
                 <div class="rating">
-                    <div class="rating__body">
-                        <div class="rating__star rating__star--active"></div>
-                        <div class="rating__star rating__star--active"></div>
-                        <div class="rating__star rating__star--active"></div>
-                        <div class="rating__star rating__star--active"></div>
-                        <div class="rating__star"></div>
-                    </div>
+                    <livewire:rating />
                 </div>
             </div>
-            <div class="product__rating-label"><a href="">بر اساس ۴۳ بررسی</a></div>
+            <div class="product__rating-label">بر اساس ۴۳ بررسی</div>
         </div>
         <div class="status-badge status-badge--style--success product__fit status-badge--has-icon status-badge--has-text">
             <div class="status-badge__body">

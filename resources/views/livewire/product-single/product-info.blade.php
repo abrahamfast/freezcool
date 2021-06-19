@@ -25,11 +25,7 @@
                     </tr>
                     <tr>
                         <th>{{ __('global.Country') }}</th>
-                        <td>ایراین</td>
-                    </tr>
-                    <tr>
-                        <th>{{ __('global.Vendor code') }}</th>
-                        <td>BDX-750Z370-S</td>
+                        <td>ایران</td>
                     </tr>
                 </table>
             </div>
