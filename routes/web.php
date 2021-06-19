@@ -7,7 +7,7 @@ use App\Http\Controllers\Pages\{
 };
 use App\Http\Controllers\Profile\{
 	TrackOrderController, WishListController, CardController, DashboardController,
-	ProfileController, AdviserController, OrderController, AddressController
+	ProfileController, AdviserController, OrderController, AddressController ,ReviewController
 };
 
 
@@ -50,6 +50,8 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/account-order-details', [OrderController::class, 'show']);
 	Route::get('/account-addresses', [AddressController::class, 'index']);
 	Route::get('/account-edit-address', [AddressController::class, 'create']);
+
+	Route::post('/reviews/{id}', [ReviewController::class, 'store'])->name('review.store');
 
 	Route::get('/account-wishlist/{id}', [
 		WishListController::class, 'link'

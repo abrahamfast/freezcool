@@ -143,7 +143,7 @@ return [
     'Reviews' => 'بررسی ها',
     'General' => 'عمومی',
     'Write A Review' => 'ثبت نظر',
-    'Your Review' => 'بررسی شما',
+    'Your Review' => 'بررسی و نظر شما',
     'Post Your Review' => 'نظر خود را ارسال کنید',
     'Review Stars' => 'امتیاز',
     'Country' => 'کشور',

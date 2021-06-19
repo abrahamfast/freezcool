@@ -184,32 +184,35 @@
                         </div>
                     </div>
                 </div>
-                <form class="reviews-view__form">
+                <form class="reviews-view__form" action="{{ route('review.store', $product->id)}}" method="POST">
+                    @csrf
                     <h3 class="reviews-view__header">{{ __('global.Write A Review') }}</h3>
                     <div class="row">
                         <div class="col-xxl-8 col-xl-10 col-lg-9 col-12">
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="review-stars">{{ __('global.Review Stars') }}</label>
-                                    <select id="review-stars" class="form-control">
-                                        <option>۵ ستاره امتیاز</option>
-                                        <option>۴ ستاره امتیاز</option>
-                                        <option>۳ ستاره امتیاز</option>
-                                        <option>۲ ستاره امتیاز</option>
-                                        <option>۱ ستاره امتیاز</option>
+                                    <select id="review-stars" name="review-stars" class="form-control">
+                                        <option value="5">۵ ستاره امتیاز</option>
+                                        <option value="4">۴ ستاره امتیاز</option>
+                                        <option value="3">۳ ستاره امتیاز</option>
+                                        <option value="2">۲ ستاره امتیاز</option>
+                                        <option value="1">۱ ستاره امتیاز</option>
                                     </select>
                                 </div>
-                                    <x-ui.form_input :size="4" :id="'form-name'" :label="__('global.contact_Your Name')" :name="'name'" />
-
-                                    <x-ui.form_input :size="4" :id="'form-email'" :label="__('global.Email Address')" :name="'email'" :type="'email'" />
-
                             </div>
                             <div class="form-group">
                                 <label for="review-text">{{ __('global.Your Review') }}</label>
-                                <textarea class="form-control" id="review-text" rows="6"></textarea>
+                                <textarea name="review-text" class="form-control" id="review-text" rows="6"></textarea>
                             </div>
                             <div class="form-group mb-0 mt-4">
-                                <button type="submit" class="btn btn-primary">{{ __('global.Post Your Review') }}</button>
+                                @guest
+                                    
+                                    <a href="/login" class="btn btn-primary">{{ __('global.Post Your Review') }}</a>
+                                @endguest
+                                @auth
+                                    <button class="btn btn-primary">{{ __('global.Post Your Review') }}</button>
+                                @endauth
                             </div>
                         </div>
                     </div>
