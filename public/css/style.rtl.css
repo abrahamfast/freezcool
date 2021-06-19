@@ -11925,7 +11925,7 @@ select.form-control-sm {
   background: #f7f7f7;
   font-weight: 500;
   min-width: 140px;
-  text-align: left;
+  text-align: right;
 }
 
 .compare-table__column--product {

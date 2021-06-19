@@ -39,4 +39,18 @@ class CompareController extends Controller
         
         return redirect()->back();
     }
+
+    public function delete($id)
+    {
+        $list = session()->get('compare');
+        session()->forget('compare');
+        
+        foreach($list as $product){
+            if($product->id !== $id){
+                session()->push('compare', $product);
+            }
+        }
+
+        return redirect()->back();
+    }
 }

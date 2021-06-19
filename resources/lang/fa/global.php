@@ -95,6 +95,7 @@ return [
     'Rating' => 'رتبه بندی',
     'Availability' => 'موجودی',
     'In Stock' => 'در انبار',
+    'Invalid stock' => 'نا موجود',
     'Please Call Us' => 'لطفا تماس بگیرید',
     'Price' => 'قیمت',
     'Add to cart' => 'اضافه به سبد',
@@ -237,7 +238,17 @@ return [
     'Enter Otp Code' => 'کد پیامک شده را وارد کنید',
     'code uniqie' => 'کد یکبار مصرف را وارد کنید',
     'Enter Otp Code detail' => 'کد از طریق پیامک به شماره همراه شما ارسال شده است.',
-    'verify code' => 'بررسی و ورود'
+    'verify code' => 'بررسی و ورود',
+
+    'insulation' => 'عایق کاری',
+    'chassis_material' => 'جنس شاسی',
+    'evaporator_fan' => 'فن اواپراتور',
+    'condenser_fan' => 'فن کندانسور',
+    'evaporator_material' => 'جنس اواپراتور',
+    'condenser_material' => 'مواد کندانسور',
+    'electricity_consumption' => 'مصرف برق',
+    'warranty_and_service' => 'گارانتی و خدمات',
+    'warranty_terms' => 'شرایط گارانتی'
 
 
 
