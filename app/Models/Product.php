@@ -45,7 +45,8 @@ class Product extends Model
     {
     	$covers = $this->attachment()->get();
         $exists = $covers->count();
-    	if( $exists) return $covers[0]->id;
+        
+    	if($exists) return $covers[0]->id;
 
     	return 'default.jpg';
     }

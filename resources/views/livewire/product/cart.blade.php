@@ -24,7 +24,7 @@
         <div class="product-card__image">
             <div class="image image--type--product">
                 <a href="{{ route('product.show', $product->id) }}" class="image__body">
-                    <img class="image__tag" src="/storage/{{ $product->getCover() }}" alt="">
+                    <img class="image__tag" src="/storage/{{ $product->cover_id ?? 'default.jpg' }}" alt="">
                 </a>
             </div>
             @if($product->warranty_and_service)
