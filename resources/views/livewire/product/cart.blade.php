@@ -23,8 +23,8 @@
         </div>
         <div class="product-card__image">
             <div class="image image--type--product">
-                <a href="product-full" class="image__body">
-                    <img class="image__tag" src="/images/products/product-{{ rand(1,5) }}-245x245.jpg" alt="">
+                <a href="{{ route('product.show', $product->id) }}" class="image__body">
+                    <img class="image__tag" src="/storage/{{ $product->getCover() }}" alt="">
                 </a>
             </div>
             @if($product->warranty_and_service)
@@ -52,7 +52,7 @@
                         <div class="tag-badge tag-badge--new">{{ __('global.new') }}</div>
                         <div class="tag-badge tag-badge--hot">{{ __('global.hot') }}</div>
                     </div>
-                    <a href="/product/single">{{ $product->name }}</a>
+                    <a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
                 </div>
             </div>
             <div class="product-card__rating">
@@ -73,9 +73,6 @@
                     <li>فن کندانسور : {{ $product->chassis_material }}</li>
                     <li>فن اواپراتور : {{ $product->evaporator_fan }}</li>
                     <li>عایق کاری :	 {{ $product->condenser_fan }}</li>
-                    <li>نوع اپراتور : {{ $product->evaporator_material }}</li>
-                    <li>مواد کندانسور : {{ $product->condenser_material }}</li>
-                    <li>مصرف برق : {{ $product->electricity_consumption }}</li>
                 </ul>
             </div>
         </div>
