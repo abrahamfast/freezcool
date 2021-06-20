@@ -12,7 +12,7 @@
     <div class="product-tabs__content">
         <div class="product-tabs__pane product-tabs__pane--active" id="product-tab-description">
             <div class="typography">
-                {{ $product->description }}
+                {!! $product->more_details !!}
             </div>
         </div>
         <div class="product-tabs__pane" id="product-tab-specification">

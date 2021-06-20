@@ -36,12 +36,18 @@ class Product extends Model
     	return $this->hasMany(Attachment::class, 'parent_id');
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class, 'product_id');
+    }
+
     public function getCover()
     {
     	$covers = $this->attachment()->get();
-    	if($covers) return $covers[0]->id;
+        $exists = $covers->count();
+    	if( $exists) return $covers[0]->id;
 
-    	return 'default.png';
+    	return 'default.jpg';
     }
 
     public function getAmount(int $quantity = 1): float

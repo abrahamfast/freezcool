@@ -12,7 +12,7 @@
                             <div class="product__card product__card--one"></div>
                             <div class="product__card product__card--two"></div>
 
-                            <livewire:product-single.product-gallery />
+                            <livewire:product-single.product-gallery :product="$product"  />
 
 
                             <div class="product__header">
