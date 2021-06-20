@@ -5,7 +5,7 @@
         <li class="product-tabs__item">
             <a href="#product-tab-reviews">
                 {{ __('global.Reviews') }}
-                <span class="product-tabs__item-counter">۳۳</span>
+                <span class="product-tabs__item-counter">{{ \App\Helper\Stri::convertFa($product->comments()->count())  }}</span>
             </a>
         </li>
     </ul>
@@ -72,81 +72,27 @@
                 <div class="reviews-view__list">
                     <div class="reviews-list">
                         <ol class="reviews-list__content">
+                            @foreach($product->comments()->get() as $comment)
                             <li class="reviews-list__item">
                                 <div class="review">
                                     <div class="review__body">
                                         <div class="review__avatar"><img src="images/avatars/avatar-1-42x42.jpg" alt=""></div>
                                         <div class="review__meta">
-                                            <div class="review__author">غلامرضا سریوانی</div>
-                                            <div class="review__date">۱ فروردین ۱۴۰۰</div>
+                                            <div class="review__author">{{ $comment->user()->first()->name }}</div>
+                                            <div class="review__date">{{ $comment->created_at }}</div>
                                         </div>
                                         <div class="review__rating">
                                             <div class="rating">
-                                                <div class="rating__body">
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star"></div>
-                                                </div>
+                                                <livewire:rating :rating="$comment->review_stars" />
                                             </div>
                                         </div>
                                         <div class="review__content typography">
-                                            این تقسیم بندی منسوخ نشده اما تغییر کرده است. فلسفه طبیعی به علوم مختلف طبیعی ، به ویژه نجوم و کیهان شناسی تقسیم شده است. فلسفه اخلاقی علوم اجتماعی را زاییده است ، اما همچنان شامل نظریه ارزش است.
+                                            {{{ $comment->review_text }}}
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="reviews-list__item">
-                                <div class="review">
-                                    <div class="review__body">
-                                        <div class="review__avatar"><img src="images/avatars/avatar-2-42x42.jpg" alt=""></div>
-                                        <div class="review__meta">
-                                            <div class="review__author">الهام نیوری</div>
-                                            <div class="review__date">۱ فروردین ۱۴۰۰</div>
-                                        </div>
-                                        <div class="review__rating">
-                                            <div class="rating">
-                                                <div class="rating__body">
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star"></div>
-                                                    <div class="rating__star"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="review__content typography">
-                                            این تقسیم بندی منسوخ نشده اما تغییر کرده است. فلسفه طبیعی به علوم مختلف طبیعی ، به ویژه نجوم و کیهان شناسی تقسیم شده است. فلسفه اخلاقی علوم اجتماعی را زاییده است ، اما همچنان شامل نظریه ارزش است.
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="reviews-list__item">
-                                <div class="review">
-                                    <div class="review__body">
-                                        <div class="review__avatar"><img src="images/avatars/avatar-3-42x42.jpg" alt=""></div>
-                                        <div class="review__meta">
-                                            <div class="review__author">بهمن توری</div>
-                                            <div class="review__date">۱ فروردین ۱۴۰۰</div>
-                                        </div>
-                                        <div class="review__rating">
-                                            <div class="rating">
-                                                <div class="rating__body">
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                    <div class="rating__star rating__star--active"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="review__content typography">
-                                            این تقسیم بندی منسوخ نشده اما تغییر کرده است. فلسفه طبیعی به علوم مختلف طبیعی ، به ویژه نجوم و کیهان شناسی تقسیم شده است. فلسفه اخلاقی علوم اجتماعی را زاییده است ، اما همچنان شامل نظریه ارزش است.
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            @endforeach
                         </ol>
                         <div class="reviews-list__pagination">
                             <ul class="pagination">
@@ -186,13 +132,14 @@
                 </div>
                 <form class="reviews-view__form" action="{{ route('review.store', $product->id)}}" method="POST">
                     @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
                     <h3 class="reviews-view__header">{{ __('global.Write A Review') }}</h3>
                     <div class="row">
                         <div class="col-xxl-8 col-xl-10 col-lg-9 col-12">
                             <div class="form-row">
                                 <div class="form-group col-md-4">
                                     <label for="review-stars">{{ __('global.Review Stars') }}</label>
-                                    <select id="review-stars" name="review-stars" class="form-control">
+                                    <select id="review-stars" name="review_stars" class="form-control">
                                         <option value="5">۵ ستاره امتیاز</option>
                                         <option value="4">۴ ستاره امتیاز</option>
                                         <option value="3">۳ ستاره امتیاز</option>
@@ -203,7 +150,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="review-text">{{ __('global.Your Review') }}</label>
-                                <textarea name="review-text" class="form-control" id="review-text" rows="6"></textarea>
+                                <textarea name="review_text" class="form-control" id="review-text" rows="6"></textarea>
                             </div>
                             <div class="form-group mb-0 mt-4">
                                 @guest
