@@ -12,6 +12,10 @@
         <div class="filter__container">
             <div class="filter-categories">
                 <ul class="filter-categories__list">
+                    <li class="filter-categories__item filter-categories__item--current">
+                        <a href="{{ route('shop-list') }}">همه محصولات</a>
+                        <div class="filter-categories__counter"></div>
+                    </li>
                     @foreach($cates as $cat)
                     <li class="filter-categories__item filter-categories__item--current">
                         <a href="{{ route('category.list', $cat->id) }}">{{ $cat->name }}</a>

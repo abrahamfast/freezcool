@@ -2,7 +2,7 @@
     <div class="container">
         <div class="block-header__body">
             @livewire('utils.breadcrumb')
-            @if($title)
+            @if($title && false)
             <h1 class="block-header__title">
                 {{ $title }}
             </h1>

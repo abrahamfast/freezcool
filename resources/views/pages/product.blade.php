@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('body')
-    <livewire:utils.block-header  />
+    <livewire:utils.block-header :title="$product->name"  />
 
     <div class="block-split">
         <div class="container">
