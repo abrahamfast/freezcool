@@ -32,6 +32,7 @@
                 </table>
             </div>
         </div>
+        @if($product->getMoreDetails())
         <div class="product-form product__form">
             <div class="product-form__body">
                 <div class="product-form__row">
@@ -51,6 +52,7 @@
                 </div>
             </div>
         </div>
+        @endif
         <div class="product__actions">
             <div class="product__actions-item product__actions-item--quantity">
                 <div class="input-number">

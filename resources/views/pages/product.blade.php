@@ -46,6 +46,7 @@
                                 <div class="product__excerpt">
                                     {{ Str::limit($product->description) }}
                                 </div>
+                                @if($product->getMoreDetails())
                                 <div class="product__features">
                                     <div class="product__features-title">ویژگی های کلیدی:</div>
                                     <ul>
@@ -54,6 +55,7 @@
                                         @endforeach
                                     </ul>
                                 </div>
+                                    @endif
                             </div>
 
 
