@@ -12,7 +12,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at'; 
+    const UPDATED_AT = 'modified_at';
 
     protected $table = "account";
 
@@ -58,6 +58,7 @@ class User extends Authenticatable
 
     public $incrementing = false;
 
+
     public function wishlist()
     {
         return $this->hasMany(Wishlist::class, 'user_frontend_id');
@@ -75,5 +76,10 @@ class User extends Authenticatable
     public function quote()
     {
         return $this->hasMany(Quote::class, 'account_id', 'account_id');
+    }
+
+    public function isAdvisor()
+    {
+        return $this->advisor;
     }
 }

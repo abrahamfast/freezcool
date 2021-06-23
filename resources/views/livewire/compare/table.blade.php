@@ -62,15 +62,32 @@
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.Price') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->cost_price }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->cost_price ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 
+   @if(Auth::user() && Auth::user()->isAdvisor())
+   <tr class="compare-table__row">
+       <th class="compare-table__column compare-table__column--header">{{ __('global.profit margin') }}</th>
+       @foreach($products as $product)
+           <td class="compare-table__column compare-table__column--product">{{ $product->list_price ?? '-' }}</td>
+       @endforeach
+       <td class="compare-table__column compare-table__column--fake"></td>
+   </tr>
+   <tr class="compare-table__row">
+       <th class="compare-table__column compare-table__column--header">{{ __('global.pricing factor') }}</th>
+       @foreach($products as $product)
+           <td class="compare-table__column compare-table__column--product">{{ $product->pricing_factor ?? '-' }}</td>
+       @endforeach
+       <td class="compare-table__column compare-table__column--fake"></td>
+   </tr>
+   @endif
+
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.SKU') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->part_number }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->part_number ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
@@ -78,63 +95,63 @@
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.insulation') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->insulation }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->insulation ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.chassis_material') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->chassis_material }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->chassis_material ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.evaporator_fan') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->evaporator_fan }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->evaporator_fan ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.condenser_fan') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->condenser_fan }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->condenser_fan ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
-    <th class="compare-table__column compare-table__column--header">{{ __('global.evaporator_material') }}</th>
+    <th class="compare-table__column compare-table__column--header">{{ __('global.evaporator_material') ?? '-' }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->evaporator_material }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->evaporator_material ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.condenser_material') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->condenser_material }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ $product->condenser_material ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.electricity_consumption') }}</th>
     @foreach($products as $product)
-    <td class="compare-table__column compare-table__column--product">{{ $product->electricity_consumption }}</td>
+    <td class="compare-table__column compare-table__column--product">{{ $product->electricity_consumption ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.warranty_and_service') }}</th>
     @foreach($products as $product)
-    <td class="compare-table__column compare-table__column--product">{{ $product->warranty_and_service }}</td>
+    <td class="compare-table__column compare-table__column--product">{{ $product->warranty_and_service ? __('global.have') : __('global.not have') }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.warranty_terms') }}</th>
     @foreach($products as $product)
-    <td class="compare-table__column compare-table__column--product">{{ $product->warranty_terms }}</td>
+    <td class="compare-table__column compare-table__column--product">{{ $product->warranty_terms ?? '-' }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>

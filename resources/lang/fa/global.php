@@ -250,7 +250,10 @@ return [
     'warranty_and_service' => 'گارانتی و خدمات',
     'warranty_terms' => 'شرایط گارانتی',
     'more_details' => 'خصوصیات بیشتر',
-    ''
+    'not have' => 'ندارد',
+    'have' => 'دارد',
+    'profit margin' => 'حاشیه سود',
+    'pricing factor' => 'تخفیف برای مشاور',
 
 
 
