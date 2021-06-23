@@ -16,7 +16,9 @@
                                 <div class="departments__body">
                                     <ul class="departments__list">
                                         <li class="departments__list-padding" role="presentation"></li>
-
+                                        <li class="departments__item">
+                                            <a href="{{ route('shop-list') }}" class="departments__item-link">همه محصولات</a>
+                                        </li>
                                         @foreach($categories as $category)
                                             <li class="departments__item">
                                                 <a href="{{ route('category.list', $category->id) }}" class="departments__item-link">
@@ -24,7 +26,7 @@
                                                 </a>
                                             </li>
                                         @endforeach
-                                        
+
                                         <li class="departments__list-padding" role="presentation"></li>
                                     </ul>
                                     <div class="departments__menu-container"></div>
