@@ -7,7 +7,7 @@
         <a href="{{ route('product.show', $product->id) }}" class="compare-table__product">
             <div class="compare-table__product-image image image--type--product">
                 <div class="image__body">
-                    <img class="image__tag" src="/storage/{{ $product->cover_id ?? 'default.jpg'}}'" alt="">
+                    <img class="image__tag" src="/storage/{{ $product->cover_id ?? 'default.jpg' }}" alt="">
                 </div>
             </div>
             <div class="compare-table__product-name">
