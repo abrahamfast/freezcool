@@ -7,7 +7,7 @@
         <a href="{{ route('product.show', $product->id) }}" class="compare-table__product">
             <div class="compare-table__product-image image image--type--product">
                 <div class="image__body">
-                    <img class="image__tag" src="/images/products/product-1-150x150.jpg" alt="">
+                    <img class="image__tag" src="/storage/{{ $product->cover_id ?? 'default.jpg'}}'" alt="">
                 </div>
             </div>
             <div class="compare-table__product-name">
@@ -47,8 +47,8 @@
                 <div class="status-badge__body">
                     <div class="status-badge__text">
                         @if($product->status == 'Available')
-                            {{ __('global.In Stock') }} 
-                        @else 
+                            {{ __('global.In Stock') }}
+                        @else
                             {{ __('global.Invalid stock') }}
                         @endif
                     </div>
@@ -137,6 +137,16 @@
     <td class="compare-table__column compare-table__column--product">{{ $product->warranty_terms }}</td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
+</tr>
+
+<tr class="compare-table__row">
+   <th class="compare-table__column compare-table__column--header">{{ __('global.more_details') }}</th>
+   @foreach($products as $product)
+       <td class="compare-table__column compare-table__column--product">
+           <livewire:compare-more-detail :details="$product->getMoreDetails()" />
+       </td>
+   @endforeach
+   <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
 
 

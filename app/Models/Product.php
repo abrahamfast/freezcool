@@ -13,7 +13,7 @@ class Product extends Model
 {
     use HasFactory, ItemAccessor;
     const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at'; 
+    const UPDATED_AT = 'modified_at';
 
     protected $table = 'product';
 
@@ -45,10 +45,15 @@ class Product extends Model
     {
     	$covers = $this->attachment()->get();
         $exists = $covers->count();
-        
+
     	if($exists) return $covers[0]->id;
 
     	return 'default.jpg';
+    }
+
+    public function getMoreDetails()
+    {
+        return json_decode($this->key_features) ?? false;
     }
 
     public function getAmount(int $quantity = 1): float
@@ -74,7 +79,7 @@ class Product extends Model
         return StrHelper::convertFa($number);
     }
 
-    public function getPriceObtained()  
+    public function getPriceObtained()
     {
         $value = $this->takeCurrency($this->list_price);
 

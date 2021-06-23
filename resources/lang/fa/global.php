@@ -207,7 +207,7 @@ return [
     'Select a country...' => 'انتخاب کشور',
     'Street Address' => 'آدرس کامل',
     'City' => 'شهر',
-    'State' => 'منطقه', 
+    'State' => 'منطقه',
     'Postcode' => 'کد پستی',
     'Set as my default address' => 'به عنوان آدرس ارسال تنظیم شود.',
     'Terms And Conditions' => 'شرایط و ضوابط',
@@ -248,7 +248,9 @@ return [
     'condenser_material' => 'مواد کندانسور',
     'electricity_consumption' => 'مصرف برق',
     'warranty_and_service' => 'گارانتی و خدمات',
-    'warranty_terms' => 'شرایط گارانتی'
+    'warranty_terms' => 'شرایط گارانتی',
+    'more_details' => 'خصوصیات بیشتر',
+    ''
 
 
 
