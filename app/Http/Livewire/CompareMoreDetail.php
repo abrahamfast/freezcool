@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class CompareMoreDetail extends Component
 {
-    public mixed $details;
+    public $details;
 
     public function render()
     {
