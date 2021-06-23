@@ -80,6 +80,6 @@ class User extends Authenticatable
 
     public function isAdvisor()
     {
-        return $this->advisor;
+        return $this->adviser;
     }
 }
