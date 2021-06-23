@@ -12,7 +12,7 @@
     <div class="product-tabs__content">
         <div class="product-tabs__pane product-tabs__pane--active" id="product-tab-description">
             <div class="typography">
-                {!! $product->more_details !!}
+                {!! $product->more_details ?? $product->description !!}
             </div>
         </div>
         <div class="product-tabs__pane" id="product-tab-specification">
@@ -21,43 +21,43 @@
                     <h4 class="spec__section-title">{{ __('global.General') }}</h4>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.insulation') }}</div>
-                        <div class="spec__value">{{ $product->insulation }}</div>
+                        <div class="spec__value">{{ $product->insulation ?? '-' }}</div>
                     </div>
                    <div class="spec__row">
                         <div class="spec__name">{{ __('global.chassis_material') }}</div>
-                        <div class="spec__value">{{ $product->chassis_material }}</div>
+                        <div class="spec__value">{{ $product->chassis_material ?? '-' }}</div>
                     </div>
                    <div class="spec__row">
                         <div class="spec__name">{{ __('global.evaporator_fan') }}</div>
-                        <div class="spec__value">{{ $product->evaporator_fan }}</div>
+                        <div class="spec__value">{{ $product->evaporator_fan ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.condenser_fan') }}</div>
-                        <div class="spec__value">{{ $product->condenser_fan }}</div>
+                        <div class="spec__value">{{ $product->condenser_fan ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.evaporator_material') }}</div>
-                        <div class="spec__value">{{ $product->evaporator_material }}</div>
+                        <div class="spec__value">{{ $product->evaporator_material ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.condenser_material') }}</div>
-                        <div class="spec__value">{{ $product->condenser_material }}</div>
+                        <div class="spec__value">{{ $product->condenser_material ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.electricity_consumption') }}</div>
-                        <div class="spec__value">{{ $product->electricity_consumption }}</div>
+                        <div class="spec__value">{{ $product->electricity_consumption ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.warranty_and_service') }}</div>
-                        <div class="spec__value">{{ $product->warranty_and_service }}</div>
+                        <div class="spec__value">{{ $product->warranty_and_service ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.warranty_and_service') }}</div>
-                        <div class="spec__value">{{ $product->warranty_and_service }}</div>
+                        <div class="spec__value">{{ $product->warranty_and_service ?? '-' }}</div>
                     </div>
                     <div class="spec__row">
                         <div class="spec__name">{{ __('global.warranty_terms') }}</div>
-                        <div class="spec__value">{{ $product->warranty_terms }}</div>
+                        <div class="spec__value">{{ $product->warranty_terms ?? '-' }}</div>
                     </div>
                 </div>
 
@@ -154,7 +154,7 @@
                             </div>
                             <div class="form-group mb-0 mt-4">
                                 @guest
-                                    
+
                                     <a href="/login" class="btn btn-primary">{{ __('global.Post Your Review') }}</a>
                                 @endguest
                                 @auth

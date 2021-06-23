@@ -21,10 +21,10 @@
                                     <div class="product__rating">
                                         <div class="product__rating-stars">
                                             <div class="rating">
-                                                <livewire:rating />
+                                                <livewire:rating :rating="$product->rating" />
                                             </div>
                                         </div>
-                                        <div class="product__rating-label">بر اساس ۴۳ بررسی</div>
+                                        <div class="product__rating-label">بر اساس  {{ \App\Helper\Stri::convertFa($product->comments()->count()) }} بررسی</div>
                                     </div>
                                     <div class="status-badge status-badge--style--success product__fit status-badge--has-icon status-badge--has-text">
                                         <div class="status-badge__body">
@@ -33,8 +33,10 @@
                                                     <path d="M12,4.4L5.5,11L1,6.5l1.4-1.4l3.1,3.1L10.6,3L12,4.4z" />
                                                 </svg>
                                             </div>
-                                            <div class="status-badge__text">گارانتی و خدمات پس از فروش</div>
-                                            <div class="status-badge__tooltip" tabindex="0" data-toggle="tooltip" title=""></div>
+                                            @if($product->warranty_and_service)
+                                                <div class="status-badge__text">گارانتی و خدمات پس از فروش</div>
+                                                <div class="status-badge__tooltip" tabindex="0" data-toggle="tooltip" title=""></div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -47,11 +49,9 @@
                                 <div class="product__features">
                                     <div class="product__features-title">ویژگی های کلیدی:</div>
                                     <ul>
-                                        <li>مارک کمپراسور : bitzer یا DWM</li>
-                                        <li>جنس مخزن یا وان : گالوانیزه یا فولاد</li>
-                                        <li>جنس شاسی : قوطی یا تیرآهن</li>
-                                        <li>نوع جوشکاری : co2</li>
-                                        <li>نوع کندانسور : هوایی یا آبی</li>
+                                        @foreach($product->getMoreDetails() as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
 
 
 
-                            <livewire:product-single.product-info />
+                            <livewire:product-single.product-info :product="$product" />
                             <livewire:product-single.product-tabs :product="$product" />
 
                         </div>

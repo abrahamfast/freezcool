@@ -56,6 +56,11 @@ class Product extends Model
         return json_decode($this->key_features) ?? false;
     }
 
+    public function getMaterial()
+    {
+        return json_decode($this->material) ?? false;
+    }
+
     public function getAmount(int $quantity = 1): float
     {
         // @TODO need type Num
@@ -100,5 +105,10 @@ class Product extends Model
     public function getListPrice()
     {
         return $this->takeCurrency($this->list_price);
+    }
+
+    public function brand()
+    {
+        return $this->hasOne(Brand::class, 'id', 'brand_id');
     }
 }

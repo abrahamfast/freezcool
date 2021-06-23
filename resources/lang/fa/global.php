@@ -254,10 +254,7 @@ return [
     'have' => 'دارد',
     'profit margin' => 'حاشیه سود',
     'pricing factor' => 'تخفیف برای مشاور',
-
-
-
-
+    'ready_to_send' => 'آماده ارسال'
 
 
 

@@ -1,10 +1,12 @@
 <div class="product__info">
     <div class="product__info-card">
         <div class="product__info-body">
-            <div class="product__badge tag-badge tag-badge--sale">{{ __('global.Sale') }}</div>
+            @if($product->ready_to_send)
+                <div class="product__badge tag-badge tag-badge--sale">{{ __('global.ready_to_send') }}</div>
+            @endif
             <div class="product__prices-stock">
                 <div class="product__prices">
-                    <div class="product__price product__price--current">۲ میلیون تومان</div>
+                    <div class="product__price product__price--current">{{ $product->cost_price }}</div>
                 </div>
                 <div class="status-badge status-badge--style--success product__stock status-badge--has-text">
                     <div class="status-badge__body">
@@ -17,16 +19,16 @@
                 <table>
                     <tr>
                         <th>{{ __('global.SKU') }}</th>
-                        <td>201902-0057</td>
+                        <td>{{ $product->part_number }}</td>
                     </tr>
                     <tr>
                         <th>{{ __('global.Brand') }}</th>
-                        <td><a href="">نام برند</a></td>
+                        <td><a href="/">{{ $product->brand()->first()->name }}</a></td>
                     </tr>
-                    <tr>
-                        <th>{{ __('global.Country') }}</th>
-                        <td>ایران</td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <th>{{ __('global.Country') }}</th>--}}
+{{--                        <td>{{ $product->contry }}</td>--}}
+{{--                    </tr>--}}
                 </table>
             </div>
         </div>
@@ -37,18 +39,12 @@
                     <div class="product-form__control">
                         <div class="input-radio-label">
                             <div class="input-radio-label__list">
+                                @foreach($product->getMoreDetails() as $item)
                                 <label class="input-radio-label__item">
-                                    <input type="radio" name="material" class="input-radio-label__input">
-                                    <span class="input-radio-label__title">فولاد</span>
+                                    <input type="radio" name="material" class="input-radio-label__input" value="{{ $item }}">
+                                    <span class="input-radio-label__title">{{ $item }}</span>
                                 </label>
-                                <label class="input-radio-label__item">
-                                    <input type="radio" name="material" class="input-radio-label__input">
-                                    <span class="input-radio-label__title">آلومینیوم</span>
-                                </label>
-                                <label class="input-radio-label__item">
-                                    <input type="radio" name="material" class="input-radio-label__input" disabled>
-                                    <span class="input-radio-label__title">توریم</span>
-                                </label>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -67,34 +63,34 @@
                 <button class="btn btn-primary btn-lg btn-block">{{ __('global.Add to cart') }}</button>
             </div>
             <div class="product__actions-divider"></div>
-            <button class="product__actions-item product__actions-item--wishlist" type="button">
+            <a class="product__actions-item product__actions-item--wishlist" href="{{ route('compare.add', $product->id) }}">
                 <svg width="16" height="16">
                     <path d="M13.9,8.4l-5.4,5.4c-0.3,0.3-0.7,0.3-1,0L2.1,8.4c-1.5-1.5-1.5-3.8,0-5.3C2.8,2.4,3.8,2,4.8,2s1.9,0.4,2.6,1.1L8,3.7
 	l0.6-0.6C9.3,2.4,10.3,2,11.3,2c1,0,1.9,0.4,2.6,1.1C15.4,4.6,15.4,6.9,13.9,8.4z" />
                 </svg>
                 <span>{{ __('global.Add to wishlist') }}</span>
-            </button>
-            <button class="product__actions-item product__actions-item--compare" type="button">
+            </a>
+            <a class="product__actions-item product__actions-item--compare" href="{{ route('compare.add', $product->id) }}">
                 <svg width="16" height="16">
                     <path d="M9,15H7c-0.6,0-1-0.4-1-1V2c0-0.6,0.4-1,1-1h2c0.6,0,1,0.4,1,1v12C10,14.6,9.6,15,9,15z" />
                     <path d="M1,9h2c0.6,0,1,0.4,1,1v4c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1v-4C0,9.4,0.4,9,1,9z" />
                     <path d="M15,5h-2c-0.6,0-1,0.4-1,1v8c0,0.6,0.4,1,1,1h2c0.6,0,1-0.4,1-1V6C16,5.4,15.6,5,15,5z" />
                 </svg>
                 <span>{{ __('global.Add to compare') }}</span>
-            </button>
+            </a>
         </div>
-        <div class="product__tags-and-share-links">
-            <div class="product__tags tags tags--sm">
-                <div class="tags__list">
-                    <a href="">تگ شماره ۱</a>
-                    <a href="">تگ شماره ۱۲</a>
-                    <a href="">تگ شماره ۳</a>
-                    <a href="">تگ شماره ۴</a>
-                    <a href="">تگ شماره ۵</a>
-                    <a href="">تگ شماره ۲</a>
-                </div>
-            </div>
-        </div>
+{{--        <div class="product__tags-and-share-links">--}}
+{{--            <div class="product__tags tags tags--sm">--}}
+{{--                <div class="tags__list">--}}
+{{--                    <a href="">تگ شماره ۱</a>--}}
+{{--                    <a href="">تگ شماره ۱۲</a>--}}
+{{--                    <a href="">تگ شماره ۳</a>--}}
+{{--                    <a href="">تگ شماره ۴</a>--}}
+{{--                    <a href="">تگ شماره ۵</a>--}}
+{{--                    <a href="">تگ شماره ۲</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
     <div class="product__shop-features shop-features">
         <ul class="shop-features__list">
