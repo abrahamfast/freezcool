@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Profile;
 
+use App\Events\UpdateRatingAfterSaveComment;
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Helper\Stri;
@@ -23,6 +25,8 @@ class ReviewController extends Controller
             'review_stars' => $request->get('review_stars'),
             'review_text' => $request->get('review_text')
         ]);
+
+        UpdateRatingAfterSaveComment::dispatch($request->product_id);
 
         return redirect()->back();
     }
