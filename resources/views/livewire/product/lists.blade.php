@@ -62,32 +62,32 @@
                         </select>
                     </div>
                 </div>
-                <div class="view-options__body view-options__body--filters">
-                    <div class="view-options__label">{{ __('global.Active Filters') }}</div>
-                    <div class="applied-filters">
-                        <ul class="applied-filters__list">
-                            <li class="applied-filters__item">
-                                <a href="" class="applied-filters__button applied-filters__button--filter">
-                                    فروش: پرفروش ترین ها
-                                    <svg width="9" height="9">
-                                        <path d="M9,8.5L8.5,9l-4-4l-4,4L0,8.5l4-4l-4-4L0.5,0l4,4l4-4L9,0.5l-4,4L9,8.5z" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="applied-filters__item">
-                                <a href="" class="applied-filters__button applied-filters__button--filter">
-                                    رنگ: قرمز واقعی
-                                    <svg width="9" height="9">
-                                        <path d="M9,8.5L8.5,9l-4-4l-4,4L0,8.5l4-4l-4-4L0.5,0l4,4l4-4L9,0.5l-4,4L9,8.5z" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="applied-filters__item">
-                                <button type="button" class="applied-filters__button applied-filters__button--clear">{{ __('global.Clear All') }}</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+{{--                <div class="view-options__body view-options__body--filters">--}}
+{{--                    <div class="view-options__label">{{ __('global.Active Filters') }}</div>--}}
+{{--                    <div class="applied-filters">--}}
+{{--                        <ul class="applied-filters__list">--}}
+{{--                            <li class="applied-filters__item">--}}
+{{--                                <a href="" class="applied-filters__button applied-filters__button--filter">--}}
+{{--                                    فروش: پرفروش ترین ها--}}
+{{--                                    <svg width="9" height="9">--}}
+{{--                                        <path d="M9,8.5L8.5,9l-4-4l-4,4L0,8.5l4-4l-4-4L0.5,0l4,4l4-4L9,0.5l-4,4L9,8.5z" />--}}
+{{--                                    </svg>--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li class="applied-filters__item">--}}
+{{--                                <a href="" class="applied-filters__button applied-filters__button--filter">--}}
+{{--                                    رنگ: قرمز واقعی--}}
+{{--                                    <svg width="9" height="9">--}}
+{{--                                        <path d="M9,8.5L8.5,9l-4-4l-4,4L0,8.5l4-4l-4-4L0.5,0l4,4l4-4L9,0.5l-4,4L9,8.5z" />--}}
+{{--                                    </svg>--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                            <li class="applied-filters__item">--}}
+{{--                                <button type="button" class="applied-filters__button applied-filters__button--clear">{{ __('global.Clear All') }}</button>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
             <div class="products-view__list products-list products-list--grid--4" data-layout="list" data-with-features="false">
                 <div class="products-list__head">
