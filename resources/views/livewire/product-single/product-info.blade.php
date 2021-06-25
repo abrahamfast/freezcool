@@ -6,12 +6,12 @@
             @endif
             <div class="product__prices-stock">
                 <div class="product__prices">
-                    <div class="product__price product__price--current">{{ $product->cost_price }}</div>
+                    <div class="product__price product__price--current">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('cost_price')) }} تومان </div>
                 </div>
                 <div class="status-badge status-badge--style--success product__stock status-badge--has-text">
                     <div class="status-badge__body">
                         <div class="status-badge__text">{{ __('global.In Stock') }}</div>
-                        <div class="status-badge__tooltip" tabindex="0" data-toggle="tooltip" title="In&#x20;Stock"></div>
+                        <div class="status-badge__tooltip" tabindex="0" data-toggle="tooltip" title=""></div>
                     </div>
                 </div>
             </div>

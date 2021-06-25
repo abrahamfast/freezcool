@@ -62,7 +62,7 @@
 <tr class="compare-table__row">
     <th class="compare-table__column compare-table__column--header">{{ __('global.Price') }}</th>
     @foreach($products as $product)
-        <td class="compare-table__column compare-table__column--product">{{ $product->cost_price ?? '-' }}</td>
+        <td class="compare-table__column compare-table__column--product">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('cost_price')) }} تومان </td>
     @endforeach
     <td class="compare-table__column compare-table__column--fake"></td>
 </tr>
@@ -71,7 +71,7 @@
    <tr class="compare-table__row">
        <th class="compare-table__column compare-table__column--header">{{ __('global.profit margin') }}</th>
        @foreach($products as $product)
-           <td class="compare-table__column compare-table__column--product">{{ $product->list_price ?? '-' }}</td>
+           <td class="compare-table__column compare-table__column--product">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('list_price')) }}</td>
        @endforeach
        <td class="compare-table__column compare-table__column--fake"></td>
    </tr>

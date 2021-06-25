@@ -111,4 +111,9 @@ class Product extends Model
     {
         return $this->hasOne(Brand::class, 'id', 'brand_id');
     }
+
+    public function getConstPrice()
+    {
+        return $this->giveToUnderstand($this->cost_price);
+    }
 }

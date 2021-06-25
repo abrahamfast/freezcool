@@ -5,5 +5,7 @@
                 <li>{{ $detail }}</li>
             @endforeach
         </ul>
+    @else
+        -
     @endif
 </div>

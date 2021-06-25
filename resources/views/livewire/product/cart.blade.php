@@ -72,7 +72,7 @@
         </div>
         <div class="product-card__footer">
             <div class="product-card__prices">
-                <div class="product-card__price product-card__price--current">{{ $product->cost_price }}</div>
+                <div class="product-card__price product-card__price--current">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('cost_price')) }} تومان</div>
             </div>
             <button class="product-card__addtocart-icon" type="button" aria-label="Add to cart">
                 <svg width="20" height="20">
