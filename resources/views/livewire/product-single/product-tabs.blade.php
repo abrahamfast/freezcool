@@ -79,7 +79,7 @@
                                         <div class="review__avatar"><img src="images/avatars/avatar-1-42x42.jpg" alt=""></div>
                                         <div class="review__meta">
                                             <div class="review__author">{{ $comment->user()->first()->name }}</div>
-                                            <div class="review__date">{{ $comment->created_at }}</div>
+                                            <div class="review__date">{{ \App\Helper\Stri::convertFa(verta($comment->created_at)) }}</div>
                                         </div>
                                         <div class="review__rating">
                                             <div class="rating">

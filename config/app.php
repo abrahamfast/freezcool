@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Hekmatinasser\Notowo\NotowoServiceProvider::class,
+        Hekmatinasser\Verta\Laravel\VertaServiceProvider::class,
 
 
         /*
@@ -230,6 +231,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Notowo' => Hekmatinasser\Notowo\Notowo::class,
+        'Verta' => Hekmatinasser\Verta\Verta::class,
 
     ],
 
