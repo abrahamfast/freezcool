@@ -9,17 +9,18 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index($id = null)
+    public function index($id = null, Request $request)
     {
         return view('pages.shop-list', [
-            'categoryId' => $id
+            'categoryId' => $id,
+            'filters' => $request->get('filters') ?? false
         ]);
     }
 
     public function show($id)
     {
         $product = Product::findOrfail($id);
-        
+
         return view('pages.product', [
             'product' => $product
         ]);

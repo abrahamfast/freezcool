@@ -17,32 +17,33 @@
                     <div class="widget__header widget-filters__header">
                         <h4>{{ __('global.Filters') }}</h4>
                     </div>
+                    <form action="">
                     <div class="widget-filters__list">
                         <div class="widget-filters__item">
    <livewire:filter-categories-list />
                         </div>
-                        <div class="widget-filters__item">
-                            <div class="filter filter--opened" data-collapse-item>
-                                <button type="button" class="filter__title" data-collapse-trigger>
-                                    {{ __('global.Price') }}
-                                    <span class="filter__arrow">
-                                        <svg width="12px" height="7px">
-                                        <path d="M0.286,0.273 L0.286,0.273 C-0.070,0.629 -0.075,1.204 0.276,1.565 L5.516,6.993 L10.757,1.565 C11.108,1.204 11.103,0.629 10.747,0.273 L10.747,0.273 C10.385,-0.089 9.796,-0.086 9.437,0.279 L5.516,4.296 L1.596,0.279 C1.237,-0.086 0.648,-0.089 0.286,0.273 Z" />
-                                    </svg></span>
-                                </button>
-                                <div class="filter__body" data-collapse-content>
-                                    <div class="filter__container">
-                                        <div class="filter-price" data-min="500" data-max="1500" data-from="590" data-to="1000">
-                                            <div class="filter-price__slider"></div>
-                                            <div class="filter-price__title-button">
-                                                <div class="filter-price__title">تومان<span class="filter-price__min-value"></span> – تومان<span class="filter-price__max-value"></span></div>
-                                                <button type="button" class="btn btn-xs btn-secondary filter-price__button">{{ __('global.Filters') }}</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="widget-filters__item">--}}
+{{--                            <div class="filter filter--opened" data-collapse-item>--}}
+{{--                                <button type="button" class="filter__title" data-collapse-trigger>--}}
+{{--                                    {{ __('global.Price') }}--}}
+{{--                                    <span class="filter__arrow">--}}
+{{--                                        <svg width="12px" height="7px">--}}
+{{--                                        <path d="M0.286,0.273 L0.286,0.273 C-0.070,0.629 -0.075,1.204 0.276,1.565 L5.516,6.993 L10.757,1.565 C11.108,1.204 11.103,0.629 10.747,0.273 L10.747,0.273 C10.385,-0.089 9.796,-0.086 9.437,0.279 L5.516,4.296 L1.596,0.279 C1.237,-0.086 0.648,-0.089 0.286,0.273 Z" />--}}
+{{--                                    </svg></span>--}}
+{{--                                </button>--}}
+{{--                                <div class="filter__body" data-collapse-content>--}}
+{{--                                    <div class="filter__container">--}}
+{{--                                        <div class="filter-price" data-min="0" data-max="1500" data-from="0" data-to="100">--}}
+{{--                                            <div class="filter-price__slider"></div>--}}
+{{--                                            <div class="filter-price__title-button">--}}
+{{--                                                <div class="filter-price__title">تومان<span class="filter-price__min-value"></span> – تومان<span class="filter-price__max-value"></span></div>--}}
+{{--                                                <button type="button" class="btn btn-xs btn-secondary filter-price__button">{{ __('global.Filters') }}</button>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                         <div class="widget-filters__item">
 <livewire:filter-brand-list />
                         </div>
@@ -65,10 +66,20 @@
                     </div>
                     <div class="widget-filters__actions d-flex">
                         <button class="btn btn-primary btn-sm">{{ __('global.Filter') }}</button>
-                        <button class="btn btn-secondary btn-sm">{{ __('global.Reset') }}</button>
+                        <button class="btn btn-secondary btn-sm" id="reset">{{ __('global.Reset') }}</button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@push('js')
+<script>
+    $('#reset').on('click', function(e){
+        e.preventDefault()
+        window.location = '/shop-list/'
+    });
+</script>
+@endpush

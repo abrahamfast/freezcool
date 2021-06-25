@@ -14,12 +14,12 @@
                 <ul class="filter-categories__list">
                     <li class="filter-categories__item filter-categories__item--current">
                         <a href="{{ route('shop-list') }}">همه محصولات</a>
-                        <div class="filter-categories__counter"></div>
+                        <div class="filter-categories__counter">{{  App\Helper\Stri::convertFa(\App\Models\Product::where('deleted', 0)->count()) }} مورد</div>
                     </li>
                     @foreach($cates as $cat)
                     <li class="filter-categories__item filter-categories__item--current">
                         <a href="{{ route('category.list', $cat->id) }}">{{ $cat->name }}</a>
-                        <div class="filter-categories__counter">{{ $cat->products()->count() }}</div>
+                        <div class="filter-categories__counter">{{  App\Helper\Stri::convertFa($cat->products()->count()) }} مورد</div>
                     </li>
                     @endforeach
                 </ul>

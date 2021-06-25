@@ -46,6 +46,8 @@
     <script type="text/javascript" src="/js/app.js"></script>
 
     @livewireScripts
+
+    @stack('js')
 </body>
 
 </html>
