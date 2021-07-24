@@ -39,6 +39,12 @@ Route::get('/compare', [CompareController::class, 'index'])->name('compare');
 Route::get('/compare/{id}', [CompareController::class, 'add'])->name('compare.add');
 Route::get('/compare/{id}/delete', [CompareController::class, 'delete'])->name('compare.delete');
 
+Route::post('cart/add', [\App\Http\Controllers\CartController::class, 'link']);
+Route::get('cart/unlink/{id}', [\App\Http\Controllers\CartController::class, 'unlink']);
+Route::get('cart/reset', [\App\Http\Controllers\CartController::class, 'reset']);
+Route::post('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
+Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final']);
+
 
 
 Route::middleware(['auth'])->group(function () {

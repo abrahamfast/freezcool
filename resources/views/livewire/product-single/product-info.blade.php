@@ -55,14 +55,19 @@
         @endif
         <div class="product__actions">
             <div class="product__actions-item product__actions-item--quantity">
-                <div class="input-number">
-                    <input class="input-number__input form-control form-control-lg" type="number" min="1" value="1">
-                    <div class="input-number__add"></div>
-                    <div class="input-number__sub"></div>
-                </div>
+                <form action="/cart/add" method="POST" id="product-form">
+                    @csrf
+                    <input type="hidden" name="product-id" value="{{ $product->id }}">
+                    <div class="input-number">
+                        <input class="input-number__input form-control form-control-lg" type="number" min="1" value="1">
+                        <div class="input-number__add"></div>
+                        <div class="input-number__sub"></div>
+                    </div>
+                </form>
+
             </div>
             <div class="product__actions-item product__actions-item--addtocart">
-                <button class="btn btn-primary btn-lg btn-block">{{ __('global.Add to cart') }}</button>
+                <button class="btn btn-primary btn-lg btn-block addcartbtn">{{ __('global.Add to cart') }}</button>
             </div>
             <div class="product__actions-divider"></div>
             <a class="product__actions-item product__actions-item--wishlist" href="{{ route('compare.add', $product->id) }}">
@@ -257,3 +262,13 @@
         </ul>
     </div>
 </div>
+
+
+@push('js')
+    <script>
+        $('.addcartbtn').on('click', function(e){
+            e.preventDefault();
+            $('#product-form').submit()
+        });
+    </script>
+@endpush

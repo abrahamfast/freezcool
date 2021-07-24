@@ -88,7 +88,7 @@
 {{--                                        {{ __('global.packages') }}--}}
 {{--                                    </a>--}}
 {{--                                </li>--}}
-                               
+
                             </ul>
                         </div>
                     </div>
@@ -276,8 +276,8 @@
                                 <div class="account-menu__divider"></div>
                                 <ul class="account-menu__links">
                                     <li>
-                                        <a href="logout" 
-                                            class="item channel_item" 
+                                        <a href="logout"
+                                            class="item channel_item"
                                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                             {{ __('global.Logout') }}
                                             <i class="uil uil-lock-alt icon__1"></i>
@@ -292,8 +292,8 @@
 
                         </div>
                     </div>
-                    <div class="indicator indicator--trigger--click">
-                        <a href="cart" class="indicator__button">
+                    <div class="indicator ">
+                        <a href="/cart" class="indicator__button">
                             <span class="indicator__icon">
                                 <svg width="32" height="32">
                                     <circle cx="10.5" cy="27.5" r="2.5" />
@@ -302,122 +302,11 @@
     l3.4,14.3c0.1,0.2,0.3,0.4,0.5,0.4h15.2c0.2,0,0.4-0.1,0.5-0.4l3.1-10c0.1-0.2,0-0.4-0.1-0.4C29.8,8.1,29.7,8,29.5,8H14
     c-0.6,0-1-0.4-1-1s0.4-1,1-1h15.5c0.8,0,1.5,0.4,2,1c0.5,0.6,0.6,1.5,0.4,2.2l-3.1,10C28.5,20.3,27.5,21,26.4,21z" />
                                 </svg>
-                                <span class="indicator__counter">۳</span>
+                                <span class="indicator__counter">{{ $cart->count?? '۰' }}</span>
                             </span>
                             <span class="indicator__title">{{ __('global.Shopping Cart') }}</span>
-                            <span class="indicator__value">۱۰ میلیون تومان</span>
+                            <span class="indicator__value">{{ $cart->total ?? '۰ تومان'  }}</span>
                         </a>
-                        <div class="indicator__content">
-                            <div class="dropcart">
-                                <ul class="dropcart__list">
-                                    <li class="dropcart__item">
-                                        <div class="dropcart__item-image image image--type--product">
-                                            <a class="image__body" href="product-full">
-                                                <img class="image__tag" src="/images/products/product-4-70x70.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="dropcart__item-info">
-                                            <div class="dropcart__item-name">
-                                                <a href="product-full">سردخانه میوه موتور ۱۲۰ بار</a>
-                                            </div>
-                                            <ul class="dropcart__item-features">
-                                                <li>رنگ: قرمز</li>
-                                                <li>مواد و جنس: توریم</li>
-                                            </ul>
-                                            <div class="dropcart__item-meta">
-                                                <div class="dropcart__item-quantity">۲</div>
-                                                <div class="dropcart__item-price">۲۲۰ هزار تومان</div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="dropcart__item-remove"><svg width="10" height="10">
-                                                <path d="M8.8,8.8L8.8,8.8c-0.4,0.4-1,0.4-1.4,0L5,6.4L2.6,8.8c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L3.6,5L1.2,2.6
-    c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L5,3.6l2.4-2.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L6.4,5l2.4,2.4
-    C9.2,7.8,9.2,8.4,8.8,8.8z" />
-                                            </svg>
-                                        </button>
-                                    </li>
-                                    <li class="dropcart__divider" role="presentation"></li>
-                                    <li class="dropcart__item">
-                                        <div class="dropcart__item-image image image--type--product">
-                                            <a class="image__body" href="product-full">
-                                                <img class="image__tag" src="/images/products/product-2-70x70.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="dropcart__item-info">
-                                            <div class="dropcart__item-name">
-                                                <a href="product-full">سردخانه میوه موتور ۲۲۰ بار</a>
-                                            </div>
-                                            <ul class="dropcart__item-features">
-                                                <li>رنگ: قرمز</li>
-                                                <li>مواد و جنس: توریم</li>
-                                            </ul>
-                                            <div class="dropcart__item-meta">
-                                                <div class="dropcart__item-quantity">۱</div>
-                                                <div class="dropcart__item-price">۲۱۸ هزار تومان</div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="dropcart__item-remove"><svg width="10" height="10">
-                                                <path d="M8.8,8.8L8.8,8.8c-0.4,0.4-1,0.4-1.4,0L5,6.4L2.6,8.8c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L3.6,5L1.2,2.6
-    c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L5,3.6l2.4-2.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L6.4,5l2.4,2.4
-    C9.2,7.8,9.2,8.4,8.8,8.8z" />
-                                            </svg>
-                                        </button>
-                                    </li>
-                                    <li class="dropcart__divider" role="presentation"></li>
-                                    <li class="dropcart__item">
-                                        <div class="dropcart__item-image image image--type--product">
-                                            <a class="image__body" href="product-full">
-                                                <img class="image__tag" src="/images/products/product-5-70x70.jpg" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="dropcart__item-info">
-                                            <div class="dropcart__item-name">
-                                                <a href="/product-full">سردخانه میوه موتور</a>
-                                            </div>
-                                            <ul class="dropcart__item-features">
-                                                <li>رنگ: قرمز</li>
-                                                <li>مواد و جنس: توریم</li>
-                                            </ul>
-                                            <div class="dropcart__item-meta">
-                                                <div class="dropcart__item-quantity">۳</div>
-                                                <div class="dropcart__item-price">۲۲۰ هزار تومان</div>
-                                            </div>
-                                        </div>
-                                        <button type="button" class="dropcart__item-remove"><svg width="10" height="10">
-                                                <path d="M8.8,8.8L8.8,8.8c-0.4,0.4-1,0.4-1.4,0L5,6.4L2.6,8.8c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L3.6,5L1.2,2.6
-    c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L5,3.6l2.4-2.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L6.4,5l2.4,2.4
-    C9.2,7.8,9.2,8.4,8.8,8.8z" />
-                                            </svg>
-                                        </button>
-                                    </li>
-                                    <li class="dropcart__divider" role="presentation"></li>
-                                </ul>
-                                <div class="dropcart__totals">
-                                    <table>
-                                        <tr>
-                                            <th>{{ __('global.Subtotal') }}</th>
-                                            <td>۲ میلیون و ۵۰۰ هزار</td>
-                                        </tr>
-                                        <tr>
-                                            <th>{{ __('global.Shipping') }}</th>
-                                            <td>۲ میلیون و ۵۰۰ هزار</td>
-                                        </tr>
-                                        <tr>
-                                            <th>{{ __('global.Tax') }}</th>
-                                            <td>۲ میلیون و ۵۰۰ هزار</td>
-                                        </tr>
-                                        <tr>
-                                            <th>{{ __('global.Total') }}</th>
-                                            <td>۲ میلیون و ۵۰۰ هزار</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div class="dropcart__actions">
-                                    <a href="/cart" class="btn btn-secondary">{{ __('global.View Cart') }}</a>
-                                    <a href="/checkout" class="btn btn-primary">{{ __('global.Checkout') }}</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
