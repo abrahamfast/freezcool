@@ -13,3 +13,12 @@
     <livewire:utils.block-space-before-footer />
 
 @endsection
+
+@push('js')
+    <script>
+        $('.addcartbtn').on('click', function(e){
+            e.preventDefault();
+            $('.product-form').submit()
+        });
+    </script>
+@endpush

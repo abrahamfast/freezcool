@@ -83,7 +83,12 @@
 	C17.9,5.2,17.7,5,17.5,5H9.4C9.2,5,9,4.8,9,4.6V3.4C9,3.2,9.2,3,9.4,3h9.2C19.4,3,20,3.6,20,4.4z" />
                 </svg>
             </button>
-            <button class="product-card__addtocart-full" type="button">
+            <form action="/cart/add" method="POST" class="product-form">
+                @csrf
+                <input type="hidden" name="product-id" value="{{ $product->id }}">
+                <input type="hidden" step="1" name="quantity" value="1" class="input-text qty text">
+            </form>
+            <button class="product-card__addtocart-full addcartbtn" type="button">
                 {{ __('global.Add to cart') }}
             </button>
             <a href="{{ route('wishlist.link', $product->id) }}" class="product-card__wishlist" type="button">

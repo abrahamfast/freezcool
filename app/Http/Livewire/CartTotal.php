@@ -44,8 +44,8 @@ class CartTotal extends Component
             $this->shipping_cost = $this->quote->shipping_cost;
             $this->total_amount = $this->quote->amount;
         }
-
     }
+
     public function render()
     {
         return view('livewire.cart-total');
