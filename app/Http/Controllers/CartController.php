@@ -19,9 +19,12 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $user = $request->user();
+        $quoteId = session()->get('quoteId');
+
+        return view('pages.cart');
     }
 
     public function unlink($id)

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Traits;
 
@@ -22,11 +22,11 @@ trait QuoteHandler
 	}
 	public function newQuote($user = null)
 	{
-		$rawQuote = Quote::where('id', "603e34c68f0e7bebc")->first()->toArray();
+		$rawQuote = Quote::where('id', "60e6c6c6b9de80700")->first()->toArray();
 		$rawQuote['id'] = $this->uuid();
 		$rawQuote['name'] = __('global.new quote') . date("Y-m-d");
 		if($user){
-			$rawQuote['account_id'] = $user->account()->first()->id;	
+			$rawQuote['account_id'] = $user->account()->first()->id;
 		}
 		$this->quote =  Quote::create($rawQuote);
 		$this->setSessionQuote($rawQuote['id']);
