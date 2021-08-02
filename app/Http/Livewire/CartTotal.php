@@ -8,6 +8,14 @@ use Livewire\Component;
 
 class CartTotal extends Component
 {
+    public $quote;
+    public $quote_items;
+    public $itemsCount;
+    public $discount_amount;
+    public $shipping_cost;
+    public $total_amount;
+    public $tax_amount;
+
     public function mount()
     {
         $user = Auth::user();
