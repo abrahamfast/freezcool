@@ -11,6 +11,6 @@
                                 <span class="indicator__counter">{{ $quote_items ?? '۰' }}</span>
                             </span>
         <span class="indicator__title">{{ __('global.Shopping Cart') }}</span>
-        <span class="indicator__value">{{ $cart->total_amount ?? '۰ تومان'  }}</span>
+        <span class="indicator__value">{{ $total_amount ?? '۰ تومان'  }}</span>
     </a>
 </div>
