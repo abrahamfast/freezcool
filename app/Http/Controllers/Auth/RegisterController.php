@@ -48,6 +48,18 @@ class RegisterController extends Controller
         $this->otpService = $otpService;
     }
 
+
+    public function showRegistrationForm(Request $request)
+    {
+        dd($request->all());
+        return view('auth.register');
+    }
+
+    public function before()
+    {
+        return view('auth.before');
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -82,8 +94,9 @@ class RegisterController extends Controller
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function register(Request $request)
     {
@@ -125,7 +138,7 @@ class RegisterController extends Controller
         $this->otpService->send();
         // @TODO need improve by expireation key
         session()->put($reciver, $user->phone);
-        
+
         // just one time
         return view('auth.otp');
     }

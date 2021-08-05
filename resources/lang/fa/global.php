@@ -254,7 +254,12 @@ return [
     'have' => 'دارد',
     'profit margin' => 'حاشیه سود',
     'pricing factor' => 'تخفیف برای مشاور',
-    'ready_to_send' => 'آماده ارسال'
+    'ready_to_send' => 'آماده ارسال',
+
+    'before register' => 'صفحه ثبت نام',
+    'advisor register' => 'ثبت نام مشاور',
+    'customer register' => 'ثبت نام خریدار'
+
 
 
 

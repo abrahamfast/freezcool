@@ -66,5 +66,6 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Auth::routes();
+Route::get('before/register', [App\Http\Controllers\Auth\RegisterController::class, 'before'])->name('register.before');
 Route::get('otp', 'App\Http\Controllers\Auth\LoginController@otp')->name('otp');
 Route::post('dologin', 'App\Http\Controllers\Auth\LoginController@dologin')->name('doLogin');
