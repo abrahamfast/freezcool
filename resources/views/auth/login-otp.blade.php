@@ -24,7 +24,7 @@
                                         </div>
 
                                         <button class="btn btn-primary mt-3" type="submit">{{ __('global.Login') }}</button>
-                                        <a href="/register" class="btn btn-success mt-3">{{ __('global.Register new') }}</a>
+                                        <a href="{{ route('register.before') }}" class="btn btn-success mt-3">{{ __('global.Register new') }}</a>
                                     </form>
                                 </div>
                             </div>

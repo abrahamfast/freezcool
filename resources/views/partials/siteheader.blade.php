@@ -78,7 +78,7 @@
                                         </a>
                                     </li>
                                     <li class="main-menu__item">
-                                        <a href="/register" class="main-menu__link">
+                                        <a href="{{ route('register.before') }}" class="main-menu__link">
                                             {{ __('global.Register') }}
                                         </a>
                                     </li>
@@ -250,7 +250,7 @@
                                         <button type="submit" class="btn btn-primary btn-sm">{{ __('global.Login') }}</button>
                                     </div>
                                     <div class="account-menu__form-link">
-                                        <a href="/register">{{ __('global.Create An Account') }}</a>
+                                        <a href="{{ route('register.before') }}">{{ __('global.Create An Account') }}</a>
                                     </div>
                                 </form>
                                 @endguest
@@ -267,11 +267,11 @@
                                 </a>
                                 <div class="account-menu__divider"></div>
                                 <ul class="account-menu__links">
-                                    <li><a href="account-dashboard">{{ __('global.Dashboard') }}</a></li>
+                                    <li><a href="/account-dashboard">{{ __('global.Dashboard') }}</a></li>
                                     <li><a href="/track-order">{{ __('global.Track Order') }}</a></li>
-                                    <li><a href="account-profile">{{ __('global.Edit Profile') }}</a></li>
-                                    <li><a href="account-orders">{{ __('global.Order History') }}</a></li>
-                                    <li><a href="account-addresses">{{ __('global.Addresses') }}</a></li>
+                                    <li><a href="/account-profile">{{ __('global.Edit Profile') }}</a></li>
+                                    <li><a href="/account-orders">{{ __('global.Order History') }}</a></li>
+                                    <li><a href="/account-addresses">{{ __('global.Addresses') }}</a></li>
                                 </ul>
                                 <div class="account-menu__divider"></div>
                                 <ul class="account-menu__links">
