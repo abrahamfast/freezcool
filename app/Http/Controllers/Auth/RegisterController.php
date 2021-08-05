@@ -51,8 +51,9 @@ class RegisterController extends Controller
 
     public function showRegistrationForm(Request $request)
     {
-        dd($request->all());
-        return view('auth.register');
+        return view('auth.register', [
+            'advisor' => $request->get('advisor')
+        ]);
     }
 
     public function before()

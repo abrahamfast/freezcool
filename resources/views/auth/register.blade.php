@@ -7,10 +7,12 @@
             <div class="col-md-6 d-flex mt-4 mt-md-0">
                 <div class="card flex-grow-1 mb-0 ml-0 ml-lg-3 mr-0 mr-lg-4">
                     <div class="card-body card-body--padding--2">
-                        <h3 class="card-title">{{ __('global.Register') }}</h3>
+                        <h3 class="card-title">  @if($advisor) {{ __('global.advisor register') }} @else {{ __('global.customer register') }} @endif</h3>
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
-
+                            @if($advisor)
+                                <input type="hidden" name="advisor" value="true">
+                            @endif
                             <div class="form-group">
                                 <label for="signup-name">{{ __('global.full name') }}</label>
                                 <input name="name" required id="signup-name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="">
