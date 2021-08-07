@@ -64,12 +64,14 @@ class CartController extends Controller
     }
 
 
-    public function final($id, Request $request)
+    public function final(Request $request)
     {
         $user = $request->user();
-        $quote = Quote::where('id', $id)->first();
+        $quoteId = $request->session()->get('quoteId');
+        $quote = Quote::where('id', $quoteId)->first();
         $quote->assginSalesTeam();
         $quote->status = 'In Review';
+
         // @TODO remove release ver
         if(!$quote->account_id){
             $quote->account_id = $user->account()->first()->id;
@@ -77,7 +79,7 @@ class CartController extends Controller
 
         $quote->save();
         // @TODO here need reload model
-        $quote = Quote::where('id', $id)->first();
+        $quote->refresh();
 
         session()->forget('quoteId');
 
@@ -88,14 +90,12 @@ class CartController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function checkout()
     {
-        //
+        // send payment
+
+        return redirect()->route('checkout.final', 'id');
     }
 
     /**

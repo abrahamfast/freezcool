@@ -11,7 +11,7 @@ class Quote extends Model
 {
     use HasFactory;
     const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at'; 
+    const UPDATED_AT = 'modified_at';
 
     protected $table = 'quote';
 
@@ -59,11 +59,17 @@ class Quote extends Model
     public function assginSalesTeam()
     {
         // @TODO check duplicate
-        return $this->team()->create([
-            'entity_id' => $this->id,
-            'team_id' => '6031eed8965a745e3',
-            'entity_type' => 'quote',
-            'deleted' => 0
-        ]);
+        $assign = $this->team()->whereTeamId('6031eed8965a745e3')->get();
+
+        if (!$assign){
+            return $this->team()->create([
+                'entity_id' => $this->id,
+                'team_id' => '6031eed8965a745e3',
+                'entity_type' => 'quote',
+                'deleted' => 0
+            ]);
+        }
+
+        return $assign;
     }
 }

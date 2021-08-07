@@ -6,6 +6,10 @@ use App\Models\{Product, Quote, QuoteItem};
 
 trait QuoteHandler
 {
+    public function getCurrentQuote()
+    {
+        return Quote::where('id', $this->qouteId)->first();
+    }
 	public function getSessionQuote()
 	{
 		return $this->quoteId = session()->get('quoteId');

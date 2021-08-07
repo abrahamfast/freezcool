@@ -43,8 +43,8 @@ Route::get('cart', [\App\Http\Controllers\CartController::class, 'index'])->name
 Route::post('cart/add', [\App\Http\Controllers\CartController::class, 'link']);
 Route::get('cart/unlink/{id}', [\App\Http\Controllers\CartController::class, 'unlink']);
 Route::get('cart/refresh', [\App\Http\Controllers\CartController::class, 'refresh']);
-Route::post('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
-Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final']);
+Route::get('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
+Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final'])->name('checkout.final');
 
 
 
