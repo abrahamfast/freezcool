@@ -131,15 +131,15 @@ class RegisterController extends Controller
      */
     protected function registered(Request $request, $user)
     {
-        $reciver = 'otp:phone';
-        if($request->session()->get($reciver)) {
+        $receiver = 'otp:phone';
+        if($request->session()->get($receiver)) {
             return view('auth.otp');
         }
 
         $this->otpService->setReceptor($user->phone);
         $this->otpService->send();
         // @TODO need improve by expireation key
-        session()->put($reciver, $user->phone);
+        session()->put($receiver, $user->phone);
 
         // just one time
         return view('auth.otp');

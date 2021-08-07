@@ -42,14 +42,17 @@ Route::get('/compare/{id}/delete', [CompareController::class, 'delete'])->name('
 Route::get('cart', [\App\Http\Controllers\CartController::class, 'index'])->name('cart');
 Route::post('cart/add', [\App\Http\Controllers\CartController::class, 'link']);
 Route::get('cart/unlink/{id}', [\App\Http\Controllers\CartController::class, 'unlink']);
-Route::get('cart/reset', [\App\Http\Controllers\CartController::class, 'reset']);
+Route::get('cart/refresh', [\App\Http\Controllers\CartController::class, 'refresh']);
 Route::post('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
 Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final']);
 
 
 
+Route::middleware(['auth', 'advisor'])->group(function () {
+    Route::get('/account-adviser', [AdviserController::class, 'index']);
+});
 Route::middleware(['auth'])->group(function () {
-	Route::get('/account-adviser', [AdviserController::class, 'index']);
+
 	Route::get('/account-dashboard', [DashboardController::class, 'index'])->name('dashboard');
 	Route::get('/account-profile', [ProfileController::class, 'show']);
 	Route::post('/account-profile', [ProfileController::class, 'store'])->name('profile.save');

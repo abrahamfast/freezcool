@@ -70,7 +70,7 @@ class CartController extends Controller
         $quote = Quote::where('id', $id)->first();
         $quote->assginSalesTeam();
         $quote->status = 'In Review';
-        // @TODO remove relase ver
+        // @TODO remove release ver
         if(!$quote->account_id){
             $quote->account_id = $user->account()->first()->id;
         }

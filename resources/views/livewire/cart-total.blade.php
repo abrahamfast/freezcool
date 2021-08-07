@@ -32,7 +32,7 @@
                 </tfoot>
             </table>
             @isset($total_amount)
-                <a class="btn btn-primary btn-xl btn-block" href="#">
+                <a class="btn btn-primary btn-xl btn-block" href="/cart/checkout">
                     ادامه پرداخت
                 </a>
             @else

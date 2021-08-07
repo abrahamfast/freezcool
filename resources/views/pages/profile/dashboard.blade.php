@@ -39,12 +39,14 @@
             </div>
         </div>
     </div>
+    @if($quotes->count())
     <div class="dashboard__orders card">
         <div class="card-header">
             <h5>{{ __('global.Recent Orders') }}</h5>
         </div>
         <div class="card-divider"></div>
         <div class="card-table">
+
             <div class="table-responsive-sm">
                 <table>
                     <thead>
@@ -77,7 +79,9 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
     </div>
+    @endif
 </div>
 @endsection
