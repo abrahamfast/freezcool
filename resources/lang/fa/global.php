@@ -258,7 +258,15 @@ return [
 
     'before register' => 'صفحه ثبت نام',
     'advisor register' => 'ثبت نام مشاور',
-    'customer register' => 'ثبت نام خریدار'
+    'customer register' => 'ثبت نام خریدار',
+
+    'Cash on delivery' => 'پرداخت نقدی هنگام تحویل',
+    'Pay with cash upon delivery' => 'پرداخت به صورت نقدی هنگام تحویل',
+    'Please send a check to Store Name' => 'لطفاً یک چک به نام فروشگاه ، خیابان فروشگاه ، شهرک فروشگاه ، ایالت / شهرستان فروشگاه ، کدپستی فروشگاه ارسال کنید.',
+    'Check payments' => 'پرداخت چک',
+    'Direct bank transfer' => 'انتقال مستقیم بانکی',
+    'Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.' => 'پرداخت خود را مستقیماً به حساب بانکی ما انجام دهید. لطفاً از شناسه سفارش خود به عنوان پرداخت استفاده کنید
+                                 مرجع. تا زمانی که وجوه موجود در حساب ما تسویه نشده باشد ، سفارش شما ارسال نمی شود.'
 
 
 

@@ -1,5 +1,5 @@
-<div class="cart__table cart-table">
     @if($quote)
+        <div class="cart__table cart-table">
         <table class="cart-table__table">
         <thead class="cart-table__head">
         <tr class="cart-table__row">
@@ -33,14 +33,14 @@
                 <td class="cart-table__column cart-table__column--price" data-title="Price">{{ \App\Helper\Stri::convertFa($item->product()->first()->takeCurrencyAttr('cost_price')) }} تومان </td>
                 <td class="cart-table__column cart-table__column--quantity" data-title="Quantity">
                     <div class="cart-table__quantity input-number">
-                        <input class="form-control input-number__input" type="number" min="1" value="2">
+                        <input class="form-control input-number__input" type="number" min="1" value="1">
                         <div class="input-number__add"></div>
                         <div class="input-number__sub"></div>
                     </div>
                 </td>
                 <td class="cart-table__column cart-table__column--total" data-title="Total">۲۰۰ هزار تومان</td>
                 <td class="cart-table__column cart-table__column--remove">
-                    <button type="button" class="cart-table__remove btn btn-sm btn-icon btn-muted">
+                    <button type="button" class="cart-table__remove btn btn-sm btn-icon btn-muted" data-value="{{ $item->id }}">
                         <svg width="12" height="12">
                             <path d="M10.8,10.8L10.8,10.8c-0.4,0.4-1,0.4-1.4,0L6,7.4l-3.4,3.4c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L4.6,6L1.2,2.6
         c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L6,4.6l3.4-3.4c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L7.4,6l3.4,3.4
@@ -57,21 +57,28 @@
                 <div class="cart-table__actions">
                     <form class="cart-table__coupon-form form-row">
                         <div class="form-group mb-0 col flex-grow-1">
-                            <input type="text" class="form-control form-control-sm" placeholder="کد تخفیف">
+                            <input type="text" class="form-control form-control-sm" placeholder="کد تخفیف مشاور">
                         </div>
                         <div class="form-group mb-0 col-auto">
-                            <button type="button" class="btn btn-sm btn-primary">اعمال تخفیف</button>
+                            <button type="button" class="btn btn-sm btn-primary">اعمال</button>
                         </div>
                     </form>
-                    <div class="cart-table__update-button">
-                        <a class="btn btn-sm btn-primary" href="">بررسی دوباره</a>
-                    </div>
                 </div>
             </td>
         </tr>
         </tfoot>
     </table>
+</div>
     @else
         <h1>{{ __('global.not found') }}</h1>
     @endif
-</div>
+
+
+    @push('js')
+        <script>
+            $('.cart-table__remove').on('click', function(e){
+                e.preventDefault();
+                window.location = "/cart/unlink/" + $(this).attr('data-value')
+            });
+        </script>
+    @endpush

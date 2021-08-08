@@ -41,7 +41,7 @@ Route::get('/compare/{id}/delete', [CompareController::class, 'delete'])->name('
 
 Route::get('cart', [\App\Http\Controllers\CartController::class, 'index'])->name('cart');
 Route::post('cart/add', [\App\Http\Controllers\CartController::class, 'link']);
-Route::get('cart/unlink/{id}', [\App\Http\Controllers\CartController::class, 'unlink']);
+Route::get('cart/unlink/{id}', [\App\Http\Controllers\CartController::class, 'unlink'])->name('cart.unlink');
 Route::get('cart/refresh', [\App\Http\Controllers\CartController::class, 'refresh']);
 Route::get('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
 Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final'])->name('checkout.final');

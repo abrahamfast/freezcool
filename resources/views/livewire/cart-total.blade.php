@@ -31,6 +31,60 @@
                 </tr>
                 </tfoot>
             </table>
+
+            <div class="checkout__payment-methods payment-methods">
+                <ul class="payment-methods__list">
+                    <li class="payment-methods__item">
+                        <label class="payment-methods__item-header">
+                                                    <span class="payment-methods__item-radio input-radio">
+                                                        <span class="input-radio__body">
+                                                            <input class="input-radio__input" name="checkout_payment_method" type="radio" checked="">
+                                                            <span class="input-radio__circle"></span>
+                                                        </span>
+                                                    </span>
+                            <span class="payment-methods__item-title">{{ __('global.Direct bank transfer') }}</span>
+                        </label>
+                        <div class="payment-methods__item-container" style="">
+                            <div class="payment-methods__item-details text-muted">
+                              {{ __('global.Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.') }}
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment-methods__item">
+                        <label class="payment-methods__item-header">
+                                                    <span class="payment-methods__item-radio input-radio">
+                                                        <span class="input-radio__body">
+                                                            <input class="input-radio__input" name="checkout_payment_method" type="radio">
+                                                            <span class="input-radio__circle"></span>
+                                                        </span>
+                                                    </span>
+                            <span class="payment-methods__item-title">{{ __('global.Check payments') }}</span>
+                        </label>
+                        <div class="payment-methods__item-container" style="">
+                            <div class="payment-methods__item-details text-muted">
+                                {{ __('global.Please send a check to Store Name') }}
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment-methods__item">
+                        <label class="payment-methods__item-header">
+                                                    <span class="payment-methods__item-radio input-radio">
+                                                        <span class="input-radio__body">
+                                                            <input class="input-radio__input" name="checkout_payment_method" type="radio">
+                                                            <span class="input-radio__circle"></span>
+                                                        </span>
+                                                    </span>
+                            <span class="payment-methods__item-title">{{ __('global.Cash on delivery') }}</span>
+                        </label>
+                        <div class="payment-methods__item-container" style="">
+                            <div class="payment-methods__item-details text-muted">
+                                {{ __('global.Pay with cash upon delivery') }}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
             @isset($total_amount)
                 <a class="btn btn-primary btn-xl btn-block" href="/cart/checkout">
                     ادامه پرداخت
