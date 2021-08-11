@@ -27,12 +27,16 @@ class WishListController extends Controller
 
         if ($hasWish) {
             $hasWish->delete();
+            $request->session()->put('toast', __('global.Wish was unlink'));
         } else {
             Wishlist::create([
                 'account_id' => $request->user()->id,
                 'product_id' => $id
             ]);
+            $request->session()->put('toast', __('global.Wish was link'));
         }
+
+
 
         return redirect()->back();
     }
