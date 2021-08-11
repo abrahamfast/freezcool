@@ -16,6 +16,11 @@ class Lists extends Component
 
     public function mount()
     {
+        $user = Auth::user();
+        if ($user) {
+            $this->wishlist = $user->wish()->pluck('product_id')->toArray();
+        }
+
         if ($this->cate) {
             $category = ProductCategories::find($this->cate);
             $this->products = $category->products;
@@ -28,12 +33,6 @@ class Lists extends Component
             'deleted' => 0,
             'status' => 'Available'
         ])->get();
-
-        $user = Auth::user();
-
-        if ($user) {
-            $this->wishlist = $user->wish()->pluck('product_id')->toArray();
-        }
     }
 
     public function render()
