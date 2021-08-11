@@ -8,7 +8,7 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function index($id, Request $request)
+    public function index(Request $request, $id = null)
     {
         return view('pages.shop-list', [
             'categoryId' => $id,

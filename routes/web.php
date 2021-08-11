@@ -25,7 +25,7 @@ Route::get('/faq', [ App\Http\Controllers\StaticController::class, 'getFaq']);
 Route::get('/blog', [WeblogController::class, 'index'])->name('blog');
 Route::get('/blog/single', [WeblogController::class, 'show'])->name('blog.show');
 Route::get('/shop-list', [ProductController::class, 'index'])->name('shop-list');
-Route::get('/shop-list/{id}', [ProductController::class, 'index'])->name('category.list');
+Route::get('/shop-list/{id?}', [ProductController::class, 'index'])->name('category.list');
 // @TODO seo need added slug by product title
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/btu/calculator', [CalculatorController::class, 'index'])->name('calculator');
@@ -63,9 +63,7 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::post('/reviews/{id}', [ReviewController::class, 'store'])->name('review.store');
 
-	Route::get('/account-wishlist/{id}', [
-		WishListController::class, 'link'
-	])->name('wishlist.link');
+	Route::get('/account-wishlist/{id}', [WishListController::class, 'link'])->name('wishlist.link');
 });
 
 Auth::routes();
