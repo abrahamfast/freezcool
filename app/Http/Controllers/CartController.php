@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\{Product, Quote, QuoteItem};
+use App\Models\Product;
+use App\Models\Quote;
+use App\Models\QuoteItem;
 use App\Traits\QuoteHandler;
 use App\Traits\QuoteCalculator;
 
 class CartController extends Controller
 {
-    use QuoteHandler, QuoteCalculator;
+    use QuoteHandler;
+    use QuoteCalculator;
 
     protected $product;
     protected $qoute;
@@ -44,9 +47,9 @@ class CartController extends Controller
         $productId = $request->get('product-id');
         $quantity = $request->get('quantity');
 
-        if($this->getSessionQuote()) {
+        if ($this->getSessionQuote()) {
             $this->setQuote();
-        } else if ($user) {
+        } elseif ($user) {
             $this->userQuote($user);
         } else {
             $this->newQuote();
@@ -73,7 +76,7 @@ class CartController extends Controller
         $quote->status = 'In Review';
 
         // @TODO remove release ver
-        if(!$quote->account_id){
+        if (!$quote->account_id) {
             $quote->account_id = $user->account()->first()->id;
         }
 

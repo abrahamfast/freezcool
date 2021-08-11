@@ -14,8 +14,8 @@ class ProductCategories extends Model
     protected $guarded = [];
 
     protected $casts = [
-    	'id' => 'string',
-    	'parent_id' => 'string'
+        'id' => 'string',
+        'parent_id' => 'string'
     ];
 
     public function products()

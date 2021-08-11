@@ -9,10 +9,10 @@ class Ticket extends Model
 {
     use HasFactory;
 
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at';
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
 
-    protected  $table = 'contact_form';
+    protected $table = 'contact_form';
     protected $casts = [
         'id' => 'string'
     ];

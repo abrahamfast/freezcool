@@ -9,11 +9,11 @@ class OrderController extends Controller
 {
     public function index()
     {
-    	return view('pages.profile.order');
+        return view('pages.profile.order');
     }
 
     public function show($id = null)
     {
-    	return view('pages.profile.order-detail');	
+        return view('pages.profile.order-detail');
     }
 }

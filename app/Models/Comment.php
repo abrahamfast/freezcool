@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Comment extends Model
 {
     use HasFactory;
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at';
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
 
     protected $table = 'product_comment';
 
@@ -27,5 +27,4 @@ class Comment extends Model
     {
         return $this->hasOne(User::class, 'id', 'account_id');
     }
-
 }

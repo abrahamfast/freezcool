@@ -7,6 +7,7 @@ use Livewire\Component;
 class Cart extends Component
 {
     public $product;
+    public $wishlist = [];
 
     public function render()
     {

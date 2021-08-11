@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\App;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
+    use AuthorizesRequests;
+    use DispatchesJobs;
+    use ValidatesRequests;
 }

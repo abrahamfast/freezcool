@@ -9,11 +9,11 @@ class WeblogController extends Controller
 {
     public function index()
     {
-    	return view('pages.weblog.index');
+        return view('pages.weblog.index');
     }
 
     public function show($slug = null)
     {
-    	return view('pages.weblog.show');
+        return view('pages.weblog.show');
     }
 }

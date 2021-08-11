@@ -10,8 +10,8 @@ use App\Models\EntityTeam;
 class Quote extends Model
 {
     use HasFactory;
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at';
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
 
     protected $table = 'quote';
 
@@ -20,15 +20,15 @@ class Quote extends Model
     public $incrementing = false;
 
     protected $casts = [
-    	'id' => 'string',
-    	'tax_d' => 'string',
-    	'account_id' => 'string',
-    	'shipping_contact_id' => 'string',
+        'id' => 'string',
+        'tax_d' => 'string',
+        'account_id' => 'string',
+        'shipping_contact_id' => 'string',
     ];
 
     public function items()
     {
-    	return $this->hasMany(QuoteItem::class);
+        return $this->hasMany(QuoteItem::class);
     }
 
     public function team()
@@ -61,7 +61,7 @@ class Quote extends Model
         // @TODO check duplicate
         $assign = $this->team()->whereTeamId('6031eed8965a745e3')->get();
 
-        if (!$assign){
+        if (!$assign) {
             return $this->team()->create([
                 'entity_id' => $this->id,
                 'team_id' => '6031eed8965a745e3',

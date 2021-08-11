@@ -1,3 +1,4 @@
+
 <div class="block-split__item block-split__item-content col-auto">
     <div class="block">
         <div class="products-view">
@@ -101,7 +102,7 @@
 
 
                 @foreach($products as $product)
-                    <livewire:product.cart :product="$product"  />
+                    <livewire:product.cart :product="$product" :wishlist="$wishlist" />
                 @endforeach
 
 

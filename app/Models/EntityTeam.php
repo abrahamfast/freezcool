@@ -8,7 +8,8 @@ use App\Traits\SoftDelete;
 
 class EntityTeam extends Model
 {
-    use HasFactory, SoftDelete;
+    use HasFactory;
+    use SoftDelete;
 
     protected $table = 'entity_team';
     protected $guarded = [];
@@ -17,8 +18,8 @@ class EntityTeam extends Model
     public $incrementing = false;
 
     protected $casts = [
-    	'id' => 'string',
-    	'entity_id' => 'string',
-    	'team_id' => 'string'
+        'id' => 'string',
+        'entity_id' => 'string',
+        'team_id' => 'string'
     ];
 }

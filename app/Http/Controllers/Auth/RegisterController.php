@@ -132,7 +132,7 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         $receiver = 'otp:phone';
-        if($request->session()->get($receiver)) {
+        if ($request->session()->get($receiver)) {
             return view('auth.otp');
         }
 

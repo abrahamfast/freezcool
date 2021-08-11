@@ -9,10 +9,11 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at';
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
 
     protected $table = "account";
 
@@ -76,6 +77,16 @@ class User extends Authenticatable
     public function quote()
     {
         return $this->hasMany(Quote::class, 'account_id', 'account_id');
+    }
+
+    /**
+     * User Wishlist
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function wish()
+    {
+        return $this->hasMany(Wishlist::class, 'account_id');
     }
 
     public function isAdvisor()

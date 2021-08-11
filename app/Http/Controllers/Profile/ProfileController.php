@@ -10,7 +10,7 @@ class ProfileController extends Controller
     public function show(Request $request)
     {
         $user = $request->user();
-    	return view('pages.profile.edit-profile', [
+        return view('pages.profile.edit-profile', [
             'user' => $user
         ]);
     }
@@ -32,7 +32,7 @@ class ProfileController extends Controller
         $user->shipping_address_street = $reqeust->get('shipping_address_street');
         $user->shipping_address_postal_code = $reqeust->get('shipping_address_postal_code');
         $user->save();
-        
+
         return redirect()->back();
     }
 }

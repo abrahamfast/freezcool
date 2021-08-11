@@ -21,7 +21,7 @@ class CompareController extends Controller
         $list = session()->get('compare');
         session()->forget('compare');
 
-        if($list == null) {
+        if ($list == null) {
             unset($list);
             $list[] = Product::find($id);
             session()->put('compare', $list);
@@ -33,10 +33,12 @@ class CompareController extends Controller
                 $keys[] = $item->id;
             }
 
-            if(!in_array($id, $keys)) $list[] = Product::find($id);
+            if (!in_array($id, $keys)) {
+                $list[] = Product::find($id);
+            }
             session()->put('compare', $list);
         }
-        
+
         return redirect()->back();
     }
 
@@ -44,9 +46,9 @@ class CompareController extends Controller
     {
         $list = session()->get('compare');
         session()->forget('compare');
-        
-        foreach($list as $product){
-            if($product->id !== $id){
+
+        foreach ($list as $product) {
+            if ($product->id !== $id) {
                 session()->push('compare', $product);
             }
         }

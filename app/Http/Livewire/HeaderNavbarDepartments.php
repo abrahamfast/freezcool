@@ -7,7 +7,6 @@ use App\Models\ProductCategories;
 
 class HeaderNavbarDepartments extends Component
 {
-
     public $categories;
 
     public function mount()

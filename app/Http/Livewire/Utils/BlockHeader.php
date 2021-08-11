@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class BlockHeader extends Component
 {
-    public  $title;
+    public $title;
     public function mount($title = null)
     {
         $this->title = $title;

@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-
 use Illuminate\Support\Facades\Cache;
 
 class CodeGenerator
@@ -30,7 +29,6 @@ class CodeGenerator
                 $code,
                 320
             );
-
         } catch (\Exception $e) {
         }
 
@@ -128,5 +126,4 @@ class CodeGenerator
     {
         $this->cache_prefix = $cache_prefix;
     }
-
 }

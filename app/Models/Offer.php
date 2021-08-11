@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Offer extends Model
 {
     use HasFactory;
-    
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at'; 
+
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
 
     protected $table = 'offer';
 
@@ -22,10 +22,10 @@ class Offer extends Model
     }
 
     protected $casts = [
-    	'id' => 'string',
-    	'cover_id' => 'string',
-    	'created_by_id' => 'string',
-    	'modified_by_id' => 'string',
-    	'assigned_user_id' => 'string',
+        'id' => 'string',
+        'cover_id' => 'string',
+        'created_by_id' => 'string',
+        'modified_by_id' => 'string',
+        'assigned_user_id' => 'string',
     ];
 }

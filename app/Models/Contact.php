@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Contact extends Model
 {
     use HasFactory;
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at'; 
-    
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
+
     protected $table = 'contact';
-   	protected $casts = [
-    	'id' => 'string',
+    protected $casts = [
+        'id' => 'string',
     ];
 }

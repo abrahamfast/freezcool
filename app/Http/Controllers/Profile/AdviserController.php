@@ -9,6 +9,6 @@ class AdviserController extends Controller
 {
     public function index()
     {
-    	return view('pages.profile.adviser');
+        return view('pages.profile.adviser');
     }
 }

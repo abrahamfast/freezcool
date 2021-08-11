@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Services;
 
 use Cache;
@@ -10,7 +9,6 @@ use Kavenegar\KavenegarApi;
 use App\Models\Otp;
 use App\Helper\Stri;
 
-
 /**
  * @property CodeGenerator code
  */
@@ -19,7 +17,7 @@ class OtpService
     protected $client;
     protected $receptor;
     protected $message;
-    private   $sender;
+    private $sender;
     protected $channel = 'sms';
     protected $pattern;
     protected $isDeveloperMode;
@@ -44,7 +42,7 @@ class OtpService
      *
      * @return array
      */
-    public function send() 
+    public function send()
     {
         try {
             $token = $this->code->setCacheKey($this->getReceptor())->generate();
@@ -55,19 +53,21 @@ class OtpService
                 'phone_number' => $this->getReceptor()
             ]);
 
-            if($this->isDeveloperMode) return true;
+            if ($this->isDeveloperMode) {
+                return true;
+            }
 
             return $this->client->VerifyLookup(
                 $this->getReceptor(),
-                $token,"","",
+                $token,
+                "",
+                "",
                 $this->getPattern(),
                 $this->getChannel()
             );
-            
         } catch (ApiException | HttpException $e) {
             return $e->errorMessage();
         }
-
     }
 
     /**
@@ -182,5 +182,4 @@ class OtpService
     {
         $this->pattern = $pattern;
     }
-
 }

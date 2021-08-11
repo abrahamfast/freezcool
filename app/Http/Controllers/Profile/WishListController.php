@@ -11,31 +11,25 @@ class WishListController extends Controller
 {
     public function index()
     {
-    	return view('pages.profile.wishlist');
+        return view('pages.profile.wishlist');
     }
 
-    public function link($id, Request  $request)
+    public function link($id, Request $request)
     {
         $hasWish = Wishlist::where([
             'account_id' => $request->user()->id,
             'product_id' => $id
-        ])->get();
+        ])->first();
 
-        if($hasWish->count() == 0){
+        if ($hasWish) {
+            $hasWish->delete();
+        } else {
             Wishlist::create([
                 'account_id' => $request->user()->id,
                 'product_id' => $id
             ]);
         }
 
-
-        return redirect()->back();
-
-    }
-
-    public function store($id)
-    {
-        // @TODO added whishlist
         return redirect()->back();
     }
 }

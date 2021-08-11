@@ -16,7 +16,7 @@ class AdviserMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!$request->user()->isAdvisor()) {
+        if (!$request->user()->isAdvisor()) {
             abort('404');
         }
 

@@ -10,12 +10,12 @@ class Brand extends Model
     use HasFactory;
     protected $table = "product_brand";
     protected $casts = [
-    	'id' => 'string'
+        'id' => 'string'
     ];
 
 
     public function product()
     {
-    	return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class);
     }
 }

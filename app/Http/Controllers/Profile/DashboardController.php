@@ -9,16 +9,16 @@ class DashboardController extends Controller
 {
     public function index(Request $request)
     {
-    	$user = $request->user();
-    	// main address
+        $user = $request->user();
+        // main address
 
         // get all quotes
         $quotes = $user->quote()->get();
 
 
-    	return view('pages.profile.dashboard', [
-    		'user' => $user,
+        return view('pages.profile.dashboard', [
+            'user' => $user,
             'quotes' => $quotes
-    	]);
+        ]);
     }
 }

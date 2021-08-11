@@ -7,7 +7,6 @@ use App\Models\ProductCategories;
 
 class MobileMenuCategories extends Component
 {
-
     public $categories;
 
     public function mount()

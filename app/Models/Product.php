@@ -11,9 +11,10 @@ use App\Traits\ItemAccessor;
 
 class Product extends Model
 {
-    use HasFactory, ItemAccessor;
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'modified_at';
+    use HasFactory;
+    use ItemAccessor;
+    public const CREATED_AT = 'created_at';
+    public const UPDATED_AT = 'modified_at';
 
     protected $table = 'product';
 
@@ -33,7 +34,7 @@ class Product extends Model
 
     public function attachment()
     {
-    	return $this->hasMany(Attachment::class, 'parent_id');
+        return $this->hasMany(Attachment::class, 'parent_id');
     }
 
     public function comments()
@@ -43,12 +44,14 @@ class Product extends Model
 
     public function getCover()
     {
-    	$covers = $this->attachment()->get();
+        $covers = $this->attachment()->get();
         $exists = $covers->count();
 
-    	if($exists) return $covers[0]->id;
+        if ($exists) {
+            return $covers[0]->id;
+        }
 
-    	return 'default.jpg';
+        return 'default.jpg';
     }
 
     public function getMoreDetails()
@@ -65,10 +68,10 @@ class Product extends Model
     {
         // @TODO need type Num
         // @TODO remove in ver v1.0.1
-        if($this->price_type == 'Discount fromList'){
+        if ($this->price_type == 'Discount fromList') {
             // ext: (2000*0.10)*12=2400
             // (price * discount) * quantity
-          return ($this->list_price - $this->getDiscount()) * $quantity;
+            return ($this->list_price - $this->getDiscount()) * $quantity;
         }
 
         return $this->unit_price * $quantity;
@@ -88,7 +91,7 @@ class Product extends Model
     {
         $value = $this->takeCurrency($this->list_price);
 
-        if($this->discount_price){
+        if ($this->discount_price) {
             $value = $this->takeCurrency($this->unit_price);
         }
 

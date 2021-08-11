@@ -2,7 +2,9 @@
 
 namespace App\Traits;
 
-use App\Models\{Product, Quote, QuoteItem};
+use App\Models\Product;
+use App\Models\Quote;
+use App\Models\QuoteItem;
 
 trait QuoteHandler
 {
@@ -10,51 +12,51 @@ trait QuoteHandler
     {
         return Quote::where('id', $this->qouteId)->first();
     }
-	public function getSessionQuote()
-	{
-		return $this->quoteId = session()->get('quoteId');
-	}
+    public function getSessionQuote()
+    {
+        return $this->quoteId = session()->get('quoteId');
+    }
 
-	public function setSessionQuote($quoteId)
-	{
-		session()->put('quoteId', $quoteId);
-	}
+    public function setSessionQuote($quoteId)
+    {
+        session()->put('quoteId', $quoteId);
+    }
 
-	public function setQuote()
-	{
-		$this->quote = Quote::where('id', $this->quoteId)->first();
-	}
-	public function newQuote($user = null)
-	{
-		$rawQuote = Quote::where('id', "60e6c6c6b9de80700")->first()->toArray();
-		$rawQuote['id'] = $this->uuid();
-		$rawQuote['name'] = __('global.new quote') . date("Y-m-d");
-		if($user){
-			$rawQuote['account_id'] = $user->id;
-		}
-		$this->quote =  Quote::create($rawQuote);
-		$this->setSessionQuote($rawQuote['id']);
-	}
+    public function setQuote()
+    {
+        $this->quote = Quote::where('id', $this->quoteId)->first();
+    }
+    public function newQuote($user = null)
+    {
+        $rawQuote = Quote::where('id', "60e6c6c6b9de80700")->first()->toArray();
+        $rawQuote['id'] = $this->uuid();
+        $rawQuote['name'] = __('global.new quote') . date("Y-m-d");
+        if ($user) {
+            $rawQuote['account_id'] = $user->id;
+        }
+        $this->quote =  Quote::create($rawQuote);
+        $this->setSessionQuote($rawQuote['id']);
+    }
 
 
-	public function userQuote($user)
-	{
-		$this->quote = $user->quote()->where('status', 'Draft')->where('deleted', 0)->first();
-		if(!$this->quote){
-			$this->newQuote($user);
+    public function userQuote($user)
+    {
+        $this->quote = $user->quote()->where('status', 'Draft')->where('deleted', 0)->first();
+        if (!$this->quote) {
+            $this->newQuote($user);
             return true;
-		}
-		$this->setSessionQuote($this->quote->id);
-	}
+        }
+        $this->setSessionQuote($this->quote->id);
+    }
 
-	public function product($productId)
-	{
-		return $this->product = Product::where('id', $productId)->first();
-	}
+    public function product($productId)
+    {
+        return $this->product = Product::where('id', $productId)->first();
+    }
 
-	public function addItem($quantity, $accountId = null)
-	{
-		QuoteItem::create([
+    public function addItem($quantity, $accountId = null)
+    {
+        QuoteItem::create([
                 'id' => $this->uuid(),
                 'name' => $this->product->name,
                 'quantity' => $quantity,
@@ -72,11 +74,10 @@ trait QuoteHandler
                 'account_id' => $accountId ?? null,
                 'product_id' => $this->product->id,
             ]);
-	}
+    }
 
-	public function uuid()
-	{
-		return uniqid() . substr(md5(rand()), 0, 4);
-	}
+    public function uuid()
+    {
+        return uniqid() . substr(md5(rand()), 0, 4);
+    }
 }
-

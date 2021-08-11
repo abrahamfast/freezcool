@@ -6,8 +6,8 @@ use Livewire\Component;
 
 class Custom extends Component
 {
-	public array $products = [];
-	
+    public array $products = [];
+
     public function render()
     {
         return view('livewire.compare.row.custom');

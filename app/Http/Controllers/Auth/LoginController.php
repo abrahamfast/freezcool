@@ -11,7 +11,6 @@ use App\Models\User;
 
 class LoginController extends Controller
 {
-
     use AuthenticatesUsers;
     private OtpService $otpService;
 
@@ -51,11 +50,11 @@ class LoginController extends Controller
         $receptor = $request->get('phone');
         $user = User::where('phone', $receptor)->first();
         // user has not registered force to register
-        if(!$user) {
+        if (!$user) {
             return redirect()->route('register');
         }
         $reciver = 'otp:phone';
-        if($request->session()->get($reciver)) {
+        if ($request->session()->get($reciver)) {
             return redirect()->route('otp');
         }
 
@@ -63,7 +62,7 @@ class LoginController extends Controller
         $this->otpService->send();
         // @TODO need improve by expireation key
         session()->put($reciver, $receptor, 120);
-        
+
         // just one time
         return redirect()->route('otp');
     }
@@ -71,10 +70,10 @@ class LoginController extends Controller
     public function otp(Request $request)
     {
         $phone = $request->session()->get('otp:phone');
-        if($phone){
+        if ($phone) {
             return view('auth.otp');
         }
-        
+
         return redirect()->to('/login');
     }
 

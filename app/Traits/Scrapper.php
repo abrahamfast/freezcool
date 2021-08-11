@@ -1,20 +1,16 @@
 <?php
 
-
 namespace App\Traits;
-
 
 use App\Helper\StrHelper;
 
 trait Scrapper
 {
-
-
     protected function sabziman($crawler)
     {
         $links = $crawler->filter('a.img');
 
-        return  $links->each(function($node){
+        return  $links->each(function ($node) {
             return $node->attr('href');
         });
     }
@@ -23,7 +19,7 @@ trait Scrapper
     {
         $links = $crawler->filter('.before_content_product_catalog a.woocommerce-LoopProduct-link');
 
-        return $links->each(function($node){
+        return $links->each(function ($node) {
             return $node->attr('href');
         });
     }
@@ -46,7 +42,6 @@ trait Scrapper
         $data['description'] = '';
 
         return $data;
-
     }
 
     /**
@@ -67,7 +62,5 @@ trait Scrapper
         $data['description'] = $crawler->filter('#tab-description')->first()->text();
 
         return $data;
-
     }
-
 }

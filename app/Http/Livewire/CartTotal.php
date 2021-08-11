@@ -21,22 +21,26 @@ class CartTotal extends Component
         $user = Auth::user();
         $quoteId = session()->get('quoteId');
 
-        if($user && !$quoteId){
+        if ($user && !$quoteId) {
             $quote = $user->quote()->where('status', 'Draft')->where('deleted', 0)->first();
-            if(!$quote) return false;
+            if (!$quote) {
+                return false;
+            }
             $haveTeam = $quote->team()->count();
-            if($quote && !$haveTeam){
+            if ($quote && !$haveTeam) {
                 $this->quote = $quote;
                 $this->quote_items = $this->quote->items()->where('deleted', 0)->get();
                 $this->itemsCount  = $this->quote_items->count();
             }
         } else {
             $quoteId = session()->get('quoteId');
-            if($quoteId){
+            if ($quoteId) {
                 $quote = Quote::where('id', $quoteId)->first();
-                if(!$quote) return false;
+                if (!$quote) {
+                    return false;
+                }
                 $haveTeam = $quote->team()->count();
-                if($quote && !$haveTeam){
+                if ($quote && !$haveTeam) {
                     $this->quote = $quote;
                     $this->quote_items = $this->quote->items()->where('deleted', 0)->get();
                     $this->itemsCount  = $this->quote_items->count();
@@ -45,7 +49,7 @@ class CartTotal extends Component
             }
         }
 
-        if($this->quote){
+        if ($this->quote) {
             $this->amount =  $this->quote->grand_total_amount;
             $this->discount_amount = $this->quote->grand_total_amount;
             $this->tax_amount = $this->quote->tax_amount;
