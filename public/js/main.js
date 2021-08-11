@@ -1277,6 +1277,14 @@
         $('.form-control-select2, .block-finder__form-control--select select').select2({width: ''});
     });
 
+    /**
+     // add cart
+     */
+    $('.addcartbtn').on('click', function(e){
+        e.preventDefault();
+        $('.product-form').submit()
+    });
+
     /*
     // .vehicle-form
     */

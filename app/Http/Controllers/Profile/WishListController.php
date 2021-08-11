@@ -9,9 +9,13 @@ use Illuminate\Http\Request;
 
 class WishListController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.profile.wishlist');
+        $wishlist = $request->user()->wish()->get();
+
+        return view('pages.profile.wishlist', [
+            'wishlist' => $wishlist
+        ]);
     }
 
     public function link($id, Request $request)
