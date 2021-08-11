@@ -28,6 +28,10 @@
         @include('partials/mobileheader')
         @include('partials/siteheader')
         <div class="site__body">
+
+            @if(session()->get('toast'))
+                <x-ui.toast />
+            @endif
             @yield('body')
         </div>
         @include('partials.site_footer')

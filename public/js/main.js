@@ -1294,4 +1294,11 @@
             item.find('~ .vehicle-form__item--select select').trigger('change.select2');
         });
     });
+
+    /*
+    // .toast
+     */
+
+    $('.toast').toast('show')
+
 })(jQuery);
