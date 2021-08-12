@@ -276,6 +276,9 @@ return [
     'Product remove from cart' => 'محصول از سبد حذف شد',
     'Product add to cart' => 'به سبد اضافه شد',
 
+    'unAvailability Product' => 'موجود نیست',
+    'Availability Product' => 'موجود است'
+
 
 
 

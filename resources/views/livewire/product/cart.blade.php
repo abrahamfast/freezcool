@@ -48,9 +48,11 @@
             <div class="product-card__name">
                 <div>
                     <div class="product-card__badges">
-                        <div class="tag-badge tag-badge--sale">{{ __('global.sale') }}</div>
-                        <div class="tag-badge tag-badge--new">{{ __('global.new') }}</div>
-                        <div class="tag-badge tag-badge--hot">{{ __('global.hot') }}</div>
+                        @if($product->status == 'Available')
+                            <div class="tag-badge tag-badge--available">{{ __('global.Availability Product') }}</div>
+                        @else
+                            <div class="tag-badge tag-badge tag-badge--sale">{{ __('global.unAvailability Product') }}</div>
+                        @endif
                     </div>
                     <a href="{{ route('product.show', $product->id) }}">{{ $product->name }}</a>
                 </div>
@@ -74,7 +76,7 @@
             <div class="product-card__prices">
                 <div class="product-card__price product-card__price--current">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('cost_price')) }} تومان</div>
             </div>
-            <button class="product-card__addtocart-icon" type="button" aria-label="Add to cart">
+            <button class="product-card__addtocart-icon addcartbtn" type="button" aria-label="Add to cart">
                 <svg width="20" height="20">
                     <circle cx="7" cy="17" r="2" />
                     <circle cx="15" cy="17" r="2" />

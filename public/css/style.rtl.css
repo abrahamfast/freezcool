@@ -3732,6 +3732,13 @@ select.form-control-sm {
   background: #1a79ff;
 }
 
+.tag-badge--available {
+    color: #fff;
+}
+
+.tag-badge--available:before {
+    color: #28a745;
+}
 .tag-badge--sale {
   color: #fff;
 }
