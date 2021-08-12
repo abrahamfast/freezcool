@@ -13,6 +13,7 @@ class Lists extends Component
     public $category;
     public $cate;
     public $wishlist = [];
+    public $filters;
 
     public function mount()
     {

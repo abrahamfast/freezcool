@@ -10,11 +10,15 @@ class ProductController extends Controller
 {
     public function index(Request $request, $id = null)
     {
-        $filter = $request->get('filters');
+        $filter = [];
+        if ($request->all()) {
+            $filter['brands'] = explode(",", $request->get('brands'));
+            $filter['rating'] = explode(",", $request->get('rating'));
+        }
 
         return view('pages.shop-list', [
             'categoryId' => $id,
-            'filters' => $request->get('filters') ?? false
+            'filters' => $filter
         ]);
     }
 

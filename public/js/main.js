@@ -1327,7 +1327,32 @@
 
     $('#product-filter').on('click', function(e){
         e.preventDefault();
-        console.log(this);
+        let rating = [];
+        let brands= [];
+
+        $('input[name="brand"]:checked').each(function(i,e){
+            brands.push(e.value)
+        })
+
+        $('input[name="rating"]:checked').each(function(i,e){
+            rating.push(e.value)
+        })
+
+        let query = '';
+        if (brands.length) {
+            query = `brands=` + brands.join(",");
+        }
+
+        if (rating.length) {
+            let rateQuery = `rating=` + rating.join(',');
+            if (query){
+                query += `&` + rateQuery
+            } else {
+                query = rateQuery;
+            }
+        }
+
+        window.location = `?` + query;
     });
 
 })(jQuery);

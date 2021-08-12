@@ -9,10 +9,13 @@ use DB;
 class FilterRatingList extends Component
 {
     public $rating;
+    public $filters;
+
     public function mount()
     {
         $this->rating = DB::table('product')->where('deleted', 0)->groupBy('rating')->orderBy('rating', 'DESC')->get(['rating', DB::raw('COUNT(id) as count')]);
     }
+
     public function render()
     {
         return view('livewire.filter-rating-list');

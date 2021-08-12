@@ -7,6 +7,7 @@ use Livewire\Component;
 class Sidebar extends Component
 {
     public $cate = null;
+    public $filters = null;
 
     public function render()
     {

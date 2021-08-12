@@ -8,6 +8,7 @@ use App\Models\Brand;
 class FilterBrandList extends Component
 {
     public $brands;
+    public $filters;
 
     public function mount()
     {
