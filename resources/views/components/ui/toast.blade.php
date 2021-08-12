@@ -8,6 +8,6 @@
         <svg class="bd-placeholder-img rounded mr-2"  width="20" height="20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#8bc34a" width="100%" height="100%"></rect></svg>
     </div>
     <div class="toast-body">
-        {{ session()->get('toast') }}
+        {{ session()->pull('toast') }}
     </div>
 </div>

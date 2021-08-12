@@ -29,7 +29,7 @@
         @include('partials/siteheader')
         <div class="site__body">
 
-            @if(session()->get('toast'))
+            @if(session()->has('toast'))
                 <x-ui.toast />
             @endif
             @yield('body')
