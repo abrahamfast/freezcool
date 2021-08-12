@@ -19,7 +19,7 @@
                     @foreach($cates as $cat)
                     <li class="filter-categories__item filter-categories__item--current">
                         <a href="{{ route('category.list', $cat->id) }}">{{ $cat->name }}</a>
-                        <div class="filter-categories__counter">{{  App\Helper\Stri::convertFa($cat->products()->count()) }} مورد</div>
+                        <div class="filter-categories__counter">{{  App\Helper\Stri::convertFa($cat->products()->where('deleted', 0)->count()) }} مورد</div>
                     </li>
                     @endforeach
                 </ul>

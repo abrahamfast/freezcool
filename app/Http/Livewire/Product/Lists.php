@@ -23,15 +23,14 @@ class Lists extends Component
 
         if ($this->cate) {
             $category = ProductCategories::find($this->cate);
-            $this->products = $category->products;
+            $this->products = $category->products()->where('deleted', 0)->get();
             $this->category = $category;
             return true;
         }
 
         // get all product has available
         $this->products = Product::where([
-            'deleted' => 0,
-            'status' => 'Available'
+            'deleted' => 0
         ])->get();
     }
 

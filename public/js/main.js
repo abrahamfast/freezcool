@@ -1317,4 +1317,12 @@
         window.location = "/cart/unlink/" + $(this).attr('data-value')
     });
 
+    /*
+    // reset product filters
+     */
+    $('#reset').on('click', function(e){
+        e.preventDefault()
+        window.location = '/shop-list/'
+    });
+
 })(jQuery);

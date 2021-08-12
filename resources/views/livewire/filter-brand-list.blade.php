@@ -24,7 +24,7 @@
                             </span>
                         </span>
                         <span class="filter-list__title">{{ $brand->name }}</span>
-                        <span class="filter-list__counter">{{  App\Helper\Stri::convertFa($brand->product()->count()) }} مورد</span>
+                        <span class="filter-list__counter">{{  App\Helper\Stri::convertFa($brand->product()->where('deleted', 0)->count()) }} مورد</span>
                     </label>
                     @endforeach
                 </div>

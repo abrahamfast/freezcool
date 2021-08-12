@@ -74,12 +74,3 @@
         </div>
     </div>
 </div>
-
-@push('js')
-<script>
-    $('#reset').on('click', function(e){
-        e.preventDefault()
-        window.location = '/shop-list/'
-    });
-</script>
-@endpush
