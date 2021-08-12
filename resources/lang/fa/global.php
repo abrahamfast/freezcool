@@ -271,7 +271,10 @@ return [
 
     'Wish was link' => 'به علاقه مند ها اضافه شد',
     'Wish was unlink' => 'حذف علاقه مندی',
-
+    'Compare add to list' => 'به لیست مقایسه اضافه شد',
+    'Compare remove from list' => 'از لیست مقایسه حذف شد',
+    'Product remove from cart' => 'محصول از سبد حذف شد',
+    'Product add to cart' => 'به سبد اضافه شد',
 
 
 

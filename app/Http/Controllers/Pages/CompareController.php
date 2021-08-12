@@ -25,6 +25,9 @@ class CompareController extends Controller
             unset($list);
             $list[] = Product::find($id);
             session()->put('compare', $list);
+
+            session()->put('toast', __('global.Compare add to list'));
+
             return redirect()->back();
         }
 
@@ -39,6 +42,8 @@ class CompareController extends Controller
             session()->put('compare', $list);
         }
 
+        session()->put('toast', __('global.Compare add to list'));
+
         return redirect()->back();
     }
 
@@ -52,6 +57,8 @@ class CompareController extends Controller
                 session()->push('compare', $product);
             }
         }
+
+        session()->put('toast', __('global.Compare remove from list'));
 
         return redirect()->back();
     }

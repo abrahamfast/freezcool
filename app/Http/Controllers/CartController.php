@@ -38,6 +38,7 @@ class CartController extends Controller
         $this->setQuote();
         $this->performs();
 
+        session()->put('toast', __('global.Product remove from cart'));
         return redirect()->back();
     }
 
@@ -62,6 +63,8 @@ class CartController extends Controller
         );
 
         $this->performs();
+
+        session()->put('toast', __('global.Product add to cart'));
 
         return redirect()->back();
     }
