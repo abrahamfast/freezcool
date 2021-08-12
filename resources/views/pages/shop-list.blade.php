@@ -5,7 +5,7 @@
     <div class="block-split block-split--has-sidebar">
         <div class="container">
             <div class="block-split__row row no-gutters">
-                <livewire:product.sidebar />
+                <livewire:product.sidebar :cate="$categoryId" />
                 <livewire:product.lists :cate="$categoryId" />
             </div>
         </div>

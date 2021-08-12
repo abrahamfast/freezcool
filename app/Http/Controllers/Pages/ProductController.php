@@ -10,6 +10,8 @@ class ProductController extends Controller
 {
     public function index(Request $request, $id = null)
     {
+        $filter = $request->get('filters');
+
         return view('pages.shop-list', [
             'categoryId' => $id,
             'filters' => $request->get('filters') ?? false

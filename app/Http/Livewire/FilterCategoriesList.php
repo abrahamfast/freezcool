@@ -8,6 +8,7 @@ use App\Models\ProductCategories;
 class FilterCategoriesList extends Component
 {
     public $cates;
+    public $cate;
 
     public function mount()
     {

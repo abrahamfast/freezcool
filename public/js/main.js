@@ -1325,4 +1325,9 @@
         window.location = '/shop-list/'
     });
 
+    $('#product-filter').on('click', function(e){
+        e.preventDefault();
+        console.log(this);
+    });
+
 })(jQuery);
