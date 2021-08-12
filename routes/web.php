@@ -31,7 +31,7 @@ Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.s
 Route::get('/btu/calculator', [CalculatorController::class, 'index'])->name('calculator');
 Route::get('/btu/calculator/result', [CalculatorController::class, 'show'])->name('calculator.result');
 Route::get('/track-order', [TrackOrderController::class, 'index'])->name('order.track');
-Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wishlist');
+
 
 
 
@@ -64,6 +64,7 @@ Route::middleware(['auth'])->group(function () {
 	Route::post('/reviews/{id}', [ReviewController::class, 'store'])->name('review.store');
 
 	Route::get('/account-wishlist/{id}', [WishListController::class, 'link'])->name('wishlist.link');
+    Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wishlist');
 });
 
 Auth::routes();
