@@ -11,8 +11,14 @@ class ProductController extends Controller
     public function index(Request $request, $id = null)
     {
         $filter = [];
-        if ($request->all()) {
+        $filter['brands'] = false;
+        $filter['rating'] = false;
+
+        if ($request->get('brands')) {
             $filter['brands'] = explode(",", $request->get('brands'));
+        }
+
+        if ($request->get('rating')) {
             $filter['rating'] = explode(",", $request->get('rating'));
         }
 

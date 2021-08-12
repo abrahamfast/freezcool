@@ -24,19 +24,55 @@ class Lists extends Component
 
         if ($this->cate) {
             $category = ProductCategories::find($this->cate);
-            $this->products = $category->products()->where('deleted', 0)->get();
+            $queryBuilder = $category->products()->where('deleted', 0);
+
+            $queryBuilder = $this->filter($queryBuilder);
+
+
+
+            $this->products = $queryBuilder->get();
             $this->category = $category;
             return true;
         }
 
         // get all product has available
-        $this->products = Product::where([
-            'deleted' => 0
-        ])->get();
+        $queryBuilder = Product::where('deleted', 0);
+
+        $queryBuilder = $this->filter($queryBuilder);
+
+
+        $this->products = $queryBuilder->get();
     }
 
     public function render()
     {
         return view('livewire.product.lists');
+    }
+
+    private function filter($queryBuilder)
+    {
+        $query = false;
+
+        if ($this->filters) {
+            if ($this->filters['brands']) {
+                $queryBuilder->whereIn('brand_id', $this->filters['brands']);
+            }
+
+            if ($this->filters['rating']) {
+                if ($query) {
+                    $query = $query->whereIn('rating', $this->filters['rating']);
+                } else {
+                    $query = $queryBuilder->where('rating', 5);
+                }
+            }
+        }
+
+
+        if ($query) {
+            return $query;
+        }
+
+
+        return $queryBuilder;
     }
 }
