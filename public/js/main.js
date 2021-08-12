@@ -1309,4 +1309,12 @@
 
     $('.toast').toast('show')
 
+    /*
+    // unline cart item
+    */
+    $('.cart-table__remove').on('click', function(e){
+        e.preventDefault();
+        window.location = "/cart/unlink/" + $(this).attr('data-value')
+    });
+
 })(jQuery);

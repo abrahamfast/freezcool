@@ -1,3 +1,4 @@
+@if($total_amount)
 <div class="cart__totals">
     <div class="card">
         <div class="card-body card-body--padding--2">
@@ -97,3 +98,5 @@
         </div>
     </div>
 </div>
+
+@endif
