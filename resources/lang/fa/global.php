@@ -278,7 +278,9 @@ return [
 
     'unAvailability Product' => 'موجود نیست',
     'Availability Product' => 'موجود است',
-    'Login to panel' => 'پنل کاربری'
+    'Login to panel' => 'پنل کاربری',
+
+    'Popular Brands' => 'برندهای مطرح'
 
 
 
