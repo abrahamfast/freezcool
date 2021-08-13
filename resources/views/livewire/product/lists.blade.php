@@ -1,5 +1,7 @@
 
+
 <div class="block-split__item block-split__item-content col-auto">
+    @if($products->count())
     <div class="block">
         <div class="products-view">
             <div class="products-view__options view-options view-options--offcanvas--mobile">
@@ -153,4 +155,9 @@
 
         </div>
     </div>
+    @else
+        <div class="alert alert-info alert-lg mb-3 alert-dismissible fade show">
+            {{ __('global.not found') }}
+        </div>
+    @endif
 </div>
