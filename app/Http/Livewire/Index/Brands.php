@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Index;
 
 use Livewire\Component;
+use App\Models\Brand;
+
 
 class Brands extends Component
 {
@@ -10,7 +12,7 @@ class Brands extends Component
 
     public function mount()
     {
-        $this->brands = Brands::where('deleted', 0)->limit(6)->get();
+        $this->brands = Brand::where('deleted', 0)->limit(6)->get();
     }
     public function render()
     {
