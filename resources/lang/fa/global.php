@@ -57,7 +57,7 @@ return [
     'Addresses' => 'آدرس‌ها',
     'Logout' => 'خروج از پنل',
     'Shopping Cart' => 'سبد خرید',
-    'Call Us' => 'شماره مشاوره',
+    'Call Us' => 'تماس',
     'Select Bmi' => 'تولید پکیچ',
     'Top Sales Products' => 'محصولات پر فروش',
     'Categories' => 'دسته بندی‌ها',
@@ -277,7 +277,8 @@ return [
     'Product add to cart' => 'به سبد اضافه شد',
 
     'unAvailability Product' => 'موجود نیست',
-    'Availability Product' => 'موجود است'
+    'Availability Product' => 'موجود است',
+    'Login to panel' => 'پنل کاربری'
 
 
 

@@ -6083,7 +6083,7 @@ select.form-control-sm {
 
 @media (min-width: 1400px) {
   .block-brands--layout--columns-8-full .block-brands__item {
-    width: calc((100% - 8px) / 8);
+    width: calc((100% - 8px) / 6);
   }
   .block-brands--layout--columns-8-full .block-brands__divider {
     width: 1px;
