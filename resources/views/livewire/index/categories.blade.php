@@ -3,7 +3,7 @@
         <ul class="block-brands__list">
             @foreach($categories as $item)
             <li class="block-brands__item">
-                <a href="" class="block-brands__item-link">
+                <a href="{{ route('product.show', $item->id) }}" class="block-brands__item-link">
                     <img src="/storage/{{ $item->icon_id }}" alt="{{ $item->name }}">
                     <span class="block-brands__item-name">{{ $item->name }}</span>
                 </a>

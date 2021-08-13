@@ -17,47 +17,15 @@
         <div class="block block-brands block-brands--layout--columns-8-full">
             <div class="container">
                 <ul class="block-brands__list">
+                    @foreach($brands as $item)
                     <li class="block-brands__item">
-                        <a href="" class="block-brands__item-link">
-                            <img src="images/brands/brand-1.png" alt="">
-                            <span class="block-brands__item-name">AimParts</span>
+                        <a href="{{ route('shop-list') }}/?brands={{$item->id}}" class="block-brands__item-link">
+                            <img src="/storage/{{ $item->icon_id }}" alt="">
+                            <span class="block-brands__item-name">{{ $item->name }}</span>
                         </a>
                     </li>
                     <li class="block-brands__divider" role="presentation"></li>
-                    <li class="block-brands__item">
-                        <a href="" class="block-brands__item-link">
-                            <img src="images/brands/brand-2.png" alt="">
-                            <span class="block-brands__item-name">WindEngine</span>
-                        </a>
-                    </li>
-                    <li class="block-brands__divider" role="presentation"></li>
-                    <li class="block-brands__item">
-                        <a href="" class="block-brands__item-link">
-                            <img src="images/brands/brand-3.png" alt="">
-                            <span class="block-brands__item-name">TurboElectric</span>
-                        </a>
-                    </li>
-                    <li class="block-brands__divider" role="presentation"></li>
-                    <li class="block-brands__item">
-                        <a href="" class="block-brands__item-link">
-                            <img src="images/brands/brand-4.png" alt="">
-                            <span class="block-brands__item-name">StartOne</span>
-                        </a>
-                    </li>
-                    <li class="block-brands__divider" role="presentation"></li>
-                    <li class="block-brands__item">
-                        <a href="" class="block-brands__item-link">
-                            <img src="images/brands/brand-3.png" alt="">
-                            <span class="block-brands__item-name">TurboElectric</span>
-                        </a>
-                    </li>
-                    <li class="block-brands__divider" role="presentation"></li>
-                    <li class="block-brands__item">
-                        <a href="" class="block-brands__item-link">
-                            <img src="images/brands/brand-4.png" alt="">
-                            <span class="block-brands__item-name">StartOne</span>
-                        </a>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
