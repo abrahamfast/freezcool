@@ -47,6 +47,9 @@ Route::get('cart/checkout', [\App\Http\Controllers\CartController::class, 'check
 Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final'])->name('checkout.final');
 
 
+Route::get('search', \App\Http\Controllers\SearchController::class)->name('search');
+
+
 
 Route::middleware(['auth', 'advisor'])->group(function () {
     Route::get('/account-adviser', [AdviserController::class, 'index']);
