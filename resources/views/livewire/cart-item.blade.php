@@ -33,9 +33,7 @@
             <td class="cart-table__column cart-table__column--price" data-title="Price">{{ \App\Helper\Stri::convertFa($item->product()->first()->takeCurrencyAttr('cost_price')) }} تومان </td>
             <td class="cart-table__column cart-table__column--quantity" data-title="Quantity">
                 <div class="cart-table__quantity input-number">
-                    <input class="form-control input-number__input" type="number" min="1" value="{{ $item->quantity ?? 1 }}">
-                    <div class="input-number__add"></div>
-                    <div class="input-number__sub"></div>
+                    <input disabled class="form-control input-number__input" type="number" min="1" value="{{ $item->quantity ?? 1 }}">
                 </div>
             </td>
             <td class="cart-table__column cart-table__column--total" data-title="Total">۲۰۰ هزار تومان</td>
