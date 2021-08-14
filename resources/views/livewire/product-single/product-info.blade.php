@@ -7,7 +7,7 @@
             <div class="product__prices-stock">
                 <div class="product__prices">
                     <div class="product__price product__price--current">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('cost_price')) }} تومان </div>
-                    @if(auth()->user()->isAdvisor())
+                    @if(auth()->user() && auth()->user()->isAdvisor())
                         <br>
                         <hr>
                         @if($product->pricing_type == 'Profit Margin')

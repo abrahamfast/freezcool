@@ -76,7 +76,7 @@
             <div class="product-card__prices">
                 <div class="product-card__price product-card__price--current">
                     {{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('unit_price')) }} تومان
-                    @if(auth()->user()->isAdvisor())
+                    @if(auth()->user() && auth()->user()->isAdvisor())
                     <br>
                     <hr>
                         @if($product->pricing_type == 'Profit Margin')
