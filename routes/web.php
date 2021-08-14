@@ -68,6 +68,12 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('/account-wishlist/{id}', [WishListController::class, 'link'])->name('wishlist.link');
     Route::get('/wishlist', [WishListController::class, 'index'])->name('profile.wishlist');
+
+
+    Route::get('cart/refresh', [\App\Http\Controllers\CartController::class, 'refresh']);
+    Route::get('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
+    Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final'])->name('checkout.final');
+
 });
 
 Auth::routes();
