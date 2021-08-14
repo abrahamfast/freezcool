@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7dd8a0cb420ff7869ac8262a90a6b468",
+    "content-hash": "32c005b339d796ec15a72c6e499fa92b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -908,16 +908,16 @@
         },
         {
             "name": "hekmatinasser/verta",
-            "version": "v1.12.3",
+            "version": "v1.12.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hekmatinasser/verta.git",
-                "reference": "99044f33ba84148a8efeaaecb017230303b5f558"
+                "reference": "75a9713ed2f5723b34318744614cd8b55cfb09f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hekmatinasser/verta/zipball/99044f33ba84148a8efeaaecb017230303b5f558",
-                "reference": "99044f33ba84148a8efeaaecb017230303b5f558",
+                "url": "https://api.github.com/repos/hekmatinasser/verta/zipball/75a9713ed2f5723b34318744614cd8b55cfb09f2",
+                "reference": "75a9713ed2f5723b34318744614cd8b55cfb09f2",
                 "shasum": ""
             },
             "require": {
@@ -970,9 +970,9 @@
             ],
             "support": {
                 "issues": "https://github.com/hekmatinasser/verta/issues",
-                "source": "https://github.com/hekmatinasser/verta/tree/v1.12.3"
+                "source": "https://github.com/hekmatinasser/verta/tree/v1.12.4"
             },
-            "time": "2021-06-16T18:05:06+00:00"
+            "time": "2021-07-15T14:54:46+00:00"
         },
         {
             "name": "kavenegar/laravel",
@@ -7684,7 +7684,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^7.4|^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

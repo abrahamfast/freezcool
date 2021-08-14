@@ -59,7 +59,7 @@
                     @csrf
                     <input type="hidden" name="product-id" value="{{ $product->id }}">
                     <div class="input-number">
-                        <input class="input-number__input form-control form-control-lg" type="number" min="1" value="1">
+                        <input class="input-number__input form-control form-control-lg" name="quantity" type="number" min="1" value="1">
                         <div class="input-number__add"></div>
                         <div class="input-number__sub"></div>
                     </div>

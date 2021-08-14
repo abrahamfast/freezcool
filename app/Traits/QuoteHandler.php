@@ -76,6 +76,11 @@ trait QuoteHandler
             ]);
     }
 
+    public function checkExistsItem($productId)
+    {
+        return QuoteItem::where('product_id', $productId)->first();
+    }
+
     public function uuid()
     {
         return uniqid() . substr(md5(rand()), 0, 4);

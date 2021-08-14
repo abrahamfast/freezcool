@@ -57,6 +57,11 @@ class CartController extends Controller
         }
 
         $this->product($productId);
+
+        if ($this->checkExistsItem($productId)){
+            session()->put('toast', __('global.Product add to cart'));
+            return redirect()->back();
+        }
         $this->addItem(
             $quantity,
             $user ? $user->account_id : ''
