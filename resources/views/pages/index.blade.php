@@ -7,4 +7,3 @@
     <livewire:utils.block-space />
     <livewire:index.brands />
 @endsection
-categories
