@@ -280,8 +280,10 @@ return [
     'Availability Product' => 'موجود است',
     'Login to panel' => 'پنل کاربری',
 
-    'Popular Brands' => 'برندهای مطرح'
+    'Popular Brands' => 'برندهای مطرح',
 
+    'Payment Success' => 'پرداخت با موفقیت انجام شد',
+    'you successfully read this important' => 'سفارش شما با موفقیت ثبت شد،جهت پیگیری و بررسی سفارشات، می توانید از طریق پنل کاربری ملاحظه کنید.'
 
 
 

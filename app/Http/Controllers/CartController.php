@@ -62,6 +62,7 @@ class CartController extends Controller
             session()->put('toast', __('global.Product add to cart'));
             return redirect()->back();
         }
+
         $this->addItem(
             $quantity,
             $user ? $user->account_id : ''
@@ -94,7 +95,7 @@ class CartController extends Controller
 
         session()->forget('quoteId');
 
-        return view('success', [
+        return view('pages.success', [
             'slug' => __('Order Placed'),
             'quote' => $quote,
             'user' => $user

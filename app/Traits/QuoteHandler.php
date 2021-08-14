@@ -78,7 +78,10 @@ trait QuoteHandler
 
     public function checkExistsItem($productId)
     {
-        return QuoteItem::where('product_id', $productId)->first();
+        return QuoteItem::where([
+            'product_id' => $productId,
+            'quote_id' => $this->quote->id,
+        ])->first();
     }
 
     public function uuid()
