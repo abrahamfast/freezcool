@@ -60,7 +60,7 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/account-profile', [ProfileController::class, 'show']);
 	Route::post('/account-profile', [ProfileController::class, 'store'])->name('profile.save');
 	Route::get('/account-orders', [OrderController::class, 'index']);
-	Route::get('/account-order-details', [OrderController::class, 'show']);
+	Route::get('/account-order-details/{id}', [OrderController::class, 'show'])->name('order.show');
 	Route::get('/account-addresses', [AddressController::class, 'index']);
 	Route::get('/account-edit-address', [AddressController::class, 'create']);
 

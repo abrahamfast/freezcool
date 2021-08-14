@@ -32,4 +32,9 @@ class QuoteItem extends Model
     {
         return $this->hasOne(Product::class, 'id', 'product_id');
     }
+
+    public function items()
+    {
+        return $this->hasMany(QuoteItem::class, 'quote_id');
+    }
 }

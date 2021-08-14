@@ -17,24 +17,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($quotes as $item)
                         <tr>
-                            <td><a href="account-order-details">#8132</a></td>
-                            <td>۲۰ فروردین ۱۳۹۹</td>
-                            <td>در انتظار</td>
-                            <td>۲۵۰،۰۰۰ تومان برای ۱۰ تا مورد</td>
+                            <td><a href="{{ route('order.show', $item->id) }}">{{ $item->number }}</a></td>
+                            <td>{{ $item->created_at }}</td>
+                            <td>{{ $item->status }}</td>
+                            <td>{{ $item->grand_total_amount }} تومان برای {{ $item->items()->count() }} تا مورد</td>
                         </tr>
-                        <tr>
-                            <td><a href="account-order-details">#7592</a></td>
-                            <td>۲۰ فروردین ۱۳۹۹</td>
-                            <td>در انتظار</td>
-                            <td>۲۵۰،۰۰۰ تومان برای ۱۰ تا مورد</td>
-                        </tr>
-                        <tr>
-                            <td><a href="account-order-details">#7192</a></td>
-                            <td>۲۰ فروردین ۱۳۹۹</td>
-                            <td>حمل شده</td>
-                            <td>۱۵۰،۰۰۰ تومان برای ۱۰ تا مورد</td>
-                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
             </div>
