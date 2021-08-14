@@ -7,6 +7,23 @@
             <div class="product__prices-stock">
                 <div class="product__prices">
                     <div class="product__price product__price--current">{{ \App\Helper\Stri::convertFa($product->takeCurrencyAttr('cost_price')) }} تومان </div>
+                    @if(auth()->user()->isAdvisor())
+                        <br>
+                        <hr>
+                        @if($product->pricing_type == 'Profit Margin')
+                            <div class="status-badge status-badge--style--success status-badge--has-text">
+                                <div class="status-badge__body">
+                                    <div class="status-badge__text"> حاشیه سود: <b>{{ $product->pricing_factor }} </b>درصد </div>
+                                </div>
+                            </div>
+                        @else
+                            <div class="status-badge status-badge--style--failure status-badge--has-text">
+                                <div class="status-badge__body">
+                                    <div class="status-badge__text">بدون حاشیه سود</div>
+                                </div>
+                            </div>
+                        @endif
+                    @endif
                 </div>
                 <div class="status-badge status-badge--style--success product__stock status-badge--has-text">
                     <div class="status-badge__body">
