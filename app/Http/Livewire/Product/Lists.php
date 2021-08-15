@@ -62,7 +62,7 @@ class Lists extends Component
                 if ($query) {
                     $query = $query->whereIn('rating', $this->filters['rating']);
                 } else {
-                    $query = $queryBuilder->where('rating', 5);
+                    $query = $queryBuilder->whereIn('rating', $this->filters['rating']);
                 }
             }
         }
