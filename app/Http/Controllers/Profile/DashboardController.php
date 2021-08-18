@@ -13,7 +13,7 @@ class DashboardController extends Controller
         // main address
 
         // get all quotes
-        $quotes = $user->quote()->get();
+        $quotes = $user->quote();
 
 
         return view('pages.profile.dashboard', [

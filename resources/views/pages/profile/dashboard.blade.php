@@ -45,8 +45,8 @@
             <h5>{{ __('global.Recent Orders') }}</h5>
         </div>
         <div class="card-divider"></div>
-        <div class="card-table">
 
+        <div class="card-table">
             <div class="table-responsive-sm">
                 <table>
                     <thead>
@@ -58,28 +58,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($quotes->orderBy('created_at', 'asc')->limit(5)->get() as $quote)
                         <tr>
-                            <td><a href="account-order-details">#8132</a></td>
-                            <td>۲۰ فروردین ۱۳۹۹</td>
-                            <td>در انتظار</td>
-                            <td>۲۵۰،۰۰۰ تومان برای ۱۰ تا مورد</td>
+                            <td><a href="{{ route('order.show', $quote->id) }}">{{ $quote->number }}</a></td>
+                            <td>{{ $quote->created_at }}</td>
+                            <td>{{ $quote->status }}</td>
+                            <td>{{ $quote->grand_total_amount }}</td>
                         </tr>
-                        <tr>
-                            <td><a href="account-order-details">#7592</a></td>
-                            <td>۲۰ فروردین ۱۳۹۹</td>
-                            <td>در انتظار</td>
-                            <td>۲۵۰،۰۰۰ تومان برای ۱۰ تا مورد</td>
-                        </tr>
-                        <tr>
-                            <td><a href="account-order-details">#7192</a></td>
-                            <td>۲۰ فروردین ۱۳۹۹</td>
-                            <td>حمل شده</td>
-                            <td>۱۵۰،۰۰۰ تومان برای ۱۰ تا مورد</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
-
         </div>
     </div>
     @endif
