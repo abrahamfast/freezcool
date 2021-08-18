@@ -9,7 +9,7 @@
             <div class="profile-card__name">{{ $user->name }}</div>
             <div class="profile-card__email">{{ $user->email }}</div>
             <div class="profile-card__edit">
-                <a href="account-profile" class="btn btn-secondary btn-sm">{{ __('global.Edit Profile') }}</a>
+                <a href="/account-profile" class="btn btn-secondary btn-sm">{{ __('global.Edit Profile') }}</a>
             </div>
         </div>
     </div>
@@ -51,14 +51,14 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>{{ __('global.Order') }}</th>
+                            <th>{{ __('global.ORDER') }}</th>
                             <th>{{ __('global.Orders Date') }}</th>
                             <th>{{ __('global.Orders Status') }}</th>
                             <th>{{ __('global.Orders Total') }}</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($quotes->orderBy('created_at', 'asc')->limit(5)->get() as $quote)
+                        @foreach($quotes->orderBy('created_at', 'desc')->limit(7)->get() as $quote)
                         <tr>
                             <td><a href="{{ route('order.show', $quote->id) }}">{{ $quote->number }}</a></td>
                             <td>{{ $quote->created_at }}</td>

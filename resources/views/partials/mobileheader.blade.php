@@ -10,22 +10,7 @@
                         <a class="mobile-header__logo" href="">
                             <img src="/logo.png" alt="">
                         </a>
-                        <div class="mobile-header__search mobile-search">
-                            <form class="mobile-search__body">
-                                <input type="text" class="mobile-search__input" placeholder="{{ __('global.Enter keyword or part number') }}">
-                                <button type="submit" class="mobile-search__button mobile-search__button--search">
-                                    <x-ui.icon.search />
-                                </button>
-                                <button type="button" class="mobile-search__button mobile-search__button--close">
-                                    <svg width="20" height="20">
-                                        <path d="M16.7,16.7L16.7,16.7c-0.4,0.4-1,0.4-1.4,0L10,11.4l-5.3,5.3c-0.4,0.4-1,0.4-1.4,0l0,0c-0.4-0.4-0.4-1,0-1.4L8.6,10L3.3,4.7
-    c-0.4-0.4-0.4-1,0-1.4l0,0c0.4-0.4,1-0.4,1.4,0L10,8.6l5.3-5.3c0.4-0.4,1-0.4,1.4,0l0,0c0.4,0.4,0.4,1,0,1.4L11.4,10l5.3,5.3
-    C17.1,15.7,17.1,16.3,16.7,16.7z" />
-                                    </svg>
-                                </button>
-                                <div class="mobile-search__field"></div>
-                            </form>
-                        </div>
+                        <livewire:mobile-header-search />
                         <div class="mobile-header__indicators">
                             <div class="mobile-indicator mobile-indicator--search d-md-none">
                                 <button type="button" class="mobile-indicator__button">
@@ -56,20 +41,7 @@
                                     </span>
                                 </a>
                             </div>
-                            <div class="mobile-indicator">
-                                <a href="/cart" class="mobile-indicator__button">
-                                    <span class="mobile-indicator__icon">
-                                        <svg width="20" height="20">
-                                            <circle cx="7" cy="17" r="2" />
-                                            <circle cx="15" cy="17" r="2" />
-                                            <path d="M20,4.4V5l-1.8,6.3c-0.1,0.4-0.5,0.7-1,0.7H6.7c-0.4,0-0.8-0.3-1-0.7L3.3,3.9C3.1,3.3,2.6,3,2.1,3H0.4C0.2,3,0,2.8,0,2.6
-    V1.4C0,1.2,0.2,1,0.4,1h2.5c1,0,1.8,0.6,2.1,1.6L5.1,3l2.3,6.8c0,0.1,0.2,0.2,0.3,0.2h8.6c0.1,0,0.3-0.1,0.3-0.2l1.3-4.4
-    C17.9,5.2,17.7,5,17.5,5H9.4C9.2,5,9,4.8,9,4.6V3.4C9,3.2,9.2,3,9.4,3h9.2C19.4,3,20,3.6,20,4.4z" />
-                                        </svg>
-                                        <span class="mobile-indicator__counter">۳</span>
-                                    </span>
-                                </a>
-                            </div>
+                        <livewire:mobile-cart-botton />
                         </div>
                     </div>
                 </div>
