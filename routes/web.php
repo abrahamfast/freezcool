@@ -71,8 +71,10 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('cart/refresh', [\App\Http\Controllers\CartController::class, 'refresh']);
-    Route::get('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout']);
+    Route::get('cart/checkout', [\App\Http\Controllers\CartController::class, 'checkout'])->name('checkout');
     Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final'])->name('checkout.final');
+
+    Route::get('package', [\App\Http\Controllers\Profile\PackageController::class, 'create'])->name('package.create');
 
 });
 

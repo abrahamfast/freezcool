@@ -7,28 +7,28 @@
                 <thead>
                 <tr>
                     <th>جمع کل</th>
-                    <td>{{ $amount ?? 0 }}</td>
+                    <td>{{ $quote->amount }} تومان </td>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>حمل و نقل</th>
-                    <td>
-                        {{ $shipping_cost ?? 0 }}
-                        <div>
-                            <a href="">حمل و نقل را محاسبه کنید</a>
-                        </div>
-                    </td>
-                </tr>
+{{--                <tr>--}}
+{{--                    <th>حمل و نقل</th>--}}
+{{--                    <td>--}}
+{{--                        {{ $shipping_cost ?? 0 }}--}}
+{{--                        <div>--}}
+{{--                            <a href="">حمل و نقل را محاسبه کنید</a>--}}
+{{--                        </div>--}}
+{{--                    </td>--}}
+{{--                </tr>--}}
                 <tr>
                     <th>مالیات</th>
-                    <td>{{ $tax_amount ?? 0 }}</td>
+                    <td>{{ $quote->tax_rate }} درصد</td>
                 </tr>
                 </tbody>
                 <tfoot>
                 <tr>
                     <th>جمع</th>
-                    <td>{{ $total_amount ?? 0 }}</td>
+                    <td>{{ $quote->grand_total_amount }} تومان </td>
                 </tr>
                 </tfoot>
             </table>
@@ -86,8 +86,14 @@
                 </ul>
             </div>
 
+            @if(true || auth()->user() && auth()->user()->isAdvisor())
+                <a class="btn btn-dark btn-xl btn-block" href="{{ route('package.create') }}">
+            {{ __('global.send to user') }}
+                </a>
+            @endif
+
             @isset($total_amount)
-                <a class="btn btn-primary btn-xl btn-block" href="/cart/checkout">
+                <a class="btn btn-primary btn-xl btn-block" href="{{ route('checkout') }}">
                     ادامه پرداخت
                 </a>
             @else

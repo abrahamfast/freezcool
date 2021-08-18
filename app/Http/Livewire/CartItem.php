@@ -23,6 +23,7 @@ class CartItem extends Component
 
         if ($user && !$quoteId) {
             $quote = $user->quote()->where('status', 'Draft')->where('deleted', 0)->first();
+
             if (!$quote) {
                 return false;
             }

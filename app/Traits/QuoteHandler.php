@@ -8,10 +8,12 @@ use App\Models\QuoteItem;
 
 trait QuoteHandler
 {
+
     public function getCurrentQuote()
     {
-        return Quote::where('id', $this->qouteId)->first();
+        return Quote::where('id', session()->get('quoteId'))->first();
     }
+
     public function getSessionQuote()
     {
         return $this->quoteId = session()->get('quoteId');

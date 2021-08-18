@@ -13,30 +13,41 @@
     </thead>
     <tbody class="cart-table__body">
     @foreach($quote_items as $item)
+        @php
+            $product = $item->product()->first();
+        @endphp
         <tr class="cart-table__row">
             <td class="cart-table__column cart-table__column--image">
                 <div class="image image--type--product">
-                    <a href="{{ route('product.show', $item->product()->first()->id) }}" class="image__body">
-                        <img class="image__tag" src="/storage/{{ $item->product()->first()->cover_id ?? 'default.jpg' }}" alt="">
+                    <a href="{{ route('product.show', $product->id) }}" class="image__body">
+                        <img class="image__tag" src="/storage/{{ $product->cover_id ?? 'default.jpg' }}" alt="">
                     </a>
                 </div>
             </td>
             <td class="cart-table__column cart-table__column--product">
-                <a href="" class="cart-table__product-name">{{ $item->product()->first()->name }}</a>
+                <a href="" class="cart-table__product-name">{{ $product->name }}</a>
                 <ul class="cart-table__options">
-                    <li>مواد شاسی : {{ $item->product()->first()->insulation ?? '-' }}</li>
-                    <li>فن کندانسور : {{ $item->product()->first()->chassis_material ?? '-' }}</li>
-                    <li>فن اواپراتور : {{ $item->product()->first()->evaporator_fan ?? '-' }}</li>
-                    <li>عایق کاری :	 {{ $item->product()->first()->condenser_fan ?? '-' }}</li>
+                    <li>مواد شاسی : {{ $product->insulation ?? '-' }}</li>
+                    <li>فن کندانسور : {{ $product->chassis_material ?? '-' }}</li>
+                    <li>فن اواپراتور : {{ $product->evaporator_fan ?? '-' }}</li>
+                    <li>عایق کاری :	 {{ $product->condenser_fan ?? '-' }}</li>
                 </ul>
             </td>
-            <td class="cart-table__column cart-table__column--price" data-title="Price">{{ \App\Helper\Stri::convertFa($item->product()->first()->takeCurrencyAttr('cost_price')) }} تومان </td>
+            <td class="cart-table__column cart-table__column--price" data-title="Price">
+                    @if($product->pricing_type == 'Profit Margin')
+                        <b>{{ $product->pricing_factor }} </b>درصد
+                        <br>
+                    @endif
+
+                {{ \App\Helper\Stri::convertFa($item->unit_price) }} تومان
+            </td>
+
             <td class="cart-table__column cart-table__column--quantity" data-title="Quantity">
                 <div class="cart-table__quantity input-number">
                     <input disabled class="form-control input-number__input" type="number" min="1" value="{{ $item->quantity ?? 1 }}">
                 </div>
             </td>
-            <td class="cart-table__column cart-table__column--total" data-title="Total">۲۰۰ هزار تومان</td>
+            <td class="cart-table__column cart-table__column--total" data-title="Total">{{ \App\Helper\Stri::convertFa($item->amount) }} تومان </td>
             <td class="cart-table__column cart-table__column--remove">
                 <button type="button" class="cart-table__remove btn btn-sm btn-icon btn-muted" data-value="{{ $item->id }}">
                     <svg width="12" height="12">
