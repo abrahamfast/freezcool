@@ -22,7 +22,7 @@ class Search extends Component
 
     public function render()
     {
-        return view('livewire.product.lists');
+        return view('livewire.product.search');
     }
 
 }
