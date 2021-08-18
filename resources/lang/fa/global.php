@@ -299,7 +299,8 @@ return [
     'Send package' => 'ارسال به خریدار',
 
     'package send to customer' => 'کد مشاور برای مشتری ارسال شد',
-    'ORDER' => 'کد'
+    'ORDER' => 'کد',
+    'accept term and condition' => 'شرایط و ضوابط مورد تایید اینجانب است'
 
 
 

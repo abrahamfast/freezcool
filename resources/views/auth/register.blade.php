@@ -44,6 +44,30 @@
                                 <label for="signup-confirm">{{ __('global.Repeat password') }}</label>
                                 <input name="password_confirmation" id="signup-confirm"  required type="password" class="form-control" placeholder="">
                             </div>
+
+                            @if($advisor)
+
+                            <div class="form-group">
+                                <label>شرایط و ضوابط مشاور</label>
+                                <textarea rows="7" class="form-control text-right" style="direction: rtl; font-size: 12px" placeholder="Placeholder" disabled="">مشتری یا کاربر به شخصی گفته می‌شود که با اطلاعات کاربری خود که در فرم ثبت‌نام درج کرده است، به ثبت سفارش یا هرگونه استفاده از خدمات اقدام کند. همچنین از آنجا که این شرکت یک وب‌سایت خرده‌فروشی آنلاین است، طبق قانون تجارت الکترونیک مشتری یا مصرف کننده هر شخصی است که به منظوری جز تجارت یا شغل حرفه‌ای به خرید کالا یا خدمات اقدام می‌کند.</textarea>
+                            </div>
+                            @endif
+
+                            <div class="form-check">
+                                <span class="input-check form-check-input">
+                                    <span class="input-check__body">
+                                        <input class="input-check__input" name="term" type="checkbox" id="term">
+                                        <span class="input-check__box"></span>
+                                        <span class="input-check__icon"><svg width="9px" height="7px">
+                                                <path d="M9,1.395L3.46,7L0,3.5L1.383,2.095L3.46,4.2L7.617,0L9,1.395Z"></path>
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </span>
+                                <label class="form-check-label" for="term">{{ __('global.accept term and condition') }}</label>
+                            </div>
+
+
                             <div class="form-group mb-0">
                                 <button type="submit" class="btn btn-primary mt-3">{{ __('global.Register') }}</button>
                             </div>
