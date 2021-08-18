@@ -1282,7 +1282,7 @@
      */
     $('.addcartbtn').on('click', function(e){
         e.preventDefault();
-        $('.product-form').submit()
+        $(this).siblings('form').submit()
     });
 
     /*

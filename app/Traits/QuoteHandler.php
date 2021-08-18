@@ -58,7 +58,7 @@ trait QuoteHandler
 
     public function addItem($quantity, $accountId = null)
     {
-        QuoteItem::create([
+        return QuoteItem::create([
                 'id' => $this->uuid(),
                 'name' => $this->product->name,
                 'quantity' => $quantity,
