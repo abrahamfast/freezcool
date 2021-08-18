@@ -20,8 +20,6 @@ trait QuoteCalculator
             $weight = $item->weight + $weight;
         }
 
-
-
         $this->quote->discount_amount = $discount_amount;
         $this->quote->pre_discounted_amount = $discount_amount;
         $this->quote->amount = $amount;

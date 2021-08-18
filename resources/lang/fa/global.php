@@ -285,7 +285,18 @@ return [
     'Payment Success' => 'پرداخت با موفقیت انجام شد',
     'you successfully read this important' => 'سفارش شما با موفقیت ثبت شد،جهت پیگیری و بررسی سفارشات، می توانید از طریق پنل کاربری ملاحظه کنید.',
 
-    'send to user' => 'ارسال پکیج با تخفیف'
+    'send to user' => 'ارسال پکیج با تخفیف',
+
+    'Thank you' => 'با سپاس از خرید شما',
+    'Your order has been received' => 'سفارش شما دریافت شد',
+
+    'Go To Homepage' => 'به صفحه اصلی بروید',
+    'Created At' => 'تاریخ ثبت',
+    'Payment Method' => 'نحوه پرداخت',
+    'New package' => 'ثبت پکیج',
+    'Update Cart' => 'اعمال تخفیف',
+    'Update package' => 'ثبت پیکیچ',
+
 
 
 

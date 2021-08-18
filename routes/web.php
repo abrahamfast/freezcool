@@ -75,6 +75,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('cart/checkout/{id}', [\App\Http\Controllers\CartController::class, 'final'])->name('checkout.final');
 
     Route::get('package', [\App\Http\Controllers\Profile\PackageController::class, 'create'])->name('package.create');
+    Route::post('package', [\App\Http\Controllers\Profile\PackageController::class, 'store'])->name('package.store');
+    Route::get('package/{id}', [\App\Http\Controllers\Profile\PackageController::class, 'send'])->name('package.send');
 
 });
 

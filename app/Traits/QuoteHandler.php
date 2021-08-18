@@ -32,7 +32,8 @@ trait QuoteHandler
     {
         $rawQuote = Quote::where('id', "60e6c6c6b9de80700")->first()->toArray();
         $rawQuote['id'] = $this->uuid();
-        $rawQuote['name'] = __('global.new quote') . date("Y-m-d");
+        $rawQuote['name'] = __('global.new quote') . " - " . date("Y-m-d");
+        $rawQuote['number'] = "Q-" . date("mds");
         if ($user) {
             $rawQuote['account_id'] = $user->id;
         }
@@ -64,7 +65,7 @@ trait QuoteHandler
                 'quantity' => $quantity,
                 'list_price' => $this->product->list_price,
                 'unit_price' => $this->product->unit_price,
-                'discount' => $this->product->pricing_factor,
+                'discount' => 0,
                 'amount' => $this->product->unit_price * $quantity,
                 'unit_weight' => 1,
                 'weight' => $quantity,

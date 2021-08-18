@@ -81,6 +81,10 @@ class CartController extends Controller
         $user = $request->user();
         $quoteId = $request->session()->get('quoteId');
         $quote = Quote::where('id', $quoteId)->first();
+
+        if (!$quote){
+            return redirect()->route('index');
+        }
         $quote->assginSalesTeam();
         $quote->status = 'In Review';
 
