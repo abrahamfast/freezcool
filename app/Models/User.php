@@ -93,4 +93,22 @@ class User extends Authenticatable
     {
         return $this->adviser;
     }
+
+    public function contact()
+    {
+        return $this->hasOne(Contact::class, 'account_id');
+    }
+
+    public function getFullAddress()
+    {
+        return $this->shipping_address_country .", ". $this->shipping_address_city .", " . $this->shipping_address_street;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isNotHaveAddress(): bool
+    {
+        return $this->shipping_address_street != '' ? false : true;
+    }
 }

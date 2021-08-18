@@ -198,6 +198,7 @@ return [
     'Total' => 'مجموع',
     'Shipping Address' => 'آدرس تحویل',
     'Add New Address' => 'آدرس جدید',
+    'Add or update New Address' => 'ثبت آدرس دریافت کننده',
     'Default Address' => 'پیشفرض',
     'Edit' => 'ویرایش',
     'Remove' => 'حذف',
@@ -300,7 +301,9 @@ return [
 
     'package send to customer' => 'کد مشاور برای مشتری ارسال شد',
     'ORDER' => 'کد',
-    'accept term and condition' => 'شرایط و ضوابط مورد تایید اینجانب است'
+    'accept term and condition' => 'شرایط و ضوابط مورد تایید اینجانب است',
+    'Address remove success' => 'آدرس با موقیت حذف شد',
+    'Address added success' => 'آدرس با موفقیت ثبت شد'
 
 
 

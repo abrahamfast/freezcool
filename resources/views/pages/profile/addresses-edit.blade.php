@@ -13,20 +13,20 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="address-first-name">{{ __('global.First Name') }}</label>
-                                <input type="text" class="form-control" name="first_name" id="address-first-name" placeholder="">
+                                <input type="text" class="form-control" name="first_name" value="{{ $contact->first_name }}" id="address-first-name" placeholder="">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="address-last-name">{{ __('global.Last Name') }}</label>
-                                <input type="text" class="form-control" name="last_name" id="address-last-name" placeholder="">
+                                <input type="text" class="form-control" name="last_name" value="{{ $contact->last_name }}" id="address-last-name" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="address-company-name">{{ __('global.Company') }} <span class="text-muted">{{ __('global.Optional') }}</span></label>
-                            <input type="text" class="form-control" name="account_name" id="address-company-name" placeholder="">
+                            <input type="text" class="form-control" name="account_name" value="{{ $contact->account_name }}" id="address-company-name" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="address-country">{{ __('global.Country') }}</label>
-                            <select id="address-country" class="form-control" name="address_country">
+                            <select id="address-country" class="form-control" name="address_country" value="{{ $contact->address_country }}">
                                 <option value="">{{ __('global.Select a country...') }}</option>
                                 <option value="IR">ایران</option>
                                 <option value="DE">آلمان</option>
@@ -41,28 +41,28 @@
                         </div>
                         <div class="form-group">
                             <label for="address-address1">{{ __('global.Street Address') }}</label>
-                            <input type="text" class="form-control" id="address-address1" name="address_street" placeholder="">
+                            <input type="text" class="form-control" id="address-address1" name="address_street" value="{{ $contact->address_street }}" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="address-city">{{ __('global.City') }}</label>
-                            <input type="text" class="form-control" name="address_city" id="address-city" placeholder="">
+                            <input type="text" class="form-control" name="address_city" value="{{ $contact->address_city }}" id="address-city" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="address-state">{{ __('global.State') }}</label>
-                            <input type="text" class="form-control" name="address_state" id="address-state" placeholder="">
+                            <input type="text" class="form-control" name="address_state" value="{{ $contact->address_state }}" id="address-state" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="address-postcode">{{ __('global.Postcode') }}</label>
-                            <input type="text" class="form-control" name="address_postal_code" id="address-postcode" placeholder="">
+                            <input type="text" class="form-control" name="address_postal_code" value="{{ $contact->address_postal_code }}" id="address-postcode" placeholder="">
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-0">
                                 <label for="address-email">{{ __('global.Edit Address') }}</label>
-                                <input type="email" class="form-control" id="address-email" name="email" placeholder="info@example.com">
+                                <input type="email" class="form-control" id="address-email" name="email" value="{{ $contact->email }}" placeholder="info@example.com">
                             </div>
                             <div class="form-group col-md-6 mb-0">
                                 <label for="address-phone">{{ __('global.Phone Number') }}</label>
-                                <input type="text" class="form-control" id="address-phone" name="phone_number" placeholder="9891297979797">
+                                <input type="text" class="form-control" id="address-phone" name="phone_number" value="{{ $contact->phone_number }}" placeholder="9891297979797">
                             </div>
                         </div>
 {{--                        <div class="form-group mt-3">--}}

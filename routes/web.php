@@ -62,8 +62,14 @@ Route::middleware(['auth'])->group(function () {
 	Route::post('/account-profile', [ProfileController::class, 'store'])->name('profile.save');
 	Route::get('/account-orders', [OrderController::class, 'index'])->name('account-orders');
 	Route::get('/account-order-details/{id}', [OrderController::class, 'show'])->name('order.show');
-	Route::get('/account-addresses', [AddressController::class, 'index']);
-	Route::get('/account-edit-address', [AddressController::class, 'create']);
+
+	Route::get('/account-addresses', [AddressController::class, 'index'])->name('account-address');
+	Route::get('/account-edit-address', [AddressController::class, 'create'])->name('account-address.create');
+    Route::post('/account-edit-address', [AddressController::class, 'store'])->name('account-address.store');
+    Route::get('/account-edit-address/{id}', [AddressController::class, 'edit'])->name('account-address.edit');
+    Route::put('/account-edit-address', [AddressController::class, 'update'])->name('account-address.update');
+    Route::get('/account-edit-address/{id}/destroy', [AddressController::class, 'destroy'])->name('account-address.destroy');
+
 
 	Route::post('/reviews/{id}', [ReviewController::class, 'store'])->name('review.store');
 
