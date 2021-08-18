@@ -12,17 +12,18 @@
                             {{ __('global.Track Order') }}
                         </h1>
                         <p class="mb-4">{{ __('global.Track Order Detail') }}</p>
-                        <form>
+                        <form action="{{ route('track-order.show') }}" method="POST">
+                            @csrf
                             <div class="form-group">
                                 <label for="track-order-id">{{ __('global.Order ID') }}</label>
-                                <input class="form-control" id="track-order-id" placeholder="" type="text">
+                                <input class="form-control" name="number" id="track-order-id" placeholder="" type="text">
                                 </input>
                             </div>
                             <div class="form-group">
                                 <label for="track-email">
-                                    {{ __('global.Email address') }}
+                                    {{ __('global.phoneNumber') }}
                                 </label>
-                                <input class="form-control" id="track-email" placeholder="" type="email">
+                                <input class="form-control" name="phone_number" id="track-email" placeholder="" type="text">
                                 </input>
                             </div>
                             <div class="form-group pt-4 mb-1">

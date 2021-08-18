@@ -31,6 +31,7 @@ Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.s
 Route::get('/btu/calculator', [CalculatorController::class, 'index'])->name('calculator');
 Route::get('/btu/calculator/result', [CalculatorController::class, 'show'])->name('calculator.result');
 Route::get('/track-order', [TrackOrderController::class, 'index'])->name('order.track');
+Route::post('/track-order', [TrackOrderController::class, 'show'])->name('track-order.show');
 
 
 
