@@ -111,4 +111,9 @@ class User extends Authenticatable
     {
         return $this->shipping_address_street != '' ? false : true;
     }
+
+    public function package()
+    {
+        return $this->belongsToMany(Package::class, 'package_account', 'account_id', 'package_id', );
+    }
 }

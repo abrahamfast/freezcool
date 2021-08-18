@@ -52,9 +52,6 @@ Route::get('search', \App\Http\Controllers\SearchController::class)->name('searc
 
 
 
-Route::middleware(['auth', 'advisor'])->group(function () {
-    Route::get('/account-adviser', [AdviserController::class, 'index']);
-});
 Route::middleware(['auth'])->group(function () {
 
 	Route::get('/account-dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -88,6 +85,20 @@ Route::middleware(['auth'])->group(function () {
     Route::get('package/{id}/cancel', [\App\Http\Controllers\Profile\PackageController::class, 'cancel'])->name('package.cancel');
 
 });
+
+
+
+
+Route::middleware(['auth', 'advisor'])->group(function () {
+    Route::get('/account-adviser', [AdviserController::class, 'index'])->name('package.index');
+    Route::get('/account-adviser/{id}', [AdviserController::class, 'show'])->name('package.show');
+});
+
+
+
+
+
+
 
 Auth::routes();
 Route::get('before/register', [App\Http\Controllers\Auth\RegisterController::class, 'before'])->name('register.before');
