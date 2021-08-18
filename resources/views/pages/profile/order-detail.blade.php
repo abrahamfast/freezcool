@@ -3,9 +3,9 @@
 <div class="card">
     <div class="order-header">
         <div class="order-header__actions">
-            <a href="account-orders" class="btn btn-xs btn-secondary">{{ __('global.Back to list') }}</a>
+            <a href="/account-orders" class="btn btn-xs btn-secondary">{{ __('global.Back to list') }}</a>
         </div>
-        <h5 class="order-header__title">{{ __('global.Order Num') }} #9478</h5>
+        <h5 class="order-header__title">{{ __('global.Order Num') }} {{ $quote->number }}</h5>
         <div class="order-header__subtitle">
             {{-- Was placed on <mark>Oct 19, 2020</mark> and is currently <mark>Pending</mark>. --}}
         </div>
@@ -21,37 +21,31 @@
                     </tr>
                 </thead>
                 <tbody class="card-table__body card-table__body--merge-rows">
+                @foreach($quote->items()->where('deleted', 0)->get() as $item)
                     <tr>
-                        <td>یخچال سردخانه جسد سه کابین 3 طبقه × ۲</td>
-                        <td>۲۱۸ هزار تومان</td>
+                        <td>{{ $item->name }} × {{ $item->quantity }}</td>
+                        <td>{{ $item->amount }}</td>
                     </tr>
-                    <tr>
-                        <td>یخچال سردخانه جسد سه کابین 3 طبقه × ۲</td>
-                        <td>۲۱۸ هزار تومان</td>
-                    </tr>
-                    <tr>
-                        <td>یخچال سردخانه جسد سه کابین 3 طبقه × ۲</td>
-                        <td>۲۱۸ هزار تومان</td>
-                    </tr>
+                @endforeach
                 </tbody>
                 <tbody class="card-table__body card-table__body--merge-rows">
                     <tr>
                         <th>{{ __('global.Subtotal') }}</th>
-                        <td>۴۳۸ هزار تومان</td>
+                        <td>{{ $quote->amount }}</td>
                     </tr>
-                    <tr>
-                        <th>{{ __('global.Shipping') }}</th>
-                        <td>۲۵ هزار تومان</td>
-                    </tr>
+{{--                    <tr>--}}
+{{--                        <th>{{ __('global.Shipping') }}</th>--}}
+{{--                        <td>۲۵ هزار تومان</td>--}}
+{{--                    </tr>--}}
                     <tr>
                         <th>{{ __('global.Tax') }}</th>
-                        <td>۲۵۶ هزار تومان</td>
+                        <td>{{ $quote->tax_rate }} درصد</td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <th>{{ __('global.Total') }}</th>
-                        <td>۱ میلیون پانصد هزار تومان</td>
+                        <td>{{ $quote->grand_total_amount }} تومان</td>
                     </tr>
                 </tfoot>
             </table>
@@ -82,6 +76,6 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection

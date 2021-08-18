@@ -298,7 +298,8 @@ return [
     'Update package' => 'ثبت پیکیچ',
     'Send package' => 'ارسال به خریدار',
 
-    'package send to customer' => 'کد مشاور برای مشتری ارسال شد'
+    'package send to customer' => 'کد مشاور برای مشتری ارسال شد',
+    'ORDER' => 'کد'
 
 
 

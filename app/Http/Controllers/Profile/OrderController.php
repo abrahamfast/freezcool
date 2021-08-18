@@ -19,7 +19,9 @@ class OrderController extends Controller
 
     public function show($id = null)
     {
-
-        return view('pages.profile.order-detail');
+        $quote = Quote::find($id);
+        return view('pages.profile.order-detail', [
+            'quote' => $quote
+        ]);
     }
 }
