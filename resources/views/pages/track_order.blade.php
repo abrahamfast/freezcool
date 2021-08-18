@@ -17,7 +17,7 @@
                     <div class="order-success__subtitle"> سفارش شما در وضعیت <div class="tag-badge tag-badge--new">{{ $quote->status }}</div> قراردارد</div>
 
 
-                    <div class="order-success__subtitle">برای مشاهده اطلاعت بیشتر به پنل کاربری خود مراجعه فرمایید</div>
+                    <div class="order-success__subtitle">برای مشاهده اطلاعت بیشتر به <a href="{{ route('account-orders') }}">پنل کاربری</a> خود مراجعه فرمایید</div>
                     <div class="order-success__actions">
                         <a href="/" class="btn btn-sm btn-secondary">{{ __('global.Go To Homepage') }}</a>
                     </div>
