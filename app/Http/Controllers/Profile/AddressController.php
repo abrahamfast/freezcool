@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Profile;
 
 use App\Helper\Stri;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AccountAddressRequest;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -31,7 +32,7 @@ class AddressController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(AccountAddressRequest $request)
     {
         $data = $request->except('_token', 'default-address');
         $data['id'] = Stri::uuid();
@@ -44,13 +45,16 @@ class AddressController extends Controller
         return redirect()->route('account-address');
     }
 
-    public function update(Request $request)
+    public function update(AccountAddressRequest $request)
     {
+
         $data = $request->except('_token', 'default-address');
         $data['id'] = Stri::uuid();
         $data['account_id'] = $request->user()->id;
 
         Contact::create($data);
+
+        session()->put('toast', __('global.Address update success'));
 
         return redirect()->route('account-address');
     }

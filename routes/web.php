@@ -67,7 +67,7 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('/account-edit-address', [AddressController::class, 'create'])->name('account-address.create');
     Route::post('/account-edit-address', [AddressController::class, 'store'])->name('account-address.store');
     Route::get('/account-edit-address/{id}', [AddressController::class, 'edit'])->name('account-address.edit');
-    Route::put('/account-edit-address', [AddressController::class, 'update'])->name('account-address.update');
+    Route::put('/account-edit-address/{id}', [AddressController::class, 'update'])->name('account-address.update');
     Route::get('/account-edit-address/{id}/destroy', [AddressController::class, 'destroy'])->name('account-address.destroy');
 
 

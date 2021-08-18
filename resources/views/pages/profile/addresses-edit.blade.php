@@ -8,8 +8,9 @@
         <div class="card-body card-body--padding--2">
             <div class="row no-gutters">
                 <div class="col-12 col-lg-10 col-xl-8">
-                    <form action="{{ route('account-address.store') }}" method="POST">
+                    <form action="{{ route('account-address.update', $contact->id) }}" method="POST">
                         @csrf
+                        @method('PUT')
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="address-first-name">{{ __('global.First Name') }}</label>
@@ -26,8 +27,8 @@
                         </div>
                         <div class="form-group">
                             <label for="address-country">{{ __('global.Country') }}</label>
-                            <select id="address-country" class="form-control" name="address_country" value="{{ $contact->address_country }}">
-                                <option value="">{{ __('global.Select a country...') }}</option>
+                            <select id="address-country" class="form-control" name="address_country" >
+                                <option value="{{ $contact->address_country }}">{{ __('global.Select a country...') }}</option>
                                 <option value="IR">ایران</option>
                                 <option value="DE">آلمان</option>
                                 <option value="FR">فرانسه</option>

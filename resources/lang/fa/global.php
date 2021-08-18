@@ -303,8 +303,7 @@ return [
     'ORDER' => 'کد',
     'accept term and condition' => 'شرایط و ضوابط مورد تایید اینجانب است',
     'Address remove success' => 'آدرس با موقیت حذف شد',
-    'Address added success' => 'آدرس با موفقیت ثبت شد'
-
-
+    'Address added success' => 'آدرس با موفقیت ثبت شد',
+    'Address update success' => 'آدرس با موفقیت بروز رسانی شد'
 
 ];
