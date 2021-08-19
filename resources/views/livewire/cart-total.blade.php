@@ -86,7 +86,7 @@
                 </ul>
             </div>
 
-            @if(true || auth()->user() && auth()->user()->isAdvisor())
+            @if(auth()->user() && auth()->user()->isAdvisor())
                 <a class="btn btn-dark btn-xl btn-block" href="{{ route('package.create') }}">
             {{ __('global.send to user') }}
                 </a>

@@ -13,6 +13,7 @@
             </div>
         </div>
     </div>
+    @if($address)
     <div class="dashboard__address card address-card address-card--featured">
         <div class="address-card__badge tag-badge tag-badge--theme">{{ __('global.Address Default') }}</div>
         <div class="address-card__body">
@@ -39,6 +40,12 @@
             </div>
         </div>
     </div>
+    @else
+        <a href="{{ route('account-address.create') }}" class="addresses-list__item addresses-list__item--new dashboard__profile card profile-card">
+            <div class="addresses-list__plus"></div>
+            <div class="btn btn-secondary btn-sm">{{ __('global.Add New Address') }}</div>
+        </a>
+    @endif
     @if($quotes->count())
     <div class="dashboard__orders card">
         <div class="card-header">

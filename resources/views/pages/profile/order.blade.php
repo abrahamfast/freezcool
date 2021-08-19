@@ -10,7 +10,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>{{ __('global.Order') }}</th>
+                            <th>{{ __('global.ORDER') }}</th>
                             <th>{{ __('global.Orders Date') }}</th>
                             <th>{{ __('global.Orders Status') }}</th>
                             <th>{{ __('global.Orders Total') }}</th>

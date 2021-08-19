@@ -300,7 +300,7 @@ return [
     'Send package' => 'ارسال به خریدار',
 
     'package send to customer' => 'کد مشاور برای مشتری ارسال شد',
-    'ORDER' => 'کد',
+    'ORDER' => 'کد سفارش',
     'accept term and condition' => 'شرایط و ضوابط مورد تایید اینجانب است',
     'Address remove success' => 'آدرس با موقیت حذف شد',
     'Address added success' => 'آدرس با موفقیت ثبت شد',

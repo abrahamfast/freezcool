@@ -12,6 +12,7 @@ class OrderController extends Controller
     {
         $quotes = auth()->user()->quote()->get();
 
+
         return view('pages.profile.order', [
             'quotes' => $quotes
         ]);

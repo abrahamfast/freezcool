@@ -22,7 +22,7 @@ class CartTotal extends Component
         $quoteId = session()->get('quoteId');
 
         if ($user && !$quoteId) {
-            $quote = $user->quote()->where('status', 'Draft')->where('deleted', 0)->first();
+            $quote = $user->quote()->where('status', 'In Review')->where('deleted', 0)->first();
             if (!$quote) {
                 return false;
             }
