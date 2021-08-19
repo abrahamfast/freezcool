@@ -20,12 +20,9 @@
         <li class="account-nav__item  @if(request()->route()->uri() == 'account-edit-address') account-nav__item--active @endif">
             <a href="/account-edit-address">{{ __('global.Edit Address') }}</a>
         </li>
+        <li class="account-nav__divider" role="presentation"></li>
         <li class="account-nav__item  @if(request()->route()->uri() == 'account-password') account-nav__item--active @endif">
             <a href="/account-password">{{ __('global.Password') }}</a>
-        </li>
-        <li class="account-nav__divider" role="presentation"></li>
-        <li class="account-nav__item ">
-            <a href="/account-login">{{ __('global.Logout') }}</a>
         </li>
     </ul>
 </div>

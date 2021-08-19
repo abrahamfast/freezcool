@@ -35,7 +35,6 @@ Route::post('/track-order', [TrackOrderController::class, 'show'])->name('track-
 
 
 
-
 Route::get('/compare', [CompareController::class, 'index'])->name('compare');
 Route::get('/compare/{id}', [CompareController::class, 'add'])->name('compare.add');
 Route::get('/compare/{id}/delete', [CompareController::class, 'delete'])->name('compare.delete');

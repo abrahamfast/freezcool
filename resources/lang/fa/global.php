@@ -180,7 +180,7 @@ return [
     'Edit Address' => 'ویرایش آدرس‌',
     'Password' => 'رمز عبور',
     'Logout' => 'خروج',
-    'Address Default' => 'پیش فرض',
+    'Address Default' => 'آدرس پیش فرض',
     'Your Address' => 'آدرس شما',
     'Recent Orders' => 'سفارش اخیر',
     'Orders Date' => 'تاریخ',

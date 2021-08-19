@@ -16,26 +16,26 @@
     <div class="dashboard__address card address-card address-card--featured">
         <div class="address-card__badge tag-badge tag-badge--theme">{{ __('global.Address Default') }}</div>
         <div class="address-card__body">
-            <div class="address-card__name">{{ $user->name }}</div>
             <div class="address-card__row">
                 <div class="address-card__row-title">{{ __('global.Your Address')}}</div>
+                <hr>
                 <div class="address-card__row-content">
-                    {{ $user->shipping_address_country  }}<br>
-                    {{ $user->shipping_address_city }}<br>
-                    {{ $user->shipping_address_state }}<br>
-                    {{ $user->shipping_address_street }}<br>
+                    کشور: {{ $address->address_country  }}<br>
+                    شهر: {{ $address->address_city }}<br>
+                    منطقه: {{ $address->address_state }}<br>
+                    آدرس کامل: {{ $address->address_street }}<br>
                 </div>
             </div>
             <div class="address-card__row">
                 <div class="address-card__row-title">{{ __('global.Phone Number')}}</div>
-                <div class="address-card__row-content">{{ $user->phone ?? __('global.not set') }}</div>
+                <div class="address-card__row-content">{{ $address->phone ?? __('global.not set') }}</div>
             </div>
             <div class="address-card__row">
                 <div class="address-card__row-title">{{ __('global.Email Address')}}</div>
-                <div class="address-card__row-content">{{ $user->email }}</div>
+                <div class="address-card__row-content">{{ $address->email }}</div>
             </div>
             <div class="address-card__footer">
-                <a href="/account-profile">{{ __('global.Edit Profile') }}</a>
+                <a href="{{ route('account-address.edit', $address->id) }}">{{ __('global.Edit Address') }}</a>
             </div>
         </div>
     </div>
