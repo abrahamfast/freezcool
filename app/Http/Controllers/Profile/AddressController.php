@@ -12,7 +12,7 @@ class AddressController extends Controller
 {
     public function index(Request $request)
     {
-        $contact = $request->user()->contact()->get();
+        $contact = $request->user()->contact()->orderBy('is_primary', 'desc')->get();
 
         return view('pages.profile.addresses', [
             'contacts' => $contact
@@ -37,9 +37,9 @@ class AddressController extends Controller
         $data = $request->except('_token', 'default-address');
         $data['id'] = Stri::uuid();
         $data['account_id'] = $request->user()->id;
-        $data['is_primary'] = $data['is_primary'] ? 1 : 0;
 
-        if ($data['is_primary']){
+        if (isset($data['is_primary'] )){
+            $data['is_primary'] = 1;
             Contact::where('account_id', $data['account_id'])->update([
                 'is_primary' => false
             ]);
@@ -52,21 +52,25 @@ class AddressController extends Controller
         return redirect()->route('account-address');
     }
 
-    public function update(AccountAddressRequest $request)
+    public function update($id, AccountAddressRequest $request)
     {
 
         $data = $request->except('_token', 'default-address');
         $data['id'] = Stri::uuid();
         $data['account_id'] = $request->user()->id;
-        $data['is_primary'] = $data['is_primary'] ? 1 : 0;
 
-        if ($data['is_primary']){
+
+        if (isset($data['is_primary'] )){
+            $data['is_primary'] = 1;
             Contact::where('account_id', $data['account_id'])->update([
                 'is_primary' => false
             ]);
         }
 
-        Contact::create($data);
+
+        $contact = Contact::findOrfail($id);
+        $contact->fill($data);
+        $contact->save();
 
         session()->put('toast', __('global.Address update success'));
 
