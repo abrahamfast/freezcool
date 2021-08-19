@@ -310,5 +310,5 @@ return [
     'advisor discount amount' => 'درآمد شما',
     'package code' => 'کد پیامکی',
     'Show Quote' => 'مشاهده فاکتور',
-
+    'how to add new package' => 'راهنمای ایجاد پکیج',
 ];

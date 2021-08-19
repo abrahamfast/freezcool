@@ -26,69 +26,11 @@
                     @endforeach
                 </div>
             </div>
+            <hr>
+            <a href="{{ route('affiliate') }}" class="btn btn-primary">{{ __('global.how to add new package') }}</a>
         </div>
 
-        <div class="card-divider"></div>
-        <div class="card-header">
-            <h5>{{ __('global.add new package') }}</h5>
-        </div>
-        <div class="card-divider"></div>
-        <div class="card-body card-body--padding--2">
-                                        <div class="vehicle-form vehicle-form--layout--account">
-        <div class="vehicle-form__item vehicle-form__item--select">
-            <select class="form-control form-control-select2" aria-label="Year">
-                <option value="none">ورودی شماره یک</option>
-                <option>گزینه یک</option>
-                <option>گزینه دوم</option>
-                <option>گزینه سوم</option>
-                <option>گزینه چهارم</option>
-                <option>گزینه پنجم</option>
-                <option>گزینه ششم</option>
-                <option>گزینه هفتم</option>
-                <option>گزینه هشتم</option>
-                <option>گزینه نهم</option>
-                <option>گزینه دهم</option>
-                <option>گزینه یازدم</option>
-            </select>
-        </div>
-        <div class="vehicle-form__item vehicle-form__item--select">
-            <select class="form-control form-control-select2" aria-label="Brand" disabled>
-                <option value="none">ورودی شماره دو</option>
-                <option>گزینه یک</option>
-                <option>گزینه دوم</option>
-                <option>گزینه سوم</option>
-                <option>گزینه چهارم</option>
-                <option>گزینه پنجم</option>
-                <option>گزینه ششم</option>
-                <option>گزینه هفتم</option>
-                <option>گزینه هشتم</option>
-                <option>گزینه نهم</option>
-                <option>گزینه دهم</option>
-                <option>گزینه یازدم</option>
-            </select>
-        </div>
-        <div class="vehicle-form__item vehicle-form__item--select">
-            <select class="form-control form-control-select2" aria-label="Model" disabled>
-                <option value="none">انتخاب مدل</option>
-                <option>مدل یک</option>
-                <option>مدل دو</option>
-                <option>مدل سوم</option>
-                <option>مدل آخر</option>
-            </select>
-        </div>
-        <div class="vehicle-form__item vehicle-form__item--select">
-            <select class="form-control form-control-select2" aria-label="Engine" disabled>
-                <option value="none">انتخاب موتور</option>
-                <option>۱۵ اسب سه فاز</option>
-                <option>۱۰۰ اسب سه فاز</option>
-                <option>۱۳۰ اسب سه فاز</option>
-            </select>
-        </div>
-        <div class="vehicle-form__divider"></div>
-    </div>
-            <div class="mt-4 pt-3">
-                <a href="/btu/calculator/result" class="btn btn-sm btn-primary">{{ __('global.add new package') }}</a>
-            </div>
-        </div>
-    </div>
+
+
+
 @endsection

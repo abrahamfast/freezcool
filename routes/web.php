@@ -18,7 +18,7 @@ Route::get('/contact-us', [ContactController::class, 'index'])->name('contact-us
 Route::get('/delivery-information', [ App\Http\Controllers\StaticController::class, 'getDelivery']);
 Route::get('/privacy-policy', [ App\Http\Controllers\StaticController::class, 'getDelivery']);
 Route::get('/returns', [ App\Http\Controllers\StaticController::class, 'getDelivery']);
-Route::get('/affiliate', [ App\Http\Controllers\StaticController::class, 'getDelivery']);
+Route::get('/affiliate', [ App\Http\Controllers\StaticController::class, 'getDelivery'])->name('affiliate');
 Route::get('/certificates', [ App\Http\Controllers\StaticController::class, 'getDelivery']);
 Route::get('/faq', [ App\Http\Controllers\StaticController::class, 'getFaq']);
 
