@@ -14,7 +14,7 @@
                             <div class="vehicles-list__item-name">{{ $item->name }}</div>
                             <div class="vehicles-list__item-details">{{ $item->description }}</div>
                             <div class="vehicles-list__item-links">
-                                <a href="}}">{{ __('global.show parts') }}</a>
+                                <a href="{{ route('adviser.package.show', $item->id) }}">{{ __('global.show parts') }}</a>
                             </div>
                         </div>
                         <button type="button" class="vehicles-list__item-remove">

@@ -21,7 +21,7 @@ class AdviserController extends Controller
 
     public function show($id)
     {
-        $package = Package::findOfail($id);
+        $package = Package::findOrfail($id);
 
         return view('pages.profile.adviser_package_show', [
             'package' => $package

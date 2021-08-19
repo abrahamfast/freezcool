@@ -90,8 +90,8 @@ Route::middleware(['auth'])->group(function () {
 
 
 Route::middleware(['auth', 'advisor'])->group(function () {
-    Route::get('/account-adviser', [AdviserController::class, 'index'])->name('package.index');
-    Route::get('/account-adviser/{id}', [AdviserController::class, 'show'])->name('package.show');
+    Route::get('/account-adviser', [AdviserController::class, 'index'])->name('adviser.package.index');
+    Route::get('/account-adviser/{id}', [AdviserController::class, 'show'])->name('adviser.package.show');
 });
 
 

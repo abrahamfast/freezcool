@@ -25,7 +25,7 @@ class Package extends Model
 
     public function quote()
     {
-
+        return $this->hasOne(Quote::class, 'package_id');
     }
 
 
