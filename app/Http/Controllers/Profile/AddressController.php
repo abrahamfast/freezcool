@@ -37,6 +37,13 @@ class AddressController extends Controller
         $data = $request->except('_token', 'default-address');
         $data['id'] = Stri::uuid();
         $data['account_id'] = $request->user()->id;
+        $data['is_primary'] = $data['is_primary'] ? 1 : 0;
+
+        if ($data['is_primary']){
+            Contact::where('account_id', $data['account_id'])->update([
+                'is_primary' => false
+            ]);
+        }
 
         Contact::create($data);
 
@@ -51,6 +58,13 @@ class AddressController extends Controller
         $data = $request->except('_token', 'default-address');
         $data['id'] = Stri::uuid();
         $data['account_id'] = $request->user()->id;
+        $data['is_primary'] = $data['is_primary'] ? 1 : 0;
+
+        if ($data['is_primary']){
+            Contact::where('account_id', $data['account_id'])->update([
+                'is_primary' => false
+            ]);
+        }
 
         Contact::create($data);
 

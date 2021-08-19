@@ -9,7 +9,7 @@
     @if($contacts->count())
         @foreach($contacts as $item)
             <div class="addresses-list__item card address-card">
-{{--                <div class="address-card__badge tag-badge tag-badge--theme">{{ __('global.Default Address') }}</div>--}}
+                @if($item->is_primary)<div class="address-card__badge tag-badge tag-badge--theme">{{ __('global.Default Address') }}</div>@endif
                 <div class="address-card__body">
                     <div class="address-card__name">{{ $item->fullName() }}</div>
                     <div class="address-card__row">

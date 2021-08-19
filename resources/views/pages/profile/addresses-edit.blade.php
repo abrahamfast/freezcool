@@ -66,21 +66,21 @@
                                 <input type="text" class="form-control" id="address-phone" name="phone_number" value="{{ $contact->phone_number }}" placeholder="9891297979797">
                             </div>
                         </div>
-{{--                        <div class="form-group mt-3">--}}
-{{--                            <div class="form-check">--}}
-{{--                                <span class="input-check form-check-input">--}}
-{{--                                    <span class="input-check__body">--}}
-{{--                                        <input class="input-check__input" type="checkbox" name="default-address" id="default-address">--}}
-{{--                                        <span class="input-check__box"></span>--}}
-{{--                                        <span class="input-check__icon"><svg width="9px" height="7px">--}}
-{{--                                                <path d="M9,1.395L3.46,7L0,3.5L1.383,2.095L3.46,4.2L7.617,0L9,1.395Z" />--}}
-{{--                                            </svg>--}}
-{{--                                        </span>--}}
-{{--                                    </span>--}}
-{{--                                </span>--}}
-{{--                                <label class="form-check-label" for="default-address">{{ __('global.Set as my default address') }}</label>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+                        <div class="form-group mt-3">
+                            <div class="form-check">
+                                <span class="input-check form-check-input">
+                                    <span class="input-check__body">
+                                        <input class="input-check__input" type="checkbox" name="is_primary" id="default-address">
+                                        <span class="input-check__box"></span>
+                                        <span class="input-check__icon"><svg width="9px" height="7px">
+                                                <path d="M9,1.395L3.46,7L0,3.5L1.383,2.095L3.46,4.2L7.617,0L9,1.395Z" />
+                                            </svg>
+                                        </span>
+                                    </span>
+                                </span>
+                                <label class="form-check-label" for="default-address">{{ __('global.Set as my default address') }}</label>
+                            </div>
+                        </div>
                         <div class="form-group mb-0 pt-3 mt-3">
                             <button class="btn btn-primary">{{ __('global.Save') }}</button>
                         </div>
