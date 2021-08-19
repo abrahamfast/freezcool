@@ -71,7 +71,8 @@ class PackageController extends Controller
             'advisor_id' => $request->user()->id,
             'discount' => 0,
             'phone_number' => $request->get('phoneNumber'),
-            'status' => 'Pending'
+            'status' => 'Pending',
+            'code' => rand(11111,99999),
         ]);
 
         $quote = $this->getCurrentQuote();

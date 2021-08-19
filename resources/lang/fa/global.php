@@ -311,4 +311,6 @@ return [
     'package code' => 'کد پیامکی',
     'Show Quote' => 'مشاهده فاکتور',
     'how to add new package' => 'راهنمای ایجاد پکیج',
+
+    'advisor sended code' => 'کد تخفیف یا پکیج'
 ];

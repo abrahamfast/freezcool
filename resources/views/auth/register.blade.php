@@ -52,6 +52,16 @@
                                 <textarea rows="7" class="form-control text-right" style="direction: rtl; font-size: 12px" placeholder="Placeholder" disabled="">مشتری یا کاربر به شخصی گفته می‌شود که با اطلاعات کاربری خود که در فرم ثبت‌نام درج کرده است، به ثبت سفارش یا هرگونه استفاده از خدمات اقدام کند. همچنین از آنجا که این شرکت یک وب‌سایت خرده‌فروشی آنلاین است، طبق قانون تجارت الکترونیک مشتری یا مصرف کننده هر شخصی است که به منظوری جز تجارت یا شغل حرفه‌ای به خرید کالا یا خدمات اقدام می‌کند.</textarea>
                             </div>
                             @endif
+                            <hr>
+                            <div class="form-group">
+                                <label for="signup-phoneNumber">{{ __('global.advisor sended code') }}</label>
+                                <input name="code" required id="signup-phoneNumber" value="{{ old('code') }}" type="number" class="form-control @error('phoneNumber') is-invalid @enderror" placeholder="">
+                                @error('phoneNumber')
+                                <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
 
                             <div class="form-check">
                                 <span class="input-check form-check-input">
@@ -66,6 +76,8 @@
                                 </span>
                                 <label class="form-check-label" for="term">{{ __('global.accept term and condition') }}</label>
                             </div>
+
+
 
 
                             <div class="form-group mb-0">

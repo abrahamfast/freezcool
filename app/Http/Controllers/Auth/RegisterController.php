@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Package;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use App\Helper\Stri;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    private otpService $otpService;
+    private $otpService;
 
     /**
      * Where to redirect users after registration.
@@ -73,6 +74,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'phoneNumber' => ['required', 'string', 'max:255', 'unique:account,phone'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'term' => 'required'
         ]);
     }
 
@@ -104,12 +106,29 @@ class RegisterController extends Controller
     {
         $this->validator($request->all())->validate();
 
-        event(new Registered($user = $this->create($request->all())));
+        $user = $this->create($request->all());
+
+        if ($request->get('code')){
+
+            $package = Package::where('code', $request->get('code'))->first();
+            $package->status =  Package::REVIEW;
+
+            $quote = $package->quote()->first();
+            $quote->account_id = $user->id;
+
+            $package->save();
+            $quote->save();
+
+            session()->put('package', true);
+        }
+
+        event(new Registered($user));
 
         // store into session to force redirect to profile
         session()->put('register', true);
 
         // $this->guard()->login($user);
+
 
         if ($response = $this->registered($request, $user)) {
             return $response;

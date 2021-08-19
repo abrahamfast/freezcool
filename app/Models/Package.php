@@ -11,6 +11,8 @@ class Package extends Model
 
     public const CREATED_AT = 'created_at';
     public const UPDATED_AT = 'modified_at';
+    public const REVIEW = 'Review';
+
 
     protected $table = 'package';
 
